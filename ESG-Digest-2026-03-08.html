@@ -3,215 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 The ESG Dispatch — 8 March 2026</title>
+  <title>🌿 The ESG Dispatch — 2026-03-08</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Georgia, Arial, sans-serif;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 60px;
-      background: #f0f4f1;
-      color: #1a1a2e;
-    }
-
-    /* ── MASTHEAD ── */
-    .masthead {
-      background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%);
-      color: white;
-      border-radius: 18px;
-      padding: 36px 36px 28px;
-      margin-bottom: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-    .masthead::before {
-      content: "🌱";
-      font-size: 140px;
-      position: absolute;
-      right: -10px;
-      top: -20px;
-      opacity: 0.08;
-    }
-    .masthead-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      opacity: 0.7;
-      margin-bottom: 8px;
-    }
-    .masthead h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; background: #f0f4f1; color: #1a1a2e; }
+    .masthead { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; }
+    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.08; }
+    .masthead-eyebrow { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+    .masthead h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
     .masthead h1 span { color: #7dffa3; }
-    .masthead-tagline {
-      font-size: 1rem;
-      opacity: 0.8;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-    .masthead-meta {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: 0.82rem;
-      opacity: 0.7;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 16px;
-    }
-
-    /* ── SUMMARY PILLS ── */
-    .pill-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 18px 0 28px;
-    }
-    .pill {
-      background: white;
-      border-radius: 30px;
-      padding: 8px 18px;
-      font-size: 0.83rem;
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+    .masthead-tagline { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 20px; }
+    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; }
+    .divider { height: 3px; background: linear-gradient(90deg, #15582e, #4caf7d); border-radius: 2px; margin: 14px 0 24px; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 28px; }
+    .pill { background: white; border-radius: 30px; padding: 8px 18px; font-size: 0.83rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 6px; }
     .pill-num { font-size: 1.1rem; font-weight: 800; color: #15582e; }
-
-    /* ── REGION SECTION ── */
-    .region-section {
-      background: white;
-      border-radius: 16px;
-      padding: 0;
-      margin-bottom: 28px;
-      overflow: hidden;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    }
-    .region-header {
-      padding: 20px 28px 18px;
-      border-bottom: 1px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+    .region-section { background: white; border-radius: 16px; padding: 0; margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .region-header { padding: 20px 28px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 14px; }
     .region-header.india { background: linear-gradient(90deg, #fff8f0, #fff); border-left: 5px solid #FF9933; }
     .region-header.global { background: linear-gradient(90deg, #f0f9f4, #fff); border-left: 5px solid #15582e; }
     .region-flag { font-size: 2.2rem; }
     .region-title-block h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin-bottom: 2px; }
     .region-title-block .region-sub { font-size: 0.82rem; color: #888; font-style: italic; }
     .region-content { padding: 22px 28px; }
-
-    /* ── TOPIC BLOCKS ── */
     .topic-block { margin-bottom: 28px; }
     .topic-block:last-child { margin-bottom: 0; }
-
-    .topic-header {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-    .topic-badge {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-      color: white;
-      padding: 5px 14px;
-      border-radius: 6px;
-      white-space: nowrap;
-    }
+    .topic-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .topic-badge { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: white; padding: 5px 14px; border-radius: 6px; }
     .regulatory { background: #2563eb; }
-    .company    { background: #7c3aed; }
-    .carbon     { background: #059669; }
-    .saas       { background: #d97706; }
-
-    .topic-quip {
-      font-size: 0.83rem;
-      color: #888;
-      font-style: italic;
-    }
-
-    /* ── NEWS CARDS ── */
-    .news-item {
-      border-left: 3px solid #e5e7eb;
-      padding: 11px 16px;
-      margin-bottom: 12px;
-      border-radius: 0 6px 6px 0;
-      background: #fafafa;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .news-item:hover { border-color: #4caf7d; background: #f4fbf7; }
+    .company { background: #7c3aed; }
+    .carbon { background: #059669; }
+    .saas { background: #d97706; }
+    .topic-quip { font-size: 0.83rem; color: #888; font-style: italic; }
+    .news-item { border-left: 3px solid #e5e7eb; padding: 11px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; background: #fafafa; }
     .news-item:last-child { margin-bottom: 0; }
-
-    .news-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-    .tag-icymi  { background: #dbeafe; color: #1e40af; }
-    .tag-hot    { background: #fee2e2; color: #b91c1c; }
-    .tag-green  { background: #d1fae5; color: #065f46; }
-    .tag-watch  { background: #fef3c7; color: #92400e; }
+    .news-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
+    .tag-icymi { background: #dbeafe; color: #1e40af; }
+    .tag-hot { background: #fee2e2; color: #b91c1c; }
+    .tag-green { background: #d1fae5; color: #065f46; }
+    .tag-watch { background: #fef3c7; color: #92400e; }
     .tag-signal { background: #ede9fe; color: #5b21b6; }
-    .tag-scoop  { background: #fce7f3; color: #9d174d; }
-
-    .news-headline {
-      font-weight: 700;
-      font-size: 0.97rem;
-      margin-bottom: 5px;
-      line-height: 1.4;
-    }
+    .tag-scoop { background: #fce7f3; color: #9d174d; }
+    .news-headline { font-weight: 700; font-size: 0.97rem; margin-bottom: 5px; line-height: 1.4; }
     .news-headline a { color: #15582e; text-decoration: none; }
     .news-headline a:hover { text-decoration: underline; }
-    .news-summary {
-      color: #4b5563;
-      font-size: 0.9rem;
-      line-height: 1.65;
-      margin-bottom: 6px;
-    }
-    .news-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
+    .news-summary { color: #4b5563; font-size: 0.9rem; line-height: 1.65; margin-bottom: 6px; }
     .news-source { font-size: 0.76rem; color: #9ca3af; font-style: italic; }
-
-    /* ── SECTION DIVIDER ── */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
-      margin: 20px 0;
-    }
-
-    /* ── FOOTER ── */
-    .footer-block {
-      background: #0d3d22;
-      color: rgba(255,255,255,0.7);
-      border-radius: 14px;
-      padding: 24px 28px;
-      text-align: center;
-      font-size: 0.82rem;
-      margin-top: 8px;
-    }
+    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); margin: 20px 0; }
+    .footer-block { background: #0d3d22; color: rgba(255,255,255,0.7); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; }
     .footer-block strong { color: #7dffa3; }
   </style>
 </head>
 <body>
-
   <!-- MASTHEAD -->
   <div class="masthead">
     <div class="masthead-eyebrow">Daily ESG Intelligence</div>
@@ -219,35 +62,33 @@
     <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
     <div class="masthead-meta">
       <span>📅 Sunday, 8 March 2026</span>
-      <span>📍 India + Global</span>
-      <span>⚡ 17 stories</span>
+      <span>🌍 India + Global</span>
+      <span>📰 18 stories</span>
       <span>🤖 Auto-curated by Claude</span>
     </div>
   </div>
-
-  <!-- PILL SUMMARY ROW -->
+  <div class="divider"></div>
   <div class="pill-row">
-    <div class="pill">🇮🇳 <span class="pill-num">9</span> India</div>
-    <div class="pill">🌍 <span class="pill-num">8</span> Global</div>
+    <div class="pill">🇮🇳 <span class="pill-num">8</span> India</div>
+    <div class="pill">🌍 <span class="pill-num">10</span> Global</div>
     <div class="pill">📋 <span class="pill-num">5</span> Regulatory</div>
-    <div class="pill">🏢 <span class="pill-num">5</span> Big Moves</div>
+    <div class="pill">🏢 <span class="pill-num">4</span> Big Moves</div>
     <div class="pill">♻️ <span class="pill-num">5</span> Carbon Tech</div>
-    <div class="pill">🤖 <span class="pill-num">2</span> SaaS &amp; AI</div>
+    <div class="pill">🤖 <span class="pill-num">4</span> SaaS &amp; AI</div>
   </div>
 
-
-  <!-- ========== INDIA SECTION ========== -->
+  <!-- INDIA SECTION -->
   <div class="region-section">
     <div class="region-header india">
       <span class="region-flag">🇮🇳</span>
       <div class="region-title-block">
         <h2>India</h2>
-        <div class="region-sub">Subcontinental shifts, one policy at a time.</div>
+        <div class="region-sub">Where policy sprints and sustainability ambitions collide.</div>
       </div>
     </div>
     <div class="region-content">
 
-      <!-- INDIA: Regulatory -->
+      <!-- Regulatory -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge regulatory">📋 Regulatory &amp; Policy</span>
@@ -256,36 +97,26 @@
 
         <div class="news-item">
           <span class="news-tag tag-hot">🔥 Breaking</span>
-          <div class="news-headline"><a href="https://esgnews.com/sebi-launches-review-of-esg-rating-providers-to-strengthen-transparency-investor-confidence/" target="_blank">SEBI Scrutinises ESG Rating Providers in Bid to End Wild West Ratings</a></div>
-          <div class="news-summary">India's securities regulator has constituted a working group — with issuers, investors, global ratings providers, legal experts, and academia — to overhaul the framework governing ESG Rating Providers. The goal: make ratings more transparent, reliable, and a lot harder to game.</div>
-          <div class="news-footer"><span class="news-source">Source: ESG News</span></div>
+          <div class="news-headline">
+            <a href="https://india.mongabay.com/2025/04/latest-esg-reporting-rules-redefine-key-suppliers-and-customers-of-listed-companies/" target="_blank">SEBI's BRSR Value Chain Disclosures Now Mandatory for Top 250 Listed Companies</a>
+          </div>
+          <div class="news-summary">SEBI's Business Responsibility and Sustainability Reporting framework enters a new phase in FY2025–26: the top 250 listed entities must now report ESG data across their value chains, with third-party assurance expected from 2026–27. Companies must cover suppliers and customers accounting for at least 2% of procurement or sales, capped at 75% of total value.</div>
+          <div class="news-source">Source: Mongabay India / SEBI</div>
         </div>
 
         <div class="news-item">
           <span class="news-tag tag-watch">👀 Watch</span>
-          <div class="news-headline"><a href="https://india.mongabay.com/2025/04/latest-esg-reporting-rules-redefine-key-suppliers-and-customers-of-listed-companies/" target="_blank">SEBI's BRSR Reaches Deep Into Supply Chains — Top 250 Companies, It's Your Problem Now</a></div>
-          <div class="news-summary">SEBI's BRSR Core framework now pulls key suppliers and customers of India's top 250 listed companies into the ESG disclosure net. From FY 2026–27, third-party verification is expected — and the top 1,000 companies face full BRSR compliance. Greenwashing, consider yourself warned.</div>
-          <div class="news-footer"><span class="news-source">Source: Mongabay India</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-icymi">📬 ICYMI</span>
-          <div class="news-headline"><a href="https://www.ropesgray.com/en/insights/viewpoints/102l04y/indian-parliamentary-committee-recommends-enhancements-to-csr-and-esg-legislation" target="_blank">Parliament Wants Directors Personally On the Hook for ESG Decisions</a></div>
-          <div class="news-summary">A Parliamentary Standing Committee has recommended amending the Companies Act to make directors legally liable for ESG decisions, mandate independent ESG board committees, and create a dedicated oversight body within the Ministry of Corporate Affairs — complete with greenwashing penalties.</div>
-          <div class="news-footer"><span class="news-source">Source: Ropes &amp; Gray LLP</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">🌱 Green Signal</span>
-          <div class="news-headline"><a href="https://www.esgtoday.com/india-launches-new-regulations-for-social-sustainability-sustainability-linked-bonds/" target="_blank">India Launches Regulatory Framework for Sustainability-Linked Bonds</a></div>
-          <div class="news-summary">SEBI's new ESG Debt Securities framework covers social, sustainability, and sustainability-linked bonds with pre- and post-issuance disclosures plus mandatory third-party review — a move designed to build out India's green debt capital markets and keep bond issuers honest.</div>
-          <div class="news-footer"><span class="news-source">Source: ESG Today</span></div>
+          <div class="news-headline">
+            <a href="https://www.ropesgray.com/en/insights/viewpoints/102l04y/indian-parliamentary-committee-recommends-enhancements-to-csr-and-esg-legislation" target="_blank">Parliament Recommends Dedicated ESG Oversight Body and Director-Level ESG Fiduciary Duties</a>
+          </div>
+          <div class="news-summary">India's Parliamentary Standing Committee on Finance has recommended creating a dedicated ESG oversight body within the Ministry of Corporate Affairs, and amending the Companies Act to make ESG objectives part of directors' fiduciary duties — effectively elevating sustainability to a boardroom legal obligation, akin to financial stewardship.</div>
+          <div class="news-source">Source: Ropes &amp; Gray / Parliament of India</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- INDIA: Company Actions -->
+      <!-- Company Actions -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge company">🏢 Large Company Actions</span>
@@ -293,68 +124,55 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-scoop">🏆 Scoop</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/content/press-releases-ani/lupin-ranks-no-1-globally-in-pharma-tops-all-sectors-in-india-in-s-p-esg-assessment-2025-126030600940_1.html" target="_blank">Lupin Just Became the World's Most Sustainable Pharma Company. No Big Deal.</a></div>
-          <div class="news-summary">Indian pharma giant Lupin scored 91/100 on the S&amp;P Global Corporate Sustainability Assessment — top-ranked pharmaceutical company globally and leader across all sectors in India. Three years in a row in the Sustainability Yearbook. Someone frame this on the boardroom wall.</div>
-          <div class="news-footer"><span class="news-source">Source: Business Standard · 6 March 2026</span></div>
+          <span class="news-tag tag-scoop">🏆 Milestone</span>
+          <div class="news-headline">
+            <a href="https://www.business-standard.com/content/press-releases-ani/lupin-ranks-no-1-globally-in-pharma-tops-all-sectors-in-india-in-s-p-esg-assessment-2025-126030600940_1.html" target="_blank">Lupin Tops Global Pharma ESG Rankings with a Score of 91/100 in S&amp;P CSA 2025</a>
+          </div>
+          <div class="news-summary">Lupin Limited secured a score of 91 out of 100 in the S&amp;P Global Corporate Sustainability Assessment, placing it first among pharmaceutical companies worldwide and first across all sectors in India. The Mumbai-based drugmaker has now been included in the Sustainability Yearbook 2026 for the third consecutive year — a rare distinction in any industry globally.</div>
+          <div class="news-source">Source: Business Standard / S&amp;P Global</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-green">🌱 Green Signal</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/content/press-releases-ani/iifl-finance-scores-46-in-first-s-p-global-sustainability-assessment-registers-a-15-point-improvement-126030501172_1.html" target="_blank">IIFL Finance Scores 46 on Its First ESG Assessment — Huge 15-Point Jump</a></div>
-          <div class="news-summary">IIFL Finance scored 46 in its maiden S&amp;P Global CSA, a 15-point leap from a prior independent estimate of 31. The NBFC says this reflects a shift from "just disclosing stuff" to genuinely embedding ESG into how the business runs. Refreshingly honest framing.</div>
-          <div class="news-footer"><span class="news-source">Source: Business Standard · 5 March 2026</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-icymi">📬 ICYMI</span>
-          <div class="news-headline"><a href="https://www.greenmyna.com/corporate-sustainability-in-2026-what-indian-businesses-must-do-to-stay-esg-compliant" target="_blank">Coal India Bets ₹250 Billion on 4.5 GW of Renewables — Yep, Coal India</a></div>
-          <div class="news-summary">State-owned Coal India — the world's largest coal miner — has announced plans to install 4.5 gigawatts of solar and wind energy at a cost of ₹250 billion. A sign of the times: even coal is learning to speak green.</div>
-          <div class="news-footer"><span class="news-source">Source: Green Myna</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-signal">💡 Signal</span>
-          <div class="news-headline"><a href="https://www.greenmyna.com/corporate-sustainability-in-2026-what-indian-businesses-must-do-to-stay-esg-compliant" target="_blank">DHL Drops $1.1B in India for Low-Emission Logistics — Parcels Just Got Greener</a></div>
-          <div class="news-summary">DHL Group has committed $1.1 billion to expand low-emission logistics infrastructure and EV-driven operations in India — one of the largest single foreign sustainability-linked investments in India's logistics sector.</div>
-          <div class="news-footer"><span class="news-source">Source: Green Myna</span></div>
+          <span class="news-tag tag-green">✅ Green Signal</span>
+          <div class="news-headline">
+            <a href="https://www.business-standard.com/content/press-releases-ani/iifl-finance-scores-46-in-first-s-p-global-sustainability-assessment-registers-a-15-point-improvement-126030501172_1.html" target="_blank">IIFL Finance Scores 46 in Maiden S&amp;P Global CSA — a 15-Point Leap in ESG Performance</a>
+          </div>
+          <div class="news-summary">IIFL Finance debuted in the S&amp;P Global Corporate Sustainability Assessment with a score of 46, a sharp improvement from an independently derived baseline of 31. The NBFC describes the result as a shift from disclosure-led compliance to institutionally embedded ESG performance, signalling a maturing sustainability culture spreading deeper into India's financial sector.</div>
+          <div class="news-source">Source: Business Standard / IIFL Finance</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- INDIA: Carbon Tech -->
+      <!-- Carbon Capture -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge carbon">♻️ Carbon Capture &amp; Decarbonisation</span>
-          <span class="topic-quip">Lab coats are working overtime.</span>
+          <span class="topic-quip">Lab coats working overtime.</span>
         </div>
 
         <div class="news-item">
           <span class="news-tag tag-hot">🔥 Breaking</span>
-          <div class="news-headline"><a href="https://www.downtoearth.org.in/climate-change/budget-2026-27-sets-aside-rs-20000-crore-to-accelerate-carbon-capture-in-heavy-industry" target="_blank">India Commits ₹20,000 Crore ($2.2B) to Carbon Capture — First Big CCUS Budget</a></div>
-          <div class="news-summary">Budget 2026–27 marks India's first ring-fenced CCUS programme, targeting decarbonisation of power, steel, cement, refineries, and chemicals over five years. The timing is no coincidence — the EU's Carbon Border Adjustment Mechanism is knocking.</div>
-          <div class="news-footer"><span class="news-source">Source: Down to Earth</span></div>
+          <div class="news-headline">
+            <a href="https://carboncredits.com/india-puts-2-2-billion-for-carbon-capture-in-2026-2027-budget/" target="_blank">India's Budget 2026-27 Commits $2.2 Billion to CCUS in Heavy Industry — A Historic First</a>
+          </div>
+          <div class="news-summary">In a landmark budgetary first, India's Union Budget 2026-27 ring-fenced ₹20,000 crore ($2.2 billion) over five years for carbon capture, utilisation, and storage (CCUS) technology. The dedicated scheme targets India's five hardest-to-abate sectors — power, steel, cement, refineries, and chemicals — which cannot be decarbonised by electrification alone.</div>
+          <div class="news-source">Source: Carbon Credits / Government of India</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-scoop">🏆 Milestone</span>
-          <div class="news-headline"><a href="https://oilprice.com/Energy/Energy-General/Indias-Carbon-Capture-Moment-Has-Arrived.html" target="_blank">NTPC &amp; IIT Bombay Drill India's First CO₂ Storage Test Well in Jharkhand</a></div>
-          <div class="news-summary">India's first CO₂ storage test well — drilled by NTPC in collaboration with IIT Bombay — is complete in Jharkhand. A second monitoring well is underway, and ONGC is separately chasing India's first large-scale CCS project at Koyali refinery with IOCL. History is being made underground.</div>
-          <div class="news-footer"><span class="news-source">Source: OilPrice.com</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">🌱 Green Signal</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/industry/news/budget-2026-backs-decarbonisation-clean-energy-supply-chains-126020301564_1.html" target="_blank">Zero Customs Duty on Nuclear Equipment Until 2035 — India Goes Atomic</a></div>
-          <div class="news-summary">Following December 2025's landmark "Shanti" Nuclear Act opening nuclear power to private and foreign investment, Budget 2026–27 eliminates customs duties on nuclear plant imports through 2035. A big bet on baseload clean energy to complement the solar surge.</div>
-          <div class="news-footer"><span class="news-source">Source: Business Standard</span></div>
+          <span class="news-tag tag-scoop">🔬 Breakthrough</span>
+          <div class="news-headline">
+            <a href="https://oilprice.com/Energy/Energy-General/Indias-Carbon-Capture-Moment-Has-Arrived.html" target="_blank">NTPC &amp; IIT Bombay Complete India's First CO₂ Geological Storage Test Well in Jharkhand</a>
+          </div>
+          <div class="news-summary">NTPC Limited and IIT Bombay have drilled India's first CO₂ geological storage test well in Jharkhand, with a second monitoring well underway. While modest in scale, the milestone establishes the scientific and geological groundwork essential to any credible domestic CCUS infrastructure — a prerequisite for India achieving Net Zero by 2070.</div>
+          <div class="news-source">Source: OilPrice.com / NTPC</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- INDIA: SaaS & AI -->
+      <!-- SaaS & AI -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge saas">🤖 SaaS Tools &amp; AI for ESG</span>
@@ -362,26 +180,28 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-signal">💡 Signal</span>
-          <div class="news-headline"><a href="https://www.legal500.com/developments/thought-leadership/climate-change-and-esg-considerations-in-indias-ai-driven-future/" target="_blank">India's Green Taxonomy Wants AI-Powered MRV — Because Spreadsheets Are So 2019</a></div>
-          <div class="news-summary">Experts are pushing India's emerging Green Taxonomy to be backed by AI-driven Measurement, Reporting and Verification (MRV) — think automated ESG data validation, satellite-based land monitoring, and predictive transition risk analytics. The alternative? Yet another Excel nightmare.</div>
-          <div class="news-footer"><span class="news-source">Source: Legal 500</span></div>
+          <span class="news-tag tag-signal">📡 Signal</span>
+          <div class="news-headline">
+            <a href="https://www.freepressjournal.in/latest-news/the-end-of-greenwashing-why-2026-is-the-year-of-strategic-esg-sustainability-in-india" target="_blank">Indian Enterprises Deploy AI-Driven Monitoring to Track Supply Chain ESG Risks in Real Time</a>
+          </div>
+          <div class="news-summary">India's largest corporations are rolling out AI platforms to continuously monitor emissions, water consumption, and labour standards across their supplier networks — replacing manual spreadsheets with automated systems that flag ESG risks before they become regulatory liabilities. Companies with strong ESG credentials are reportedly generating cumulative returns up to 12% higher than sector peers.</div>
+          <div class="news-source">Source: Free Press Journal</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-green">🌱 In Numbers</span>
-          <div class="news-headline"><a href="https://www.iiot-world.com/smart-manufacturing/manufacturing-esg-strategy-2026/" target="_blank">Indian Manufacturers Using AI-Driven ESG Automation Are Cutting Energy Use by 20%+</a></div>
-          <div class="news-summary">Case studies show Indian manufacturers replacing manual ESG spreadsheets with AI-powered digital twins and IoT monitoring are cutting energy usage by over 20%. "Autonomous sustainability" — where AI continuously tracks and adjusts emissions in real time — is quietly becoming the new normal.</div>
-          <div class="news-footer"><span class="news-source">Source: IIoT World</span></div>
+          <span class="news-tag tag-watch">👀 Watch</span>
+          <div class="news-headline">
+            <a href="https://www.lexology.com/library/detail.aspx?g=5e25c464-f93c-4f54-9b7e-7c4cb3686537" target="_blank">India's Green Taxonomy Could Become a Global Model — If Paired with AI-Based MRV Systems</a>
+          </div>
+          <div class="news-summary">Policy analysts argue India's emerging Green Taxonomy framework has the potential to anchor its sustainable finance architecture globally — but only if backed by AI-powered measurement, reporting, and verification tools. Satellite-backed land use monitoring and predictive transition risk analytics could lower compliance friction and reduce greenwashing risk across the financial system.</div>
+          <div class="news-source">Source: Lexology / Legal 500</div>
         </div>
       </div>
 
     </div>
   </div>
-  <!-- END INDIA -->
 
-
-  <!-- ========== GLOBAL SECTION ========== -->
+  <!-- GLOBAL SECTION -->
   <div class="region-section">
     <div class="region-header global">
       <span class="region-flag">🌍</span>
@@ -392,7 +212,7 @@
     </div>
     <div class="region-content">
 
-      <!-- GLOBAL: Regulatory -->
+      <!-- Regulatory -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge regulatory">📋 Regulatory &amp; Policy</span>
@@ -400,37 +220,36 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-hot">🔥 Live</span>
-          <div class="news-headline"><a href="https://sustainability.freshfields.com/post/102mfa5/7-esg-trends-to-watch-in-2026" target="_blank">EU Greenwashing Directive Is Now Live — Claims Must Be Provable or Costly</a></div>
-          <div class="news-summary">The EU's Greenwashing Directive came into force this month, making it a legal obligation for companies operating in Europe to back up every sustainability claim with verifiable data. Vague promises about "eco-friendly" products? Not any more.</div>
-          <div class="news-footer"><span class="news-source">Source: Freshfields Sustainability</span></div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-icymi">📬 ICYMI</span>
-          <div class="news-headline"><a href="https://blog.qima.com/sustainability/esg-reporting-2025-2026" target="_blank">EU Slims Down CSRD &amp; CSDDD — Less Paperwork, Same Accountability</a></div>
-          <div class="news-summary">The EU has released streamlined versions of both the Corporate Sustainability Reporting Directive (CSRD) and the Corporate Sustainability Due Diligence Directive (CSDDD) — reducing compliance burden for smaller entities while keeping large multinationals firmly in the hot seat.</div>
-          <div class="news-footer"><span class="news-source">Source: QIMA Blog</span></div>
+          <span class="news-tag tag-hot">🔥 Breaking</span>
+          <div class="news-headline">
+            <a href="https://blog.qima.com/sustainability/esg-reporting-2025-2026" target="_blank">40 Jurisdictions Now Aligned to ISSB Standards — Australia, Singapore &amp; Hong Kong File First Reports in 2026</a>
+          </div>
+          <div class="news-summary">A total of 40 countries are now using or incorporating the ISSB's global sustainability disclosure standards, with Australia, Hong Kong, Malaysia, and Singapore issuing their first ISSB-aligned reports this year. The development marks a major step toward a unified global baseline for corporate climate disclosure, substantially narrowing the fragmentation that has plagued ESG reporting for a decade.</div>
+          <div class="news-source">Source: QIMA / IFRS Foundation</div>
         </div>
 
         <div class="news-item">
           <span class="news-tag tag-watch">👀 Watch</span>
-          <div class="news-headline"><a href="https://www.z2data.com/insights/2025-esg-and-environmental-regulation-review-and-2026-preview" target="_blank">California's August Deadline Will Affect 4,000+ U.S. Companies — Ready or Not</a></div>
-          <div class="news-summary">California's climate disclosure laws hit their August 2026 compliance deadline, pulling over 4,000 U.S. companies into mandatory reporting — making it a de facto national standard given California's economic footprint. The SEC may be quiet, but Sacramento is not.</div>
-          <div class="news-footer"><span class="news-source">Source: Z2Data</span></div>
+          <div class="news-headline">
+            <a href="https://www.hoganlovells.com/en/publications/esg-compliance-current-state-global-trends-and-outlook-2026" target="_blank">EU Packaging Regulation Becomes Enforceable in August 2026 — Supply Chains Scramble to Comply</a>
+          </div>
+          <div class="news-summary">The EU's Packaging and Packaging Waste Regulation (PPWR) enters enforcement from August 2026, activating harmonised requirements for packaging design, labelling, recyclability, and extended producer responsibility. Companies reliant on EU markets and supply chains face a hard deadline with little remaining runway to align operations — adding to an already crowded ESG compliance calendar.</div>
+          <div class="news-source">Source: Hogan Lovells</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-signal">💡 Signal</span>
-          <div class="news-headline"><a href="https://www.pulsora.com/blog/esg-regulations-and-framework-updates-q4-2025" target="_blank">China Rolls Out Unified Green Finance Taxonomy — Asset Reclassification Begins</a></div>
-          <div class="news-summary">China's new Green Finance Endorsed Project Catalogue (effective October 2025) is now reshaping how banks and companies label "green" assets. The result: a tightening of definitions that is forcing genuine reclassification — and quietly reducing greenwashing across the world's largest bank-financed economy.</div>
-          <div class="news-footer"><span class="news-source">Source: Pulsora</span></div>
+          <span class="news-tag tag-signal">📡 In Numbers</span>
+          <div class="news-headline">
+            <a href="https://instituteofsustainabilitystudies.com/insights/lexicon/2026-esg-regulations-and-frameworks-businesses-need-on-their-radar/" target="_blank">UK SDR Goes Live — Scope 1 &amp; 2 Emissions Disclosure Now Mandatory for In-Scope Entities</a>
+          </div>
+          <div class="news-summary">The UK's Sustainability Disclosure Requirements (SDR) came into effect on 1 January 2026, mandating Scope 1 and Scope 2 emissions reporting based on 2025 data. The regime represents Britain's most significant climate reporting milestone since leaving the EU and positions the UK as a credible hub for ESG-aligned capital markets independent of Brussels.</div>
+          <div class="news-source">Source: Institute of Sustainability Studies / UK Government</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- GLOBAL: Company Actions -->
+      <!-- Company Actions -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge company">🏢 Large Company Actions</span>
@@ -438,23 +257,27 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-watch">👀 Watch</span>
-          <div class="news-headline"><a href="https://www.mofo.com/resources/insights/260219-2026-trends-predictions-sustainability-corporate-responsibility" target="_blank">ESG Enforcement Actions Are Spiking in 2026 — And Legal Bills Are Following</a></div>
-          <div class="news-summary">Criminal investigations, litigation, and ESG compliance enforcement actions are rising sharply globally in 2026. Companies face penalties and reputational damage for greenwashing, pushing a widespread shift from aspirational sustainability commitments to legally defensible, data-backed disclosures. Lawyers everywhere are thriving.</div>
-          <div class="news-footer"><span class="news-source">Source: Morrison Foerster</span></div>
+          <span class="news-tag tag-scoop">🔬 Milestone</span>
+          <div class="news-headline">
+            <a href="https://www.lw.com/en/insights/esg-and-sustainability-insights-10-things-that-should-be-top-of-mind-in-2026" target="_blank">ISSB to Develop Global Nature-Related Reporting Standard — Exposure Draft Expected October 2026</a>
+          </div>
+          <div class="news-summary">The International Sustainability Standards Board has confirmed development of a global nature-related disclosure standard drawing on TNFD recommendations, with an Exposure Draft planned for October 2026. The move signals that biodiversity and ecosystem risk will soon be as regulated as carbon disclosures, fundamentally reshaping ESG materiality assessments for companies worldwide.</div>
+          <div class="news-source">Source: Latham &amp; Watkins / ISSB</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-icymi">📬 ICYMI</span>
-          <div class="news-headline"><a href="https://www.groundreport.in/on-this-day/2026-sustainability-calendar-60-esg-dates-companies-must-track/" target="_blank">China-Listed Companies Race to Hit April 30 ESG Reporting Deadline</a></div>
-          <div class="news-summary">Companies listed on Chinese exchanges are scrambling to publish their 2025 sustainability reports before the April 30, 2026 deadline — the first year of mandatory ESG disclosure for a major cohort of listed firms. Third-party assurance firms across Asia are currently having a moment.</div>
-          <div class="news-footer"><span class="news-source">Source: Ground Report</span></div>
+          <span class="news-tag tag-watch">👀 Watch</span>
+          <div class="news-headline">
+            <a href="https://corpgov.law.harvard.edu/2026/01/24/2025-esg-wrap-up-and-2026-outlook/" target="_blank">Global Corporations Race to Submit 2025 Sustainability Reports Ahead of April 30 Deadline</a>
+          </div>
+          <div class="news-summary">Major corporations worldwide are finalising their 2025 sustainability reports under pressure from tightened CSRD frameworks and investor demands, with a 30 April 2026 filing deadline for many European entities. Analysts note 2026 marks the shift from aspirational pledges to auditable, penalty-backed disclosure — a genuine inflection point for corporate ESG accountability.</div>
+          <div class="news-source">Source: Harvard Law School Forum on Corporate Governance</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- GLOBAL: Carbon Tech -->
+      <!-- Carbon Capture -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge carbon">♻️ Carbon Capture &amp; Decarbonisation</span>
@@ -462,30 +285,36 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-scoop">🏆 Breakthrough</span>
-          <div class="news-headline"><a href="https://www.cemnet.com/News/story/180096/svante-technologies-wins-global-award-for-breakthrough-carbon-capture-innovation.html" target="_blank">Svante's Nobel-Chemistry-Backed MOF Tech Wins Global Carbon Capture Award</a></div>
-          <div class="news-summary">Canadian cleantech firm Svante Technologies has won a global innovation award for its solid sorbent carbon capture technology using metal-organic frameworks (MOFs) — the same materials class awarded the 2025 Nobel Prize in Chemistry. The tech bolts onto existing industrial plants, skipping expensive rebuilds.</div>
-          <div class="news-footer"><span class="news-source">Source: CemNet</span></div>
+          <span class="news-tag tag-hot">🔥 Breaking</span>
+          <div class="news-headline">
+            <a href="https://www.sciencetimes.com/articles/61286/20260209/climate-technology-2026-how-carbon-capture-fighting-environmental-damage.htm" target="_blank">World's Largest Direct Air Capture Plant Now Removing Up to 1 Million Tons of CO₂ Per Year</a>
+          </div>
+          <div class="news-summary">Carbon Engineering's Stratos facility in Texas is operational at commercial scale, capturing between 500,000 and 1 million metric tons of CO₂ annually — making it the world's largest direct air capture plant. Offtake agreements with Frontier, Amazon, and Airbus validate corporate demand for permanent carbon removal, as capture costs of $250–$600 per ton continue declining.</div>
+          <div class="news-source">Source: Science Times / Carbon Engineering</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-hot">🔥 Live</span>
-          <div class="news-headline"><a href="https://carboncredits.com/top-3-carbon-capture-leaders-to-drive-the-net-zero-race-in-2026/" target="_blank">Norway's Northern Lights Project Begins Seabed CO₂ Storage at 800K Tonnes/Year</a></div>
-          <div class="news-summary">The Northern Lights CCS project in Norway is beginning commercial-scale permanent CO₂ storage beneath the Norwegian continental shelf in 2026 — up to 800,000 tonnes annually, with capacity for 12 million tonnes over 15 years. One of the most significant CCS milestones on the planet.</div>
-          <div class="news-footer"><span class="news-source">Source: Carbon Credits</span></div>
+          <span class="news-tag tag-scoop">🔬 Breakthrough</span>
+          <div class="news-headline">
+            <a href="https://www.worldcement.com/europe-cis/10122025/cool-planet-technologies-demonstrates-breakthrough-success-in-membrane-carbon-capture/" target="_blank">Cool Planet Technologies Unlocks Next-Gen Membrane Carbon Capture — Could Slash CCS Costs for Mid-Sized Emitters</a>
+          </div>
+          <div class="news-summary">Cool Planet Technologies has successfully tested its third-generation carbon capture membrane module, which avoids the costly chemical solvents used in conventional CCS. The lower energy footprint and simplified process could make carbon capture commercially viable for mid-sized industrial emitters — a segment largely excluded from current CCS economics.</div>
+          <div class="news-source">Source: World Cement / Cool Planet Technologies</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-signal">💡 In Numbers</span>
-          <div class="news-headline"><a href="https://www.sciencetimes.com/articles/61286/20260209/climate-technology-2026-how-carbon-capture-fighting-environmental-damage.htm" target="_blank">CCUS Market: $3.4B in 2024 → $9.6B by 2029. Capital Has Noticed.</a></div>
-          <div class="news-summary">The global carbon capture market is set to nearly triple from $3.4 billion in 2024 to $9.6 billion by 2029, fuelled by government mandates and voluntary carbon market demand. Three firms — Climeworks, Carbon Engineering, and SLB Capturi — currently dominate direct air capture.</div>
-          <div class="news-footer"><span class="news-source">Source: Science Times</span></div>
+          <span class="news-tag tag-green">✅ Green Signal</span>
+          <div class="news-headline">
+            <a href="https://www.weforum.org/stories/2026/01/scale-carbon-capture-storage-climate-action/" target="_blank">Northern Lights CCS Now Storing 800,000 Tons of CO₂ Per Year — A Blueprint for European Infrastructure</a>
+          </div>
+          <div class="news-summary">Norway's Northern Lights project — a joint venture of Equinor, Shell, and TotalEnergies — is now capturing, liquefying, and permanently storing up to 800,000 tons of CO₂ annually, equivalent to taking 174,000 cars off the road each year. Designed to scale to 12 million tons over 15 years, it is widely regarded as the template for future European cross-border CCS networks.</div>
+          <div class="news-source">Source: World Economic Forum / Northern Lights JV</div>
         </div>
       </div>
 
       <div class="section-divider"></div>
 
-      <!-- GLOBAL: SaaS & AI -->
+      <!-- SaaS & AI -->
       <div class="topic-block">
         <div class="topic-header">
           <span class="topic-badge saas">🤖 SaaS Tools &amp; AI for ESG</span>
@@ -493,29 +322,30 @@
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-green">🌱 Green Signal</span>
-          <div class="news-headline"><a href="https://esgnews.com/google-launches-30m-ai-for-science-initiative-to-advance-climate-and-global-research/" target="_blank">Google Pumps $30M Into AI for Climate Science — DeepMind Joins the Fight</a></div>
-          <div class="news-summary">Google's new $30M "AI for Science" initiative directs compute credits and research grants to climate modelling, biodiversity tracking, and clean energy R&amp;D, tapping Google DeepMind and Google Cloud. Big Tech meets planetary emergency — and it's not just for the PR.</div>
-          <div class="news-footer"><span class="news-source">Source: ESG News</span></div>
+          <span class="news-tag tag-hot">🔥 Hot</span>
+          <div class="news-headline">
+            <a href="https://esgnews.com/google-launches-30m-ai-for-science-initiative-to-advance-climate-and-global-research/" target="_blank">Google Launches $30M AI for Science Initiative Targeting Climate Research and ESG Data Gaps</a>
+          </div>
+          <div class="news-summary">Google has unveiled a $30 million AI for Science initiative aimed at accelerating climate research, environmental modelling, and sustainability data generation using its DeepMind and Gemini infrastructure. The programme positions Google as an active contributor to ESG data ecosystems — not merely a reporter of its own sustainability metrics — signalling growing big-tech investment in climate intelligence infrastructure.</div>
+          <div class="news-source">Source: ESG News / Google</div>
         </div>
 
         <div class="news-item">
-          <span class="news-tag tag-icymi">📬 ICYMI</span>
-          <div class="news-headline"><a href="https://www.esgtoday.com/guest-post-2026-the-year-ai-and-sustainability-become-a-unified-performance-engine/" target="_blank">81% of Executives Use AI to Hit Sustainability Goals — Deloitte Survey</a></div>
-          <div class="news-summary">Deloitte's 2025 Global C-suite Sustainability Report finds 81% of executives already use AI for sustainability — with "governed AI" (clear rules, permissions, human oversight) emerging as the dominant paradigm for ESG data management, supply chain risk tracking, and automated regulatory reporting.</div>
-          <div class="news-footer"><span class="news-source">Source: ESG Today / Deloitte</span></div>
+          <span class="news-tag tag-signal">📡 In Numbers</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/guest-post-2026-the-year-ai-and-sustainability-become-a-unified-performance-engine/" target="_blank">81% of Global Executives Now Using AI for Sustainability Goals — Deloitte Survey</a>
+          </div>
+          <div class="news-summary">Deloitte's 2025 Global C-suite Sustainability Report reveals that 81% of executives worldwide already deploy AI tools in their ESG strategies — from automated emissions tracking to supply chain risk scoring. ESG Today characterises 2026 as the year AI and sustainability fully merge into a single operating model, moving from parallel workstreams to an integrated performance engine across finance, operations, and compliance.</div>
+          <div class="news-source">Source: ESG Today / Deloitte</div>
         </div>
       </div>
 
     </div>
   </div>
-  <!-- END GLOBAL -->
 
-  <!-- FOOTER -->
   <div class="footer-block">
-    <strong>The ESG Dispatch</strong> · Auto-curated by Claude · 8 March 2026<br>
-    <span style="font-size:0.78rem; margin-top:6px; display:block;">17 stories · All sources linked above · For informational purposes — verify before you quote us in a boardroom.</span>
+    <strong>The ESG Dispatch</strong> · Auto-curated by Claude · Sunday, 8 March 2026<br>
+    <span style="font-size:0.78rem;">18 stories · All sources linked above · For informational purposes only.</span>
   </div>
-
 </body>
 </html>
