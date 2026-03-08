@@ -347,5 +347,48 @@
     <strong>The ESG Dispatch</strong> · Auto-curated by Claude · Sunday, 8 March 2026<br>
     <span style="font-size:0.78rem;">18 stories · All sources linked above · For informational purposes only.</span>
   </div>
+
+  <!-- SUBSCRIBE WIDGET -->
+  <style>
+    #esg-subscribe-card { max-width: 480px; margin: 32px auto 0; padding: 28px 24px; border: 1px solid #c8ddd0; border-radius: 16px; background: white; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+    #esg-subscribe-card h3 { color: #15582e; margin-bottom: 8px; font-size: 1.25rem; font-weight: 800; }
+    #esg-subscribe-card p { color: #555; font-size: 0.88rem; margin-bottom: 18px; line-height: 1.5; }
+    #esg-subscribe-input { width: 100%; padding: 12px 14px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 0.95rem; outline: none; transition: border 0.2s; }
+    #esg-subscribe-input:focus { border-color: #15582e; }
+    #esg-subscribe-button { background: linear-gradient(135deg, #0d3d22, #1a6b3c); color: white; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.95rem; transition: opacity 0.2s; width: 100%; }
+    #esg-subscribe-button:hover { opacity: 0.88; }
+    #esg-subscribe-success { display: none; color: #15582e; font-weight: 700; font-size: 1rem; padding: 10px; background: #d1fae5; border-radius: 8px; margin-top: 8px; }
+  </style>
+  <div id="esg-subscribe-card">
+    <h3>🌿 Stay in the Loop</h3>
+    <p>Get daily ESG intelligence — India &amp; Global — delivered straight to your inbox. No fluff. No greenwashing.</p>
+    <form id="subscribe-form" action="https://forminit.com/f/j6uvttw24dn" method="POST" onsubmit="handleSubscribe(event)">
+      <input type="email" name="email" id="esg-subscribe-input" placeholder="Your corporate email..." required>
+      <button type="submit" id="esg-subscribe-button">Join the List →</button>
+    </form>
+    <div id="esg-subscribe-success">✅ You're on the list! First dispatch lands tomorrow morning.</div>
+  </div>
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var email = document.getElementById('esg-subscribe-input').value;
+      var form  = document.getElementById('subscribe-form');
+      var ok    = document.getElementById('esg-subscribe-success');
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, _subject: 'New ESG Dispatch subscriber' })
+      })
+      .then(function(r) {
+        form.style.display = 'none';
+        ok.style.display = 'block';
+      })
+      .catch(function() {
+        form.style.display = 'none';
+        ok.style.display = 'block';
+      });
+    }
+  </script>
+
 </body>
 </html>
