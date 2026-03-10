@@ -1,338 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 The ESG Dispatch — 9 March 2026</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; background: #f0f4f1; color: #1a1a2e; }
-    .masthead { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; }
-    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.08; }
-    .masthead-eyebrow { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
-    .masthead h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .masthead h1 span { color: #7dffa3; }
-    .masthead-tagline { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 20px; }
-    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; }
-    .divider { height: 3px; background: linear-gradient(90deg, #15582e, #4caf7d); border-radius: 2px; margin: 14px 0 24px; }
-    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 28px; }
-    .pill { background: white; border-radius: 30px; padding: 8px 18px; font-size: 0.83rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 6px; }
-    .pill-num { font-size: 1.1rem; font-weight: 800; color: #15582e; }
-    .region-section { background: white; border-radius: 16px; padding: 0; margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-    .region-header { padding: 20px 28px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 14px; }
-    .region-header.india { background: linear-gradient(90deg, #fff8f0, #fff); border-left: 5px solid #FF9933; }
-    .region-header.global { background: linear-gradient(90deg, #f0f9f4, #fff); border-left: 5px solid #15582e; }
-    .region-flag { font-size: 2.2rem; }
-    .region-title-block h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin-bottom: 2px; }
-    .region-title-block .region-sub { font-size: 0.82rem; color: #888; font-style: italic; }
-    .region-content { padding: 22px 28px; }
-    .topic-block { margin-bottom: 28px; }
-    .topic-block:last-child { margin-bottom: 0; }
-    .topic-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
-    .topic-badge { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: white; padding: 5px 14px; border-radius: 6px; }
-    .regulatory { background: #2563eb; }
-    .company { background: #7c3aed; }
-    .carbon { background: #059669; }
-    .saas { background: #d97706; }
-    .topic-quip { font-size: 0.83rem; color: #888; font-style: italic; }
-    .news-item { border-left: 3px solid #e5e7eb; padding: 11px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; background: #fafafa; }
-    .news-item:last-child { margin-bottom: 0; }
-    .news-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
-    .tag-icymi { background: #dbeafe; color: #1e40af; }
-    .tag-hot { background: #fee2e2; color: #b91c1c; }
-    .tag-green { background: #d1fae5; color: #065f46; }
-    .tag-watch { background: #fef3c7; color: #92400e; }
-    .tag-signal { background: #ede9fe; color: #5b21b6; }
-    .tag-scoop { background: #fce7f3; color: #9d174d; }
-    .news-headline { font-weight: 700; font-size: 0.97rem; margin-bottom: 5px; line-height: 1.4; }
-    .news-headline a { color: #15582e; text-decoration: none; }
-    .news-headline a:hover { text-decoration: underline; }
-    .news-summary { color: #4b5563; font-size: 0.9rem; line-height: 1.65; margin-bottom: 6px; }
-    .news-source { font-size: 0.76rem; color: #9ca3af; font-style: italic; }
-    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); margin: 20px 0; }
-    .footer-block { background: #0d3d22; color: rgba(255,255,255,0.7); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; }
-    .footer-block strong { color: #7dffa3; }
-  </style>
+  <title>The ESG Dispatch - Monday, 9 March 2026</title>
 </head>
-<body>
+<body style="margin:0;padding:0;background:#f5f7f6;font-family:Arial,sans-serif;color:#1f2937;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f5f7f6;padding:24px 0;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="720" cellspacing="0" cellpadding="0" style="width:720px;max-width:95%;background:#ffffff;border-radius:12px;overflow:hidden;">
+          <tr>
+            <td style="background-color:#0b3d2e;background:linear-gradient(135deg,#0b3d2e,#1f7a4d);padding:28px 30px;color:#ffffff;">
+              <div style="font-size:13px;letter-spacing:1px;opacity:.85;text-transform:uppercase;">Daily ESG Intelligence</div>
+              <h1 style="margin:10px 0 6px 0;font-size:30px;line-height:1.2;">The ESG Dispatch</h1>
+              <div style="font-size:14px;opacity:.9;">Monday, 9 March 2026 | India + Global</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 30px;">
+              <h2 style="margin:0 0 10px 0;font-size:22px;color:#0f5132;">India Highlights</h2>
+              <ol style="margin:0;padding-left:20px;line-height:1.6;">
+                <li><strong>SEBI forms working group on ESG rating provider rules (Feb 18, 2026).</strong> India's market regulator launched a review of the ERP framework to tighten consistency and oversight.<br><a href="https://www.sebi.gov.in/media-and-notifications/press-releases/feb-2026/sebi-constitutes-working-group-to-review-esg-rating-providers-erps-regulatory-framework_99864.html">Source</a></li>
+                <li><strong>Union Budget 2026 allocates Rs 20,000 crore for CCUS scale-up.</strong> The plan targets hard-to-abate sectors including power, steel, cement and refineries.<br><a href="https://www.business-standard.com/budget/news/union-budget-2026-carbon-capture-tech-ccus-scheme-emissions-sitharaman-126020100400_1.html">Source</a></li>
+                <li><strong>Microsoft signs carbon removal deal with India's Varaha (Jan 15, 2026).</strong> The offtake covers more than 100,000 tons via biochar projects tied to farmer participation in Maharashtra.<br><a href="https://techcrunch.com/2026/01/15/microsoft-taps-indias-varaha-for-asia-first-durable-carbon-removal-offtake/">Source</a></li>
+                <li><strong>SEBI says AI tool "Sudarshan" removed 1.2 lakh misleading finfluencer posts.</strong> The enforcement push signals stronger AI-enabled market supervision relevant to governance and investor protection.<br><a href="https://m.economictimes.com/markets/stocks/news/sebi-deploys-ai-tool-sudarshan-removes-1-2-lakh-misleading-finfluencer-posts-tuhin-kanta-pandey/articleshow/128939153.cms">Source</a></li>
+              </ol>
 
-  <!-- MASTHEAD -->
-  <div class="masthead">
-    <div class="masthead-eyebrow">Daily ESG Intelligence</div>
-    <h1>The <span>ESG</span> Dispatch</h1>
-    <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
-    <div class="masthead-meta">
-      <span>📅 Monday, 9 March 2026</span>
-      <span>🌍 India + Global</span>
-      <span>📰 16 stories</span>
-    </div>
-  </div>
-  <div class="divider"></div>
-  <div class="pill-row">
-    <div class="pill">🇮🇳 <span class="pill-num">8</span> India</div>
-    <div class="pill">🌍 <span class="pill-num">8</span> Global</div>
-    <div class="pill">📋 <span class="pill-num">4</span> Regulatory</div>
-    <div class="pill">🏢 <span class="pill-num">4</span> Big Moves</div>
-    <div class="pill">♻️ <span class="pill-num">4</span> Carbon Tech</div>
-    <div class="pill">🤖 <span class="pill-num">4</span> SaaS &amp; AI</div>
-  </div>
+              <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0;">
 
-  <!-- INDIA SECTION -->
-  <div class="region-section">
-    <div class="region-header india">
-      <span class="region-flag">🇮🇳</span>
-      <div class="region-title-block">
-        <h2>India</h2>
-        <div class="region-sub">Where policy sprints and sustainability ambitions collide.</div>
-      </div>
-    </div>
-    <div class="region-content">
+              <h2 style="margin:0 0 10px 0;font-size:22px;color:#0f5132;">Global Highlights</h2>
+              <ol style="margin:0;padding-left:20px;line-height:1.6;">
+                <li><strong>EU Council gives final green light to CSRD/CSDDD simplification (Feb 24, 2026).</strong> The package reduces reporting burden and narrows trickle-down obligations for smaller firms.<br><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/02/24/council-signs-off-simplification-of-sustainability-reporting-and-due-diligence-requirements-to-boost-eu-competitiveness/pdf/">Source</a></li>
+                <li><strong>Sustainability Omnibus published in the EU Official Journal (Feb 27, 2026).</strong> The directive enters into force on March 18, 2026 and sets transposition timelines for member states.<br><a href="https://www.lw.com/en/insights/eu-sustainability-omnibus-published-in-the-official-journal">Source</a></li>
+                <li><strong>Google joins a superpollutant initiative with at least  by 2030.</strong> The coalition with Amazon and Salesforce targets methane and refrigerant gases for near-term cooling impact.<br><a href="https://dataconomy.com/2026/03/06/google-pledges-50m-to-fight-superpollutants-through-2030/">Source</a></li>
+                <li><strong>Datamaran launches standalone ESG regulatory monitoring (Feb 25, 2026).</strong> The release combines AI analysis with curated regulatory intelligence for legal and sustainability teams.<br><a href="https://www.finanzwire.com/press-release/datamaran-launches-regulatory-monitoring-solution-to-help-companies-navigate-esg-complexity-cqP7s81eMO4">Source</a></li>
+              </ol>
 
-      <!-- India: Regulatory & Policy -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge regulatory">📋 Regulatory &amp; Policy</span>
-          <span class="topic-quip">"The rulebook just got a lot thicker."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-hot">🔥 Breaking</span>
-          <div class="news-headline"><a href="https://www.esgtoday.com/india-launches-review-of-esg-ratings-provider-regulations/" target="_blank">SEBI Constitutes Working Group to Overhaul ESG Ratings Framework</a></div>
-          <div class="news-summary">India's market regulator SEBI has formed a multi-stakeholder working group — including issuers, investors, ESG rating providers, and academics — to comprehensively review and improve the existing ESG Ratings Provider regulations. The review focuses on boosting transparency, reliability, and investor confidence in ESG scores that increasingly shape capital flows across the country.</div>
-          <div class="news-source">Source: ESG Today</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-watch">📌 Watch</span>
-          <div class="news-headline"><a href="https://www.ropesgray.com/en/insights/viewpoints/102l04y/indian-parliamentary-committee-recommends-enhancements-to-csr-and-esg-legislation" target="_blank">Parliamentary Committee Calls for Dedicated ESG Oversight Body and Stronger Directors' Duties</a></div>
-          <div class="news-summary">India's Parliamentary Standing Committee on Finance has recommended creating a dedicated ESG oversight body under the Ministry of Corporate Affairs and amending the Companies Act to enshrine ESG objectives as part of directors' fiduciary duties. The committee also called for mandatory independent ESG committees on company boards — modelled after audit committees — signalling a major legislative upgrade on the horizon.</div>
-          <div class="news-source">Source: Ropes &amp; Gray / Parliamentary Report</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- India: Large Company Actions -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge company">🏢 Large Company Actions</span>
-          <span class="topic-quip">"Big moves. Bigger stakes."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-hot">🏆 Top Performer</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/content/press-releases-ani/lupin-ranks-no-1-globally-in-pharma-tops-all-sectors-in-india-in-s-p-global-esg-assessment-2025-126030600940_1.html" target="_blank">Lupin Scores 91/100 in S&amp;P ESG Assessment, Tops India and Global Pharma</a></div>
-          <div class="news-summary">Indian pharmaceutical giant Lupin Limited has been ranked the world's top pharmaceutical company in the S&amp;P Global Corporate Sustainability Assessment (CSA), achieving a near-perfect score of 91 out of 100 — and placing first among all sectors in India. Included in the Sustainability Yearbook 2026 for the third consecutive year, Lupin's result sets a new benchmark for ESG performance in Indian industry.</div>
-          <div class="news-source">Source: Business Standard / S&amp;P Global CSA</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">🟢 Milestone</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/content/press-releases-ani/iifl-finance-scores-46-in-first-s-p-global-sustainability-assessment-registers-a-15-point-improvement-126030501172_1.html" target="_blank">IIFL Finance Posts 46-Point Score in Debut S&amp;P Global Sustainability Assessment</a></div>
-          <div class="news-summary">Leading NBFC IIFL Finance has scored 46 in its very first participation in the S&amp;P Global Corporate Sustainability Assessment — a sharp jump from its earlier internal baseline of 31 — reflecting a shift from disclosure-led compliance to genuinely embedded ESG performance across operations. The company's debut places it ahead of many Indian financial peers and signals rising investor confidence.</div>
-          <div class="news-source">Source: Business Standard</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- India: Carbon Capture & Decarbonisation -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge carbon">♻️ Carbon Capture &amp; Decarbonisation</span>
-          <span class="topic-quip">"Lab coats working overtime."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-signal">💰 Budget Signal</span>
-          <div class="news-headline"><a href="https://www.downtoearth.org.in/climate-change/budget-2026-27-sets-aside-rs-20000-crore-to-accelerate-carbon-capture-in-heavy-industry" target="_blank">India's Union Budget 2026-27 Earmarks ₹20,000 Crore for CCUS Across Heavy Industries</a></div>
-          <div class="news-summary">In a landmark first, India's Union Budget 2026-27 ring-fences approximately ₹20,000 crore (~$2.2 billion) over five years specifically for Carbon Capture, Utilisation and Storage (CCUS) across five hard-to-abate sectors: power, steel, cement, refineries, and chemicals. With ₹500 crore allocated in the first year and CBAM pressure rising, this signals India's intent to decarbonise industry without sacrificing development.</div>
-          <div class="news-source">Source: Down to Earth / Carbon Brief</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">🔬 Milestone</span>
-          <div class="news-headline"><a href="https://www.business-standard.com/industry/news/budget-2026-backs-decarbonisation-clean-energy-supply-chains-126020301564_1.html" target="_blank">NTPC and IIT Bombay Complete India's First CO₂ Storage Test Well in Jharkhand</a></div>
-          <div class="news-summary">NTPC Limited, in collaboration with IIT Bombay, has completed the country's first CO₂ geological storage test well in Jharkhand — with a second monitoring well currently underway. While modest in scope, the milestone is foundational for India's CCUS ambitions: underground geological storage is the backbone of any credible carbon capture ecosystem, and this test lays the groundwork for future commercial-scale projects.</div>
-          <div class="news-source">Source: Business Standard / ORF America</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- India: SaaS & AI for ESG -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge saas">🤖 SaaS Tools &amp; AI for ESG</span>
-          <span class="topic-quip">"The algorithm has opinions about your emissions."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-signal">📈 Trend</span>
-          <div class="news-headline"><a href="https://www.freepressjournal.in/latest-news/the-end-of-greenwashing-why-2026-is-the-year-of-strategic-esg-sustainability-in-india" target="_blank">Indian Enterprises Surge on AI-Driven ESG Monitoring as Greenwashing Era Ends</a></div>
-          <div class="news-summary">Indian companies are rapidly deploying AI tools to track emissions, water consumption, and labour standards in real time — often across complex multi-tier supplier networks. With global ESG investments approaching $8 trillion in 2026 and SEBI mandating audit-grade disclosures, firms embracing AI-powered ESG monitoring are outperforming peers by up to 12% in cumulative returns over two years.</div>
-          <div class="news-source">Source: Free Press Journal</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-icymi">💡 Insight</span>
-          <div class="news-headline"><a href="https://www.legal500.com/developments/thought-leadership/climate-change-and-esg-considerations-in-indias-ai-driven-future/" target="_blank">India's Green Taxonomy + AI Could Make the Country a Global ESG Tech Leader</a></div>
-          <div class="news-summary">Experts argue that India's emerging Green Taxonomy framework, if backed by AI-based measurement, reporting, and verification systems, could dramatically cut greenwashing and compliance friction. Satellite-backed land-use monitoring, AI-driven climate risk scoring, and automated ESG data validation are emerging as key capabilities that position Indian technology firms to lead sustainable AI deployment globally.</div>
-          <div class="news-source">Source: Legal 500 / CXO Today</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- GLOBAL SECTION -->
-  <div class="region-section">
-    <div class="region-header global">
-      <span class="region-flag">🌍</span>
-      <div class="region-title-block">
-        <h2>Global</h2>
-        <div class="region-sub">The world's daily balancing act between profit and planet.</div>
-      </div>
-    </div>
-    <div class="region-content">
-
-      <!-- Global: Regulatory & Policy -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge regulatory">📋 Regulatory &amp; Policy</span>
-          <span class="topic-quip">"Governments doing government things — but greener."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-watch">⏸️ Watch</span>
-          <div class="news-headline"><a href="https://blog.qima.com/sustainability/esg-reporting-2025-2026" target="_blank">EU's CSRD "Stop-the-Clock" Delay Reshapes Global Sustainability Reporting Calendar</a></div>
-          <div class="news-summary">The European Union has approved a two-year delay to the Corporate Sustainability Reporting Directive (CSRD), pushing first mandatory reporting to FY 2027 for EU companies. Alongside a scope reduction of approximately 90% and the removal of listed SMEs from the mandate, the "Stop-the-Clock" measure aims to reduce regulatory burden — but the EU's Environmental Crime Directive still requires national transposition by 21 May 2026, keeping pressure on corporates.</div>
-          <div class="news-source">Source: QIMA / Hogan Lovells</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-signal">🐉 Policy Move</span>
-          <div class="news-headline"><a href="https://www.hoganlovells.com/en/publications/esg-compliance-current-state-global-trends-and-outlook-2026" target="_blank">China's Unified Green Finance Catalogue Forces Banks and Corporates to Reassess Green Labels</a></div>
-          <div class="news-summary">China's People's Bank of China, the National Financial Regulatory Administration, and the CSRC jointly issued the Green Finance Endorsed Project Catalogue (2025 Edition) — now the single national taxonomy for all green financial products. The tighter definitions are forcing financial institutions to reassess existing green-labelled assets, expanding eligible categories to include industrial decarbonisation and recycling while reducing greenwashing risk across the world's second-largest economy.</div>
-          <div class="news-source">Source: Hogan Lovells</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- Global: Large Company Actions -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge company">🏢 Large Company Actions</span>
-          <span class="topic-quip">"When boardrooms feel the heat — literally."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-watch">📅 Deadline</span>
-          <div class="news-headline"><a href="https://www.lw.com/en/insights/esg-and-sustainability-insights-10-things-that-should-be-top-of-mind-in-2026" target="_blank">Chinese Listed Companies Face 30 April Deadline for First ISSB-Aligned Sustainability Reports</a></div>
-          <div class="news-summary">Shanghai, Shenzhen, and Beijing stock exchanges have begun enforcing their mandatory sustainability reporting guidelines, with a hard 30 April 2026 deadline for companies to publish their 2025 sustainability reports aligned with ISSB standards. This marks the first mandatory ESG reporting wave in China, bringing hundreds of major companies into scope simultaneously and signalling that Asian capital markets are rapidly aligning with global disclosure norms.</div>
-          <div class="news-source">Source: Latham &amp; Watkins</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-hot">⚖️ Legal</span>
-          <div class="news-headline"><a href="https://www.mofo.com/resources/insights/260219-2026-trends-predictions-sustainability-corporate-responsibility" target="_blank">French Courts Rule Corporate Carbon Neutrality Claims Can Constitute Greenwashing</a></div>
-          <div class="news-summary">In a significant precedent for global corporate sustainability communications, French courts have ruled that public statements about carbon neutrality and energy transition can amount to greenwashing when they misrepresent a company's actual trajectory or investment strategy. The ruling is sending shockwaves through European boardrooms, where marketing-driven sustainability claims are now firmly in the legal crosshairs — particularly as ESG litigation escalates across multiple jurisdictions.</div>
-          <div class="news-source">Source: Morrison Foerster</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- Global: Carbon Capture & Decarbonisation -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge carbon">♻️ Carbon Capture &amp; Decarbonisation</span>
-          <span class="topic-quip">"Sucking carbon from the air like it owes us money."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">🌊 Live</span>
-          <div class="news-headline"><a href="https://carboncredits.com/top-3-carbon-capture-leaders-to-drive-the-net-zero-race-in-2026/" target="_blank">Northern Lights (Norway) Scales to 800,000 Tonnes CO₂ Per Year — World's First Open-Access Storage Hub</a></div>
-          <div class="news-summary">Norway's Northern Lights project — the world's first open-source CO₂ transport and storage infrastructure — is now operating at capacity to capture, liquefy, and permanently store up to 800,000 tonnes of CO₂ annually beneath the North Sea seabed. Over its 15-year lifespan, the project will sequester up to 12 million tonnes of CO₂, while €5 billion in EU funding continues to push carbon capture from scattered pilots toward coordinated industrial-scale deployment.</div>
-          <div class="news-source">Source: Carbon Credits / Science Times</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-scoop">🔬 Breakthrough</span>
-          <div class="news-headline"><a href="https://www.worldcement.com/europe-cis/10122025/cool-planet-technologies-demonstrates-breakthrough-success-in-membrane-carbon-capture/" target="_blank">Cool Planet Technologies Validates Third-Generation Membrane Carbon Capture Module</a></div>
-          <div class="news-summary">Cool Planet Technologies has announced the successful testing of its third-generation carbon capture membrane module, marking what the company describes as a transformative milestone in the industrial scaling of its technology. The advance is significant for hard-to-abate industries like cement, where conventional CCS approaches remain costly — membrane-based capture promises a lighter-footprint, more scalable alternative for industrial decarbonisation.</div>
-          <div class="news-source">Source: World Cement</div>
-        </div>
-      </div>
-
-      <div class="section-divider"></div>
-
-      <!-- Global: SaaS & AI for ESG -->
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge saas">🤖 SaaS Tools &amp; AI for ESG</span>
-          <span class="topic-quip">"Even the robots are going green now."</span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-green">💚 Launch</span>
-          <div class="news-headline"><a href="https://esgnews.com/google-launches-30m-ai-for-science-initiative-to-advance-climate-and-global-research/" target="_blank">Google Launches $30M AI for Science Initiative Targeting Climate and Sustainability Research</a></div>
-          <div class="news-summary">Google.org has opened applications for its $30 million AI for Science initiative, positioning AI as a force multiplier for complex global challenges including climate science and public health. Selected organisations will receive financial backing, engineering support, technical mentorship, and access to Google's infrastructure to scale their solutions — underscoring the growing convergence of AI capability and ESG ambition at the world's largest tech companies.</div>
-          <div class="news-source">Source: ESG News</div>
-        </div>
-
-        <div class="news-item">
-          <span class="news-tag tag-signal">📊 Trend</span>
-          <div class="news-headline"><a href="https://www.dcycle.io/post/best-esg-software" target="_blank">"Governed AI" Emerges as the New Standard for Enterprise ESG Platforms in 2026</a></div>
-          <div class="news-summary">A clear shift is underway in European and global ESG software: platforms are moving away from simple checklists toward governed AI — systems that apply artificial intelligence with clear rules, permissions, audit trails, and human oversight, ensuring that ESG data used in official regulatory reports is traceable and defensible. With 81% of executives already using AI for sustainability goals (Deloitte, 2025), the focus is now on quality and accountability rather than just adoption.</div>
-          <div class="news-source">Source: Dcycle / ESG Today</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="footer-block">
-    <strong>The ESG Dispatch</strong> · Monday, 9 March 2026<br>
-    <span style="font-size:0.78rem;">16 stories · All sources linked above · For informational purposes only.</span>
-  </div>
-
-  <!-- SUBSCRIBE WIDGET -->
-  <style>
-    #esg-subscribe-card { max-width: 480px; margin: 32px auto 0; padding: 28px 24px; border: 1px solid #c8ddd0; border-radius: 16px; background: white; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
-    #esg-subscribe-card h3 { color: #15582e; margin-bottom: 8px; font-size: 1.25rem; font-weight: 800; }
-    #esg-subscribe-card p { color: #555; font-size: 0.88rem; margin-bottom: 18px; line-height: 1.5; }
-    #esg-subscribe-input { width: 100%; padding: 12px 14px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 0.95rem; outline: none; transition: border 0.2s; }
-    #esg-subscribe-input:focus { border-color: #15582e; }
-    #esg-subscribe-button { background: linear-gradient(135deg, #0d3d22, #1a6b3c); color: white; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.95rem; transition: opacity 0.2s; width: 100%; }
-    #esg-subscribe-button:hover { opacity: 0.88; }
-    #esg-subscribe-success { display: none; color: #15582e; font-weight: 700; font-size: 1rem; padding: 10px; background: #d1fae5; border-radius: 8px; margin-top: 8px; }
-  </style>
-  <div id="esg-subscribe-card">
-    <h3>🌿 Stay in the Loop</h3>
-    <p>Get daily ESG intelligence — India &amp; Global — delivered straight to your inbox. No fluff. No greenwashing.</p>
-    <form id="subscribe-form" action="https://forminit.com/f/j6uvttw24dn" method="POST" onsubmit="handleSubscribe(event)">
-      <input type="email" name="email" id="esg-subscribe-input" placeholder="Your corporate email..." required>
-      <button type="submit" id="esg-subscribe-button">Join the List →</button>
-    </form>
-    <div id="esg-subscribe-success">✅ You're on the list! First dispatch lands tomorrow morning.</div>
-  </div>
-  <script>
-    function handleSubscribe(e) {
-      e.preventDefault();
-      var email = document.getElementById('esg-subscribe-input').value;
-      var form  = document.getElementById('subscribe-form');
-      var ok    = document.getElementById('esg-subscribe-success');
-      fetch(form.action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ email: email, _subject: 'New ESG Dispatch subscriber' })
-      })
-      .then(function(r) { form.style.display = 'none'; ok.style.display = 'block'; })
-      .catch(function()  { form.style.display = 'none'; ok.style.display = 'block'; });
-    }
-  </script>
-
+              <p style="margin:24px 0 0 0;color:#4b5563;font-size:13px;line-height:1.6;">
+                You are receiving this newsletter because you subscribed to The ESG Dispatch.<br>
+                Unsubscribe anytime: <a href="{unsubscribe}">{unsubscribe}</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
