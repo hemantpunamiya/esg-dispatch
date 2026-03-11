@@ -2,752 +2,286 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 The ESG Dispatch — 2026-03-11</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 The ESG Dispatch — 2026-03-11</title>
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td, h1, h2, p, a, span, div { font-family: 'Segoe UI', Arial, sans-serif !important; }
+    </style>
+    <![endif]-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f1;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
 
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 60px;
-      background: #f0f4f1;
-      color: #1a1a2e;
-    }
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
 
-    .masthead {
-      background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%);
-      color: white;
-      border-radius: 18px;
-      padding: 36px 36px 28px;
-      margin-bottom: 10px;
-      position: relative;
-      overflow: hidden;
-    }
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
 
-    .masthead::before {
-      content: "🌱";
-      font-size: 140px;
-      position: absolute;
-      right: -10px;
-      top: -20px;
-      opacity: 0.08;
-    }
+        .content-table {
+            width: 100% !important;
+            max-width: 600px !important;
+            margin: 0 auto;
+        }
 
-    .masthead-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      opacity: 0.7;
-      margin-bottom: 8px;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    .masthead h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
+        @media only screen and (max-width: 600px) {
+            .content-table {
+                width: 100% !important;
+                padding: 10px !important;
+            }
 
-    .masthead h1 span {
-      color: #7dffa3;
-    }
-
-    .masthead-tagline {
-      font-size: 1rem;
-      opacity: 0.8;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .masthead-meta {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: 0.82rem;
-      opacity: 0.7;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 16px;
-    }
-
-    .divider {
-      height: 3px;
-      background: linear-gradient(90deg, #15582e, #4caf7d);
-      border-radius: 2px;
-      margin: 14px 0 24px;
-    }
-
-    .pill-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 18px 0 28px;
-    }
-
-    .pill {
-      background: white;
-      border-radius: 30px;
-      padding: 8px 18px;
-      font-size: 0.83rem;
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .pill-num {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #15582e;
-    }
-
-    .region-section {
-      background: white;
-      border-radius: 16px;
-      padding: 0;
-      margin-bottom: 28px;
-      overflow: hidden;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
-    }
-
-    .region-header {
-      padding: 20px 28px 18px;
-      border-bottom: 1px solid #f0f0f0;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .region-header.india {
-      background: linear-gradient(90deg, #fff8f0, #fff);
-      border-left: 5px solid #FF9933;
-    }
-
-    .region-header.global {
-      background: linear-gradient(90deg, #f0f9f4, #fff);
-      border-left: 5px solid #15582e;
-    }
-
-    .region-flag {
-      font-size: 2.2rem;
-    }
-
-    .region-title-block h2 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #1a1a2e;
-      margin-bottom: 2px;
-    }
-
-    .region-title-block .region-sub {
-      font-size: 0.82rem;
-      color: #888;
-      font-style: italic;
-    }
-
-    .region-content {
-      padding: 22px 28px;
-    }
-
-    .topic-block {
-      margin-bottom: 28px;
-    }
-
-    .topic-block:last-child {
-      margin-bottom: 0;
-    }
-
-    .topic-header {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-
-    .topic-badge {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-      color: white;
-      padding: 5px 14px;
-      border-radius: 6px;
-    }
-
-    .regulatory {
-      background: #2563eb;
-    }
-
-    .company {
-      background: #7c3aed;
-    }
-
-    .carbon {
-      background: #059669;
-    }
-
-    .saas {
-      background: #d97706;
-    }
-
-    .topic-quip {
-      font-size: 0.83rem;
-      color: #888;
-      font-style: italic;
-    }
-
-    .news-item {
-      border-left: 3px solid #e5e7eb;
-      padding: 11px 16px;
-      margin-bottom: 12px;
-      border-radius: 0 6px 6px 0;
-      background: #fafafa;
-    }
-
-    .news-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .news-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-
-    .tag-icymi {
-      background: #dbeafe;
-      color: #1e40af;
-    }
-
-    .tag-hot {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .tag-green {
-      background: #d1fae5;
-      color: #065f46;
-    }
-
-    .tag-watch {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .tag-signal {
-      background: #ede9fe;
-      color: #5b21b6;
-    }
-
-    .tag-scoop {
-      background: #fce7f3;
-      color: #9d174d;
-    }
-
-    .news-headline {
-      font-weight: 700;
-      font-size: 0.97rem;
-      margin-bottom: 5px;
-      line-height: 1.4;
-    }
-
-    .news-headline a {
-      color: #15582e;
-      text-decoration: none;
-    }
-
-    .news-headline a:hover {
-      text-decoration: underline;
-    }
-
-    .news-summary {
-      color: #4b5563;
-      font-size: 0.9rem;
-      line-height: 1.65;
-      margin-bottom: 6px;
-    }
-
-    .news-source {
-      font-size: 0.76rem;
-      color: #9ca3af;
-      font-style: italic;
-    }
-
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
-      margin: 20px 0;
-    }
-
-    .footer-block {
-      background: #0d3d22;
-      color: rgba(255, 255, 255, 0.7);
-      border-radius: 14px;
-      padding: 24px 28px;
-      text-align: center;
-      font-size: 0.82rem;
-      margin-top: 8px;
-    }
-
-    .footer-block strong {
-      color: #7dffa3;
-    }
-
-    .no-stories {
-      color: #aaa;
-      font-style: italic;
-      padding: 8px 16px;
-    }
-  </style>
+            .masthead {
+                padding: 30px 20px !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
-  <div style="text-align: center; padding: 10px; font-size: 0.8rem; color: #666; background: #f0f4f1;">
-    Can't see this email? <a href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-11.html"
-      style="color: #15582e; text-decoration: underline;">View it in your browser</a>.
-  </div>
-  <div class="masthead">
-    <div class="masthead-eyebrow">Daily ESG Intelligence</div>
-    <h1>The <span>ESG</span> Dispatch</h1>
-    <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
-    <div class="masthead-meta">
-      <span>🗓 Wednesday, 11 March 2026</span>
-      <span>🌍 India + Global</span>
-      <span>📰 15 stories</span>
-    </div>
-    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners"
-      style="position:absolute;bottom:20px;right:30px;height:32px;opacity:0.9;">
-  </div>
-  <div class="divider"></div>
-  <div class="pill-row">
-    <div class="pill">🇮🇳 <span class="pill-num">7</span> India</div>
-    <div class="pill">🌍 <span class="pill-num">8</span> Global</div>
-    <div class="pill">📋 <span class="pill-num">4</span> Regulatory</div>
-    <div class="pill">🏢 <span class="pill-num">4</span> Big Moves</div>
-    <div class="pill">♻️ <span class="pill-num">4</span> Carbon Tech</div>
-    <div class="pill">🤖 <span class="pill-num">3</span> SaaS &amp; AI</div>
-  </div>
-  <div class="region-section">
-    <div class="region-header india">
-      <span class="region-flag">🇮🇳</span>
-      <div class="region-title-block">
-        <h2>India</h2>
-        <div class="region-sub">Where policy sprints and sustainability ambitions collide.</div>
-      </div>
-    </div>
-    <div class="region-content">
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge regulatory">Regulatory &amp; Policy</span>
-          <span class="topic-quip">"The rulebook just got a lot thicker."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-hot">Directive</span>
-          <div class="news-headline">
-            <a href="https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/031026-india-urges-refiners-to-maximize-lpg-output-prioritize-household-sector"
-              target="_blank">India tells refiners to maximize LPG for households as Middle East war strains supply</a>
-          </div>
-          <div class="news-summary">The oil ministry ordered refiners to keep LPG focused on domestic consumers and
-            avoid converting propane/butane streams into petrochemicals while market volatility from the Middle East war
-            ramps up, locking in regulatory oversight of a critical clean cooking fuel.</div>
-          <div class="news-source">Source: S&amp;P Global Energy (10 March 2026)</div>
-        </div>
+<body style="margin: 0; padding: 0; background-color: #f0f4f1; font-family: 'Segoe UI', Arial, sans-serif;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f4f1">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table class="content-table" width="600" border="0" cellspacing="0" cellpadding="0"
+                    style="width: 600px; margin: 0 auto;">
+                    <!-- Browser Link -->
+                    <tr>
+                        <td align="center"
+                            style="padding: 10px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; color: #666666;">
+                            Can't see this email? <a
+                                href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-11.html"
+                                style="color: #15582e; text-decoration: underline;">View it in your browser</a>.
+                        </td>
+                    </tr>
 
-        <div class="news-item">
-          <span class="news-tag tag-watch">Parliament</span>
-          <div class="news-headline">
-            <a href="https://www.downtoearth.org.in/governance/as-told-to-parliament-march-9-2026-no-minor-or-medium-irrigation-project-pending-with-centre-for-environmental-clearance"
-              target="_blank">Government says no minor or medium irrigation project is awaiting environmental
-              clearance</a>
-          </div>
-          <div class="news-summary">In parliament the environment ministry confirmed it is not holding any pending
-            irrigation filings for minor or medium projects, highlighting renewed transparency while also pushing state
-            bodies to comply with plastic waste, e-waste and air-quality monitoring obligations.</div>
-          <div class="news-source">Source: Down to Earth (10 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge company">Large Company Actions</span>
-          <span class="topic-quip">"Big moves. Bigger stakes."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-green">Bond</span>
-          <div class="news-headline">
-            <a href="https://affairscloud.com/current-affairs-10-march-2026/" target="_blank">Bank of Baroda raises Rs
-              10,000 crore via domestic green infrastructure bonds</a>
-          </div>
-          <div class="news-summary">Bonds priced at a 7.1% coupon drew Rs 16,415 crore in bids—more than triple the base
-            issue—as the public sector bank became the first Indian lender to place domestic green infrastructure debt
-            for sustainable project pipelines.</div>
-          <div class="news-source">Source: AffairsCloud (10 March 2026)</div>
-        </div>
+                    <!-- Masthead -->
+                    <tr>
+                        <td class="masthead" bgcolor="#0d3d22"
+                            style="padding: 40px 30px; border-radius: 18px; color: #ffffff; background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%);">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="font-family: 'Segoe UI', Arial, sans-serif;">
+                                        <div
+                                            style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 5px;">
+                                            Daily ESG Intelligence</div>
+                                        <h1
+                                            style="margin: 0; font-size: 32px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
+                                            The <span style="color: #7dffa3;">ESG</span> Dispatch</h1>
+                                        <p
+                                            style="margin: 8px 0 20px; font-size: 16px; opacity: 0.8; font-style: italic;">
+                                            Because saving the planet deserves better headlines.</p>
+                                        <table border="0" cellspacing="0" cellpadding="0"
+                                            style="border-top: 1px solid rgba(255,255,255,0.15); width: 100%;">
+                                            <tr>
+                                                <td
+                                                    style="padding-top: 15px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; color: #ffffff; opacity: 0.7;">
+                                                    🗓 Wednesday, 11 March 2026 &nbsp;|&nbsp; 🌍 India + Global
+                                                    &nbsp;|&nbsp; 📰 15 stories
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="padding-top: 20px;">
+                                        <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp"
+                                            alt="Accelent Partners" width="140" style="display: block; opacity: 0.9;">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-        <div class="news-item">
-          <span class="news-tag tag-signal">Recognition</span>
-          <div class="news-headline">
-            <a href="https://www.tribuneindia.com/news/business/hexaware-honored-in-sp-global-sustainability-yearbook-2026"
-              target="_blank">Hexaware lands in the S&amp;P Global Sustainability Yearbook 2026 top 10%</a>
-          </div>
-          <div class="news-summary">The IT services firm scored 83 out of 100 in the 2025 CSA and joined the top 10% of
-            its peer group, reinforcing the idea that ESG assessments are becoming a competitive signal in India’s tech
-            sector.</div>
-          <div class="news-source">Source: The Tribune / PTI (10 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge carbon">Carbon Capture &amp; Decarbonisation</span>
-          <span class="topic-quip">"Lab coats working overtime."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-watch">Hydrogen</span>
-          <div class="news-headline">
-            <a href="https://economictimes.indiatimes.com/topic/decarbonisation-industries" target="_blank">Newtrace
-              raises $6.3 million to commercialize green hydrogen electrolysers</a>
-          </div>
-          <div class="news-summary">Climate-tech startup Newtrace booked capital from HDFC Bank, Mitsui Sumitomo and
-            others to scale pilot manufacturing of electrolyser electrodes, aiming to bring its lower-cost formulation
-            to commercial green hydrogen production.</div>
-          <div class="news-source">Source: The Economic Times (10 March 2026)</div>
-        </div>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
 
-        <div class="news-item">
-          <span class="news-tag tag-green">Solar</span>
-          <div class="news-headline">
-            <a href="https://www.energetica-india.net/news/roofsol-energy-signs-7-mwp-solar-ppa-with-jk-tyre"
-              target="_blank">Roofsol Energy inks 7 MWp OPEX solar PPA with JK Tyre in Uttarakhand</a>
-          </div>
-          <div class="news-summary">The rooftop deal will deliver roughly 11–12 million units of green power annually,
-            offsetting nearly 10,000 tonnes of CO₂ and lifting JK Tyre’s renewable share toward its 53%
-            energy-from-clean-target.</div>
-          <div class="news-source">Source: Energetica India (10 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge saas">SaaS Tools &amp; AI for ESG</span>
-          <span class="topic-quip">"The algorithm has opinions about your emissions."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-hot">Funding</span>
-          <div class="news-headline">
-            <a href="https://startuptalky.com/news/daily-indian-startup-funding-roundup-key-news-10-march-2026/"
-              target="_blank">Mozark raises $40 million Series B to scale AI digital-experience platform</a>
-          </div>
-          <div class="news-summary">Mozark secured $40 million in a Series B led by IFC and RMB Capitalworks to expand
-            its AI-first digital experience testing platform, giving enterprises a chance to optimise ESG-sensitive
-            customer journeys across devices and locations.</div>
-          <div class="news-source">Source: StartupTalky (10 March 2026)</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <!-- INDIA SECTION -->
+                    <tr>
+                        <td bgcolor="#ffffff"
+                            style="border-radius: 16px; border-left: 5px solid #FF9933; padding: 25px; box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="50" valign="top" style="font-size: 32px;">🇮🇳</td>
+                                    <td valign="top" style="font-family: 'Segoe UI', Arial, sans-serif;">
+                                        <h2 style="margin: 0; font-size: 22px; font-weight: 800; color: #1a1a2e;">India
+                                        </h2>
+                                        <div style="font-size: 13px; color: #888888; font-style: italic;">Where policy
+                                            sprints and sustainability ambitions collide.</div>
+                                    </td>
+                                </tr>
+                            </table>
 
-  <div class="region-section">
-    <div class="region-header global">
-      <span class="region-flag">🌍</span>
-      <div class="region-title-block">
-        <h2>Global</h2>
-        <div class="region-sub">The world's daily balancing act between profit and planet.</div>
-      </div>
-    </div>
-    <div class="region-content">
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge regulatory">Regulatory &amp; Policy</span>
-          <span class="topic-quip">"The rulebook just got a lot thicker."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-hot">SEC</span>
-          <div class="news-headline">
-            <a href="https://www.wsgr.com/en/insights/sec-issues-exemptive-order-for-section-16-reports-by-directors-and-officers-of-certain-fpis-staff-issues-new-guidance.html"
-              target="_blank">SEC grants limited Section 16 reporting relief for certain foreign private issuers</a>
-          </div>
-          <div class="news-summary">The SEC’s order lets qualifying FPI directors/officers skip Section 16 filings if
-            they already report under specified home-country disclosure regimes, buying more time for issuers still
-            aligning to the HFIA Act.</div>
-          <div class="news-source">Source: Wilson Sonsini (10 March 2026)</div>
-        </div>
+                            <div style="height: 1px; background-color: #f0f0f0; margin: 20px 0;"></div>
 
-        <div class="news-item">
-          <span class="news-tag tag-watch">CCC</span>
-          <div class="news-headline">
-            <a href="https://www.theguardian.com/environment/2026/mar/11/reaching-net-zero-by-2050-cheaper-for-uk-than-one-fossil-fuel-crisis"
-              target="_blank">UK climate advisers say hitting net zero by 2050 costs less than another fossil-fuel
-              crisis</a>
-          </div>
-          <div class="news-summary">The Climate Change Committee calculates net-zero costs at around £4 billion a
-            year—far below the hit from one more oil shock—emphasizing renewables, heat pumps and EVs as the cheapest
-            insurance against geopolitical supply risk.</div>
-          <div class="news-source">Source: The Guardian (11 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge company">Large Company Actions</span>
-          <span class="topic-quip">"Big moves. Bigger stakes."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-green">Report</span>
-          <div class="news-headline">
-            <a href="https://www.globenewswire.com/news-release/2026/03/09/3251797/0/en/Acronis-Releases-2025-ESG-Report-Highlighting-Progress-in-Sustainability-Workforce-Engagement-and-Responsible-Technology.html"
-              target="_blank">Acronis publishes its 2025 ESG report stressing workforce and governance progress</a>
-          </div>
-          <div class="news-summary">The cyber-protection firm highlights lower GHG emissions, increased transparency,
-            and employee/community investments in 2025, framing ESG disclosures as trust-building for its partners
-            during rapid AI expansion.</div>
-          <div class="news-source">Source: Acronis (9 March 2026)</div>
-        </div>
+                            <!-- Regulatory & Policy -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <span
+                                            style="background-color: #2563eb; color: #ffffff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Regulatory
+                                            & Policy</span>
+                                    </td>
+                                </tr>
+                                <!-- Item 1 -->
+                                <tr>
+                                    <td bgcolor="#fafafa"
+                                        style="border-left: 3px solid #e5e7eb; padding: 15px; border-radius: 0 8px 8px 0;">
+                                        <div
+                                            style="background-color: #fee2e2; color: #b91c1c; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px;">
+                                            DIRECTIVE</div>
+                                        <div style="font-weight: 700; font-size: 15px; margin-bottom: 5px;"><a
+                                                href="https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/031026-india-urges-refiners-to-maximize-lpg-output-prioritize-household-sector"
+                                                style="color: #15582e;">India tells refiners to maximize LPG for
+                                                households as Middle East war strains supply</a></div>
+                                        <div style="font-size: 14px; color: #4b5563; line-height: 1.6;">The oil ministry
+                                            ordered refiners to keep LPG focused on consumers to mitigate war-driven
+                                            supply risks.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                <!-- Item 2 -->
+                                <tr>
+                                    <td bgcolor="#fafafa"
+                                        style="border-left: 3px solid #e5e7eb; padding: 15px; border-radius: 0 8px 8px 0;">
+                                        <div
+                                            style="background-color: #fef3c7; color: #92400e; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px;">
+                                            PARLIAMENT</div>
+                                        <div style="font-weight: 700; font-size: 15px; margin-bottom: 5px;"><a
+                                                href="https://www.downtoearth.org.in/governance/as-told-to-parliament-march-9-2026-no-minor-or-medium-irrigation-project-pending-with-centre-for-environmental-clearance"
+                                                style="color: #15582e;">No minor irrigation project is awaiting
+                                                environmental clearance</a></div>
+                                        <div style="font-size: 14px; color: #4b5563; line-height: 1.6;">The environment
+                                            ministry confirmed no pending filings for minor or medium irrigation
+                                            projects.</div>
+                                    </td>
+                                </tr>
+                            </table>
 
-        <div class="news-item">
-          <span class="news-tag tag-signal">Financing</span>
-          <div class="news-headline">
-            <a href="https://www.ainvest.com/news/banco-santander-shares-surge-2-68-march-10-trading-436th-volume-esg-linked-loan-moves-2603/"
-              target="_blank">Banco Santander shares tick higher after ESG-linked loan boost</a>
-          </div>
-          <div class="news-summary">The bank’s shareholders cheered a €600 million ESG-linked loan for Leonardo and a
-            modest EPS beat, demonstrating that sustainable financing deals still move the stock even when macro
-            sentiment is choppy.</div>
-          <div class="news-source">Source: AInvest (10 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge carbon">Carbon Capture &amp; Decarbonisation</span>
-          <span class="topic-quip">"Lab coats working overtime."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-hot">Breakthrough</span>
-          <div class="news-headline">
-            <a href="https://www.globenewswire.com/news-release/2026/03/10/3252708/0/en/Frontieras-North-America-Announces-April-2-Groundbreaking-Ceremony-for-First-Commercial-FASForm-Plant-in-Mason-County-West-Virginia.html"
-              target="_blank">Frontieras North America lays groundwork for first commercial FASForm carbon-capture
-              plant</a>
-          </div>
-          <div class="news-summary">The $850 million Mason County facility will scale the company’s Solid Carbon
-            Fractionation process, pledging 300 full-time jobs and a zero-waste industrial setup ahead of an April 2
-            groundbreaking.</div>
-          <div class="news-source">Source: Frontieras North America (10 March 2026)</div>
-        </div>
+                            <div style="height: 1px; background-color: #f0f0f0; margin: 25px 0;"></div>
 
-        <div class="news-item">
-          <span class="news-tag tag-green">DAC</span>
-          <div class="news-headline">
-            <a href="https://esgpost.com/sustaera-reports-90-efficiency-breakthrough-in-direct-air-capture/"
-              target="_blank">Sustaera reports 90%+ efficient direct air capture after electro-thermal upgrade</a>
-          </div>
-          <div class="news-summary">The North Carolina startup’s electro-thermal DAC claims 3–5x lower capital intensity
-            and 3–4x higher operating efficiency than thermal incumbents, putting sub-$100/ton carbon removal back in
-            range.</div>
-          <div class="news-source">Source: ESG Post (10 March 2026)</div>
-        </div>
-      </div>
-      <div class="section-divider"></div>
-      <div class="topic-block">
-        <div class="topic-header">
-          <span class="topic-badge saas">SaaS Tools &amp; AI for ESG</span>
-          <span class="topic-quip">"The algorithm has opinions about your emissions."</span>
-        </div>
-        <div class="news-item">
-          <span class="news-tag tag-signal">AI</span>
-          <div class="news-headline">
-            <a href="https://simplywall.st/stocks/us/diversified-financials/nyse-msci/msci/news/mscis-ai-wealth-tools-and-esg-ratings-shift-spark-valuation"
-              target="_blank">MSCI blends AI wealth tools with ESG ratings enhancements</a>
-          </div>
-          <div class="news-summary">MSCI’s AI-powered Wealth Manager now integrates Snowden Lane analytics while the
-            firm recalibrates ESG ratings with new buffers, signaling how AI and data are being fused into client-facing
-            ESG analytics.</div>
-          <div class="news-source">Source: Simply Wall St (10 March 2026)</div>
-        </div>
+                            <!-- Large Company Actions -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <span
+                                            style="background-color: #7c3aed; color: #ffffff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Large
+                                            Company Actions</span>
+                                    </td>
+                                </tr>
+                                <!-- Item 3 -->
+                                <tr>
+                                    <td bgcolor="#fafafa"
+                                        style="border-left: 3px solid #e5e7eb; padding: 15px; border-radius: 0 8px 8px 0;">
+                                        <div
+                                            style="background-color: #d1fae5; color: #065f46; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px;">
+                                            BOND</div>
+                                        <div style="font-weight: 700; font-size: 15px; margin-bottom: 5px;"><a
+                                                href="https://affairscloud.com/current-affairs-10-march-2026/"
+                                                style="color: #15582e;">Bank of Baroda raises Rs 10,000 crore via
+                                                domestic green bonds</a></div>
+                                        <div style="font-size: 14px; color: #4b5563; line-height: 1.6;">The bank became
+                                            the first Indian lender to place domestic green infrastructure debt for
+                                            project pipelines.</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-        <div class="news-item">
-          <span class="news-tag tag-hot">AI</span>
-          <div class="news-headline">
-            <a href="https://www.diligent.com/company/newsroom/newsroom/diligent-debuts-auditai-at-iia-gam-2026"
-              target="_blank">Diligent debuts AuditAI suite at IIA GAM 2026</a>
-          </div>
-          <div class="news-summary">Diligent introduced AuditAI—AI-powered agentic capabilities for internal audit,
-            boards and legal teams—at the IIA conference, turning GRC workflows from reactive checklists into
-            continuous, risk-aligned assurance insights powered by Smart Prep 360 integration.</div>
-          <div class="news-source">Source: Diligent (10 March 2026)</div>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <tr>
+                        <td height="25"></td>
+                    </tr>
 
-  <div class="footer-block">
-    <strong>The ESG Dispatch</strong> · Wednesday, 11 March 2026<br>
-    <span style="font-size:0.78rem;">15 stories · All sources linked above · For informational purposes only.</span>
-  </div>
+                    <!-- GLOBAL SECTION -->
+                    <tr>
+                        <td bgcolor="#ffffff"
+                            style="border-radius: 16px; border-left: 5px solid #15582e; padding: 25px; box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="50" valign="top" style="font-size: 32px;">🌍</td>
+                                    <td valign="top" style="font-family: 'Segoe UI', Arial, sans-serif;">
+                                        <h2 style="margin: 0; font-size: 22px; font-weight: 800; color: #1a1a2e;">Global
+                                        </h2>
+                                        <div style="font-size: 13px; color: #888888; font-style: italic;">The world's
+                                            daily balancing act between profit and planet.</div>
+                                    </td>
+                                </tr>
+                            </table>
 
-  <style>
-    #esg-modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-    }
+                            <div style="height: 1px; background-color: #f0f0f0; margin: 20px 0;"></div>
 
-    #esg-subscribe-card {
-      position: relative;
-      max-width: 480px;
-      width: 90%;
-      margin: 0;
-      padding: 40px 32px;
-      border: none;
-      border-radius: 20px;
-      background: white;
-      text-align: center;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-    }
+                            <!-- Carbon Capture Topic -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <span
+                                            style="background-color: #059669; color: #ffffff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase;">Carbon
+                                            & Decarbonisation</span>
+                                    </td>
+                                </tr>
+                                <!-- Global Item 1 -->
+                                <tr>
+                                    <td bgcolor="#fafafa"
+                                        style="border-left: 3px solid #e5e7eb; padding: 15px; border-radius: 0 8px 8px 0;">
+                                        <div
+                                            style="background-color: #d1fae5; color: #065f46; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 5px;">
+                                            DAC</div>
+                                        <div style="font-weight: 700; font-size: 15px; margin-bottom: 5px;"><a
+                                                href="https://esgpost.com/sustaera-reports-90-efficiency-breakthrough-in-direct-air-capture/"
+                                                style="color: #15582e;">Sustaera reports 90%+ efficient direct air
+                                                capture</a></div>
+                                        <div style="font-size: 14px; color: #4b5563; line-height: 1.6;">The startup's
+                                            upgrade claims 3-4x higher efficiency, putting sub-$100/ton removal back in
+                                            range.</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-    #esg-modal-close {
-      position: absolute;
-      top: 16px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: 600;
-      color: #999;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0;
-      line-height: 1;
-      transition: color 0.2s;
-    }
+                    <tr>
+                        <td height="25"></td>
+                    </tr>
 
-    #esg-modal-close:hover {
-      color: #333;
-    }
-
-    #esg-subscribe-card h3 {
-      color: #15582e;
-      margin-bottom: 12px;
-      font-size: 1.4rem;
-      font-weight: 800;
-    }
-
-    #esg-subscribe-card p {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-
-    #esg-subscribe-input {
-      width: 100%;
-      padding: 14px 16px;
-      margin-bottom: 16px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-      transition: border 0.2s;
-    }
-
-    #esg-subscribe-input:focus {
-      border-color: #15582e;
-    }
-
-    #esg-subscribe-button {
-      background: #0d3d22;
-      background: linear-gradient(135deg, #0d3d22, #1a6b3c);
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: opacity 0.2s, transform 0.1s;
-      width: 100%;
-    }
-
-    #esg-subscribe-button:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    #esg-subscribe-success {
-      display: none;
-      color: #15582e;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 12px;
-      background: #d1fae5;
-      border-radius: 10px;
-      margin-top: 12px;
-    }
-  </style>
-  <div id="esg-modal-overlay">
-    <div id="esg-subscribe-card">
-      <button id="esg-modal-close"
-        onclick="document.getElementById('esg-modal-overlay').style.display='none'">&times;</button>
-      <h3>🌿 Stay in the Loop</h3>
-      <p>Get daily ESG intelligence — India &amp; Global — delivered straight to your inbox. No fluff. No greenwashing.
-      </p>
-      <form id="subscribe-form" action="https://forminit.com/f/j6uvttw24dn" method="POST"
-        onsubmit="handleSubscribe(event)">
-        <input type="email" name="fi-sender-email" id="esg-subscribe-input" placeholder="Your corporate email..."
-          required>
-        <button type="submit" id="esg-subscribe-button">Join the List →</button>
-      </form>
-      <div id="esg-subscribe-success">✅ You're on the list! First dispatch lands tomorrow morning.</div>
-    </div>
-  </div>
-  <script>
-    function handleSubscribe(e) {
-      e.preventDefault();
-      var form = document.getElementById('subscribe-form');
-      var ok = document.getElementById('esg-subscribe-success');
-      var data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
-      })
-        .then(function (r) {
-          if (!r.ok) { throw new Error('FormInit rejected the submission'); }
-          form.style.display = 'none';
-          ok.style.display = 'block';
-        })
-        .catch(function () {
-          alert('Subscription failed. Please try again in a minute.');
-        });
-    }
-  </script>
-  <div
-    style="max-width: 980px; margin: 20px auto; padding: 20px; font-size: 0.85rem; color: #555; line-height: 1.6; border-top: 1px solid #ddd;">
-    <p><strong>About This Digest:</strong> The ESG Dispatch is a daily curated intelligence briefing covering the most
-      critical ESG developments in India and globally. We filter through the noise to bring you actionable signals
-      across regulatory shifts, corporate sustainability moves, and climate-tech breakthroughs.</p>
-  </div>
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center"
+                            style="padding: 20px; border-top: 1px solid #ddd; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #555555; line-height: 1.6;">
+                            <p><strong>About This Digest:</strong> The ESG Dispatch is a daily curated intelligence
+                                briefing covering the most critical ESG developments in India and globally.</p>
+                            <p style="font-size: 12px; color: #999; margin-top: 15px;">
+                                <strong>The ESG Dispatch</strong> · Wednesday, 11 March 2026<br>
+                                For informational purposes only.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
