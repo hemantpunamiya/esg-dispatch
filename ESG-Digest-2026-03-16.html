@@ -6,54 +6,54 @@
   <title>🌿 The ESG Dispatch — 2026-03-16</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; background: #f0f4f1; color: #1a1a2e; }
-    .masthead { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; }
-    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.08; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; background: #0f1117; color: #e2e4e9; }
+    .masthead { background: linear-gradient(135deg, #0a2e18 0%, #134d2e 60%, #1a6b3c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; border: 1px solid #1e3a28; }
+    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.06; }
     .masthead-eyebrow { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
     .masthead h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
     .masthead h1 span { color: #7dffa3; }
     .masthead-tagline { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 20px; }
-    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; }
-    .divider { height: 3px; background: linear-gradient(90deg, #15582e, #4caf7d); border-radius: 2px; margin: 14px 0 24px; }
+    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 16px; }
+    .divider { height: 3px; background: linear-gradient(90deg, #1a6b3c, #2d9c5c); border-radius: 2px; margin: 14px 0 24px; }
     .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 28px; }
-    .pill { background: white; border-radius: 30px; padding: 8px 18px; font-size: 0.83rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 6px; }
-    .pill-num { font-size: 1.1rem; font-weight: 800; color: #15582e; }
-    .region-section { background: white; border-radius: 16px; padding: 0; margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-    .region-header { padding: 20px 28px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 14px; }
-    .region-header.india { background: linear-gradient(90deg, #fff8f0, #fff); border-left: 5px solid #FF9933; }
-    .region-header.global { background: linear-gradient(90deg, #f0f9f4, #fff); border-left: 5px solid #15582e; }
+    .pill { background: #1a1d26; border: 1px solid #2a2e3a; border-radius: 30px; padding: 8px 18px; font-size: 0.83rem; font-weight: 600; color: #c8cbd2; display: flex; align-items: center; gap: 6px; }
+    .pill-num { font-size: 1.1rem; font-weight: 800; color: #7dffa3; }
+    .region-section { background: #161922; border-radius: 16px; padding: 0; margin-bottom: 28px; overflow: hidden; border: 1px solid #22262f; }
+    .region-header { padding: 20px 28px 18px; border-bottom: 1px solid #22262f; display: flex; align-items: center; gap: 14px; }
+    .region-header.india { background: linear-gradient(90deg, #1f1a12, #161922); border-left: 5px solid #FF9933; }
+    .region-header.global { background: linear-gradient(90deg, #111a14, #161922); border-left: 5px solid #2d9c5c; }
     .region-flag { font-size: 2.2rem; }
-    .region-title-block h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin-bottom: 2px; }
-    .region-title-block .region-sub { font-size: 0.82rem; color: #888; font-style: italic; }
+    .region-title-block h2 { font-size: 1.4rem; font-weight: 800; color: #eef0f4; margin-bottom: 2px; }
+    .region-title-block .region-sub { font-size: 0.82rem; color: #8b8f9a; font-style: italic; }
     .region-content { padding: 22px 28px; }
     .topic-block { margin-bottom: 28px; }
     .topic-block:last-child { margin-bottom: 0; }
     .topic-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
     .topic-badge { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: white; padding: 5px 14px; border-radius: 6px; }
-    .regulatory { background: #2563eb; }
-    .company { background: #7c3aed; }
-    .carbon { background: #059669; }
-    .topic-quip { font-size: 0.83rem; color: #888; font-style: italic; }
-    .news-item { border-left: 3px solid #e5e7eb; padding: 11px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; background: #fafafa; }
+    .regulatory { background: #1d4ed8; }
+    .company { background: #6d28d9; }
+    .carbon { background: #047857; }
+    .topic-quip { font-size: 0.83rem; color: #8b8f9a; font-style: italic; }
+    .news-item { border-left: 3px solid #2a2e3a; padding: 11px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; background: #1c1f28; }
     .news-item:last-child { margin-bottom: 0; }
     .news-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
-    .tag-icymi { background: #dbeafe; color: #1e40af; }
-    .tag-hot { background: #fee2e2; color: #b91c1c; }
-    .tag-green { background: #d1fae5; color: #065f46; }
-    .tag-watch { background: #fef3c7; color: #92400e; }
-    .tag-signal { background: #ede9fe; color: #5b21b6; }
-    .tag-scoop { background: #fce7f3; color: #9d174d; }
+    .tag-icymi { background: #1e3a5f; color: #93c5fd; }
+    .tag-hot { background: #4c1d1d; color: #fca5a5; }
+    .tag-green { background: #0f3d2a; color: #6ee7b7; }
+    .tag-watch { background: #3d2f0f; color: #fcd34d; }
+    .tag-signal { background: #2e1f5e; color: #c4b5fd; }
+    .tag-scoop { background: #4a1942; color: #f9a8d4; }
     .news-headline { font-weight: 700; font-size: 0.97rem; margin-bottom: 5px; line-height: 1.4; }
-    .news-headline a { color: #15582e; text-decoration: none; }
-    .news-headline a:hover { text-decoration: underline; }
-    .news-summary { color: #4b5563; font-size: 0.9rem; line-height: 1.65; margin-bottom: 6px; }
-    .news-source { font-size: 0.76rem; color: #9ca3af; font-style: italic; }
-    .news-context { background: #fffbeb; border-left: 3px solid #f59e0b; padding: 8px 14px; margin-top: 8px; border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #78350f; line-height: 1.55; }
-    .news-context strong { color: #92400e; }
-    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); margin: 20px 0; }
-    .footer-block { background: #0d3d22; color: rgba(255,255,255,0.7); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; }
+    .news-headline a { color: #7dffa3; text-decoration: none; }
+    .news-headline a:hover { text-decoration: underline; color: #a5ffca; }
+    .news-summary { color: #b0b4be; font-size: 0.9rem; line-height: 1.65; margin-bottom: 6px; }
+    .news-source { font-size: 0.76rem; color: #6b7080; font-style: italic; }
+    .news-context { background: #1f1c12; border-left: 3px solid #b45309; padding: 8px 14px; margin-top: 8px; border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #fbbf24; line-height: 1.55; }
+    .news-context strong { color: #f59e0b; }
+    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #2a2e3a, transparent); margin: 20px 0; }
+    .footer-block { background: #0a2e18; color: rgba(255,255,255,0.6); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; border: 1px solid #1e3a28; }
     .footer-block strong { color: #7dffa3; }
-    .no-stories { color: #aaa; font-style: italic; padding: 8px 16px; }
+    .no-stories { color: #6b7080; font-style: italic; padding: 8px 16px; }
   </style>
 </head>
 <body>
@@ -307,17 +307,17 @@
   </div>
 
   <style>
-    #esg-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
-    #esg-subscribe-card { position: relative; max-width: 480px; width: 90%; margin: 0; padding: 40px 32px; border: none; border-radius: 20px; background: white; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; box-shadow: 0 10px 40px rgba(0,0,0,0.25); }
-    #esg-modal-close { position: absolute; top: 16px; right: 20px; font-size: 28px; font-weight: 600; color: #999; cursor: pointer; background: none; border: none; padding: 0; line-height: 1; transition: color 0.2s; }
-    #esg-modal-close:hover { color: #333; }
-    #esg-subscribe-card h3 { color: #15582e; margin-bottom: 12px; font-size: 1.4rem; font-weight: 800; }
-    #esg-subscribe-card p { color: #555; font-size: 0.95rem; margin-bottom: 24px; line-height: 1.5; }
-    #esg-subscribe-input { width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.2s; }
-    #esg-subscribe-input:focus { border-color: #15582e; }
-    #esg-subscribe-button { background: #0d3d22; background: linear-gradient(135deg, #0d3d22, #1a6b3c); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: opacity 0.2s, transform 0.1s; width: 100%; }
+    #esg-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 9999; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); }
+    #esg-subscribe-card { position: relative; max-width: 480px; width: 90%; margin: 0; padding: 40px 32px; border: 1px solid #2a2e3a; border-radius: 20px; background: #1a1d26; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    #esg-modal-close { position: absolute; top: 16px; right: 20px; font-size: 28px; font-weight: 600; color: #6b7080; cursor: pointer; background: none; border: none; padding: 0; line-height: 1; transition: color 0.2s; }
+    #esg-modal-close:hover { color: #e2e4e9; }
+    #esg-subscribe-card h3 { color: #7dffa3; margin-bottom: 12px; font-size: 1.4rem; font-weight: 800; }
+    #esg-subscribe-card p { color: #b0b4be; font-size: 0.95rem; margin-bottom: 24px; line-height: 1.5; }
+    #esg-subscribe-input { width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1px solid #2a2e3a; border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.2s; background: #0f1117; color: #e2e4e9; }
+    #esg-subscribe-input:focus { border-color: #7dffa3; }
+    #esg-subscribe-button { background: linear-gradient(135deg, #0a2e18, #1a6b3c); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: opacity 0.2s, transform 0.1s; width: 100%; }
     #esg-subscribe-button:hover { opacity: 0.9; transform: translateY(-1px); }
-    #esg-subscribe-success { display: none; color: #15582e; font-weight: 700; font-size: 1rem; padding: 12px; background: #d1fae5; border-radius: 10px; margin-top: 12px; }
+    #esg-subscribe-success { display: none; color: #7dffa3; font-weight: 700; font-size: 1rem; padding: 12px; background: #0f3d2a; border-radius: 10px; margin-top: 12px; }
   </style>
   <div id="esg-modal-overlay">
     <div id="esg-subscribe-card">
