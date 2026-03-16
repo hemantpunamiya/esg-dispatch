@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌿 The ESG Dispatch — 2026-03-16</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; background: #f0f4f1; color: #1a1a2e; }
+    .masthead { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; }
+    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.08; }
+    .masthead-eyebrow { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+    .masthead h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .masthead h1 span { color: #7dffa3; }
+    .masthead-tagline { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 20px; }
+    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; }
+    .divider { height: 3px; background: linear-gradient(90deg, #15582e, #4caf7d); border-radius: 2px; margin: 14px 0 24px; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 28px; }
+    .pill { background: white; border-radius: 30px; padding: 8px 18px; font-size: 0.83rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 6px; }
+    .pill-num { font-size: 1.1rem; font-weight: 800; color: #15582e; }
+    .region-section { background: white; border-radius: 16px; padding: 0; margin-bottom: 28px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .region-header { padding: 20px 28px 18px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 14px; }
+    .region-header.india { background: linear-gradient(90deg, #fff8f0, #fff); border-left: 5px solid #FF9933; }
+    .region-header.global { background: linear-gradient(90deg, #f0f9f4, #fff); border-left: 5px solid #15582e; }
+    .region-flag { font-size: 2.2rem; }
+    .region-title-block h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin-bottom: 2px; }
+    .region-title-block .region-sub { font-size: 0.82rem; color: #888; font-style: italic; }
+    .region-content { padding: 22px 28px; }
+    .topic-block { margin-bottom: 28px; }
+    .topic-block:last-child { margin-bottom: 0; }
+    .topic-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .topic-badge { font-size: 0.72rem; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; color: white; padding: 5px 14px; border-radius: 6px; }
+    .regulatory { background: #2563eb; }
+    .company { background: #7c3aed; }
+    .carbon { background: #059669; }
+    .topic-quip { font-size: 0.83rem; color: #888; font-style: italic; }
+    .news-item { border-left: 3px solid #e5e7eb; padding: 11px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; background: #fafafa; }
+    .news-item:last-child { margin-bottom: 0; }
+    .news-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
+    .tag-icymi { background: #dbeafe; color: #1e40af; }
+    .tag-hot { background: #fee2e2; color: #b91c1c; }
+    .tag-green { background: #d1fae5; color: #065f46; }
+    .tag-watch { background: #fef3c7; color: #92400e; }
+    .tag-signal { background: #ede9fe; color: #5b21b6; }
+    .tag-scoop { background: #fce7f3; color: #9d174d; }
+    .news-headline { font-weight: 700; font-size: 0.97rem; margin-bottom: 5px; line-height: 1.4; }
+    .news-headline a { color: #15582e; text-decoration: none; }
+    .news-headline a:hover { text-decoration: underline; }
+    .news-summary { color: #4b5563; font-size: 0.9rem; line-height: 1.65; margin-bottom: 6px; }
+    .news-source { font-size: 0.76rem; color: #9ca3af; font-style: italic; }
+    .news-context { background: #fffbeb; border-left: 3px solid #f59e0b; padding: 8px 14px; margin-top: 8px; border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #78350f; line-height: 1.55; }
+    .news-context strong { color: #92400e; }
+    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, #e5e7eb, transparent); margin: 20px 0; }
+    .footer-block { background: #0d3d22; color: rgba(255,255,255,0.7); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; }
+    .footer-block strong { color: #7dffa3; }
+    .no-stories { color: #aaa; font-style: italic; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead-eyebrow">Weekly ESG Intelligence</div>
+    <h1>The <span>ESG</span> Dispatch</h1>
+    <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
+    <div class="masthead-meta">
+      <span>🗓 Monday, 16 March 2026</span>
+      <span>🌍 India + Global</span>
+      <span>📰 13 stories · Week of 9–15 March</span>
+    </div>
+    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners" style="position:absolute;bottom:20px;right:30px;height:32px;opacity:0.9;">
+  </div>
+  <div class="divider"></div>
+  <div class="pill-row">
+    <div class="pill">🇮🇳 <span class="pill-num">6</span> India</div>
+    <div class="pill">🌍 <span class="pill-num">7</span> Global</div>
+    <div class="pill">📋 <span class="pill-num">4</span> Regulatory</div>
+    <div class="pill">🏢 <span class="pill-num">5</span> Big Moves</div>
+    <div class="pill">♻️ <span class="pill-num">4</span> Carbon &amp; Decarbonisation</div>
+  </div>
+
+  <!-- ===================== INDIA ===================== -->
+  <div class="region-section">
+    <div class="region-header india">
+      <span class="region-flag">🇮🇳</span>
+      <div class="region-title-block">
+        <h2>India</h2>
+        <div class="region-sub">Green ammonia standards, ESG capital inflows, and ABB betting big on Bengaluru.</div>
+      </div>
+    </div>
+    <div class="region-content">
+
+      <!-- INDIA: Regulatory -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge regulatory">Regulatory &amp; Policy</span>
+          <span class="topic-quip">"India just told hydrogen what 'green' actually means."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-hot">Policy</span>
+          <div class="news-headline">
+            <a href="https://www.indianchemicalnews.com/policy/india-notifies-green-ammonia-and-green-methanol-standards-to-accelerate-hydrogen-mission-29620" target="_blank">India Notifies Green Ammonia &amp; Green Methanol Standards</a>
+          </div>
+          <div class="news-summary">On 9 March, the Ministry of New and Renewable Energy officially notified standards for green ammonia and green methanol — setting strict GHG limits (≤0.38 kg CO₂e per kg ammonia) and eligibility rules for fuels produced using renewable-based green hydrogen. The move brings long-awaited regulatory clarity for investors and industry building out India's hydrogen derivatives ecosystem.</div>
+          <div class="news-source">Source: Indian Chemical News (9 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> These are the final, notified standards — not drafts. Project developers and offtakers now have a clear benchmark for what counts as "green." Three pilot projects under NGHM are already testing hydrogen-based DRI for steelmaking, and ₹4,440 crore in electrolyser incentives under the SIGHT scheme are driving capacity buildout.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-watch">Maritime</span>
+          <div class="news-headline">
+            <a href="https://www.lloydsregister.com" target="_blank">Indian Government Partners with LR Advisory on Maritime Decarbonisation Programme</a>
+          </div>
+          <div class="news-summary">Lloyd's Register announced that the Indian government has engaged LR Advisory on a programme spanning maritime decarbonisation and digital transformation, signalling fresh policy momentum around cleaner shipping and operational reform in one of the world's busiest maritime corridors.</div>
+          <div class="news-source">Source: Lloyd's Register (11 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> India's maritime sector is a significant and often overlooked emissions source. IMO's tighter 2026-30 emissions trajectory is forcing port states to act. This engagement positions India to align with international shipping decarbonisation mandates ahead of the 2027 compliance window.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- INDIA: Company -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge company">Large Company Actions</span>
+          <span class="topic-quip">"Foreign capital is voting with its feet — and it's walking toward India."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-hot">Corporate</span>
+          <div class="news-headline">
+            <a href="https://www.energetica-india.net/news/vedanta-aluminium-among-top-10-percent-globally-in-sp-global-sustainability-yearbook-2026" target="_blank">Vedanta Aluminium Enters Top 10% Globally in S&amp;P Sustainability Yearbook 2026</a>
+          </div>
+          <div class="news-summary">Vedanta Aluminium scored 84/100 in S&amp;P Global's Corporate Sustainability Assessment, entering the top 10% of the global aluminium sector for the first time. The ranking is backed by a 28% emission reduction, zero liquid discharge facilities, biodiversity restoration with PwC, and 14.6 million tonnes of waste recycled in FY25.</div>
+          <div class="news-source">Source: Energetica India (12 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> S&amp;P Global CSA is one of the few ESG rating frameworks still actively covering India after SEBI's ERP mandate. MSCI is surrendering its SEBI Category II registration; Morningstar and Bloomberg opted out of the mandate entirely. Only S&amp;P, Sustainalytics, and CRISIL (India's first SEBI-approved ERP) remain fully active. For Indian heavy industry, an S&amp;P top-10% ranking carries outsized weight with global allocators.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-signal">Capital</span>
+          <div class="news-headline">
+            <a href="https://energynews.oedigital.com/energy-markets/2026/03/10/indias-esg-and-returns-attract-global-investors" target="_blank">India Emerges as Top ESG-Aligned Capital Destination in Asia-Pacific</a>
+          </div>
+          <div class="news-summary">At the IVCA conclave on 10 March, a McKinsey-IVCA survey revealed 31% of global LPs now rank India as their #1 choice in APAC, driven by ESG standards and PE/VC exits doubling to $120 billion between 2021-25. SEBI's BRSR Core framework is credited with lowering the trust barrier for European and North American funds governed by strict green mandates.</div>
+          <div class="news-source">Source: OE Digital / ESG News.earth (10 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> BRSR Core — India's audited ESG reporting framework — is now mandatory for the top 250 listed companies with value chain disclosures. Third-party assurance begins FY 2026-27. This is what's unlocking LP confidence: Indian sustainability data is becoming finance-grade, not just disclosure theatre.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-green">Investment</span>
+          <div class="news-headline">
+            <a href="https://www.globenewswire.com/news-release/2026/03/09/3251507/0/en/ABB-invests-75-million-in-India-to-expand-manufacturing-and-R-D-for-critical-segments.html" target="_blank">ABB Invests $75M in India for Green Manufacturing &amp; R&amp;D Expansion</a>
+          </div>
+          <div class="news-summary">ABB announced a $75 million investment across five Indian locations — Bengaluru, Hyderabad, Nashik, and Vadodara — for manufacturing and R&amp;D expansion in electrification, motion, and automation. The investment creates 300+ skilled jobs and builds on $35 million spent in 2025. ABB shares rose 3% on the announcement.</div>
+          <div class="news-source">Source: GlobeNewsWire / ABB (9 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> 85% of ABB's products sold in India are now manufactured locally. The expansion targets data centres, metros, and renewable energy infrastructure — all sectors with direct decarbonisation implications. This is "local-for-local" industrial strategy, not just an FDI headline.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- INDIA: Carbon -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge carbon">Carbon &amp; Decarbonisation</span>
+          <span class="topic-quip">"Green hydrogen in India is graduating from PowerPoint to plant floor."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-hot">Green Tech</span>
+          <div class="news-headline">
+            <a href="https://www.manufacturingtodayindia.com" target="_blank">Hero Future Energies Wins Award for Green Hydrogen Project</a>
+          </div>
+          <div class="news-summary">Hero Future Energies received industry recognition for its green hydrogen project, a signal that industrial decarbonisation in India is maturing from pilot-stage ambition into recognisable, award-worthy execution. The project targets hard-to-abate sectors where electrification alone isn't viable.</div>
+          <div class="news-source">Source: Manufacturing Today India (11 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> India's National Green Hydrogen Mission targets 5 MMTPA by 2030, backed by ₹19,744 crore. Nine companies have been awarded contracts under the SIGHT scheme. Hero's recognition matters because it validates execution — not just targets — at a time when global investors are separating hydrogen hype from hydrogen delivery.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== GLOBAL ===================== -->
+  <div class="region-section">
+    <div class="region-header global">
+      <span class="region-flag">🌍</span>
+      <div class="region-title-block">
+        <h2>Global</h2>
+        <div class="region-sub">New ESG scores, proxy advisor upheaval, and the UK just called nuclear "green."</div>
+      </div>
+    </div>
+    <div class="region-content">
+
+      <!-- GLOBAL: Regulatory -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge regulatory">Regulatory &amp; Policy</span>
+          <span class="topic-quip">"LSEG scores 16,000 companies. Singapore tells banks to plan for climate. Busy week for compliance teams."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-hot">Disclosure</span>
+          <div class="news-headline">
+            <a href="https://news.ballotpedia.org/2026/03/11/london-stock-exchange-group-launches-new-esg-scores/" target="_blank">LSEG Launches New ESG Sustainability Ratings Covering 16,000+ Companies</a>
+          </div>
+          <div class="news-summary">On 9 March, the London Stock Exchange Group unveiled LSEG Sustainability Ratings and Data — a rules-based scoring system evaluating companies on a 0-to-5 scale across 12 ESG themes using 220 standardised indicators and 2,000+ data points. The system covers ~99% of the FTSE All-World Index and replaces analyst judgment with automated, comparable scores.</div>
+          <div class="news-source">Source: Ballotpedia / LSEG (9 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> LSEG (which acquired Refinitiv) is not taking an India ERP licence under SEBI's mandate — so these ratings are available ex-India only. In India, the only global rating providers still actively operating are S&amp;P Global, Sustainalytics, and CRISIL. MSCI is surrendering its Category II registration. Morningstar and Bloomberg decided not to participate when the SEBI mandate kicked in. This matters: Indian companies seeking global ESG visibility now have fewer bridges to international capital.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-watch">Singapore</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/singapore-sets-climate-risk-management-expectations-for-banks-investors-insurers/" target="_blank">Singapore MAS Sets Climate Transition Planning Rules for Financial Institutions</a>
+          </div>
+          <div class="news-summary">The Monetary Authority of Singapore finalised its Guidelines on Environmental Risk Management — Transition Planning, setting supervisory expectations for banks, insurers, and asset managers to manage climate transition and physical risks. The guidelines take effect September 2027 after an 18-month transition period, with sector-specific requirements across all three financial verticals.</div>
+          <div class="news-source">Source: ESG Today / MAS (9 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> Singapore is positioning itself as Asia's green finance regulatory hub. These guidelines go beyond disclosure — they require financial institutions to have a credible transition plan, not just report on risks. For Indian banks and asset managers with APAC operations, Singapore's standards will increasingly set the floor for what "climate-ready" means.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- GLOBAL: Company -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge company">Large Company Actions</span>
+          <span class="topic-quip">"Proxy advisors are rewriting the ESG playbook — under political fire."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-signal">Proxy</span>
+          <div class="news-headline">
+            <a href="https://corpgov.law.harvard.edu/2026/03/12/winter-2026-esg-investing-quarterly-update/" target="_blank">Glass Lewis &amp; ISS Pivot to Customised ESG Voting Policies</a>
+          </div>
+          <div class="news-summary">Both major proxy advisory firms are restructuring: Glass Lewis will offer client-by-client customised voting from 2027, while ISS moves to case-by-case disclosure assessment. The shift follows a Trump executive order targeting proxy advisors and Florida suing both firms for alleged anticompetitive conduct. SEC Chair Atkins warned of "persistent uncertainty" in the 2026 proxy season.</div>
+          <div class="news-source">Source: Harvard Law Corporate Governance (12 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> This is a seismic shift. Blanket ESG voting recommendations are dead. Companies will now face more varied, less predictable shareholder engagement on sustainability topics. For Indian corporates with ADRs or dual listings, this means ESG messaging needs to be investor-specific, not one-size-fits-all.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-scoop">Gender</span>
+          <div class="news-headline">
+            <a href="https://fticommunications.com/esg-newsletter-12-march-2026/" target="_blank">US Companies Slide in Global Gender Equality Rankings</a>
+          </div>
+          <div class="news-summary">Only seven US companies ranked in the top 100 for gender equality in 2026, down from 17 in 2023 (Equileap data). Women hold just 32% of US board positions vs. 46% in France and 44% in the UK. IMPAX research shows companies in the top quartile for women in leadership significantly outperform peers.</div>
+          <div class="news-source">Source: FTI ESG+ Newsletter (12 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> The "S" in ESG is often the hardest to measure — but gender diversity has the strongest performance correlation of any social metric. India's BRSR framework mandates gender-related disclosures, and SEBI's latest board diversity push makes this relevant for Indian corporates benchmarking against global peers.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-green">Solar</span>
+          <div class="news-headline">
+            <a href="https://www.skhynix.com" target="_blank">SK hynix Wins Double CDP Korea Awards for Climate &amp; Water Security</a>
+          </div>
+          <div class="news-summary">SK hynix won top CDP Korea awards on both climate change and water security — reinforcing that environmental performance metrics continue to drive capital-market and stakeholder evaluations. The semiconductor giant's dual recognition highlights the growing importance of water stewardship alongside carbon in technology manufacturing.</div>
+          <div class="news-source">Source: SK hynix Newsroom (11 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> CDP scores remain one of the most widely used ESG benchmarks globally. SK hynix's water focus is notable because semiconductor fabs are among the most water-intensive industrial operations. For Indian chipmakers building under the ₹76,000 crore semiconductor mission, water stewardship will be a defining ESG challenge.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- GLOBAL: Carbon -->
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge carbon">Carbon &amp; Decarbonisation</span>
+          <span class="topic-quip">"The UK called nuclear green. Space satellites are watching your smokestacks. What a week."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-hot">Green Bond</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/category/esg-news/" target="_blank">UK Raises $8.4 Billion in Green Bond That Includes Nuclear for the First Time</a>
+          </div>
+          <div class="news-summary">The UK government raised $8.4 billion in a landmark green bond that, for the first time, includes nuclear energy as an eligible use of proceeds. The issuance signals a pragmatic shift in how "green" is defined at the sovereign level — and opens the door for other nations to classify nuclear within sustainable finance frameworks.</div>
+          <div class="news-source">Source: ESG Today (12 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> This is a taxonomy fight, not just a bond. If nuclear is "green" in UK sovereign debt, it sets a precedent for the EU taxonomy debate and for emerging markets like India, where nuclear contributes ~3% of electricity. India's own green bond framework currently excludes nuclear — but this UK move will fuel calls for revision.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-green">Carbon Removal</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/category/esg-news/" target="_blank">Octopus Energy Signs $60M Carbon Removal Deal with Cultivo</a>
+          </div>
+          <div class="news-summary">Octopus Energy Generation signed a $60 million carbon removal deal with nature-based solutions provider Cultivo, one of the largest nature-based CDR commitments of the year. The agreement pairs energy-sector capital with land-based sequestration at a scale that begins to move the needle on corporate net-zero credibility.</div>
+          <div class="news-source">Source: ESG Today (13 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> $60M is serious money for nature-based CDR — an area plagued by credibility concerns. Cultivo's model focuses on verifiable land-based removals. For India, where the voluntary carbon market is evolving alongside the compliance CCTS, this deal sets a benchmark for what institutional-grade CDR procurement looks like.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag tag-signal">Space Tech</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/category/esg-news/" target="_blank">AIRMO Raises €5M to Detect Greenhouse Gas Emissions from Space</a>
+          </div>
+          <div class="news-summary">AIRMO closed a €5 million round to deploy satellite-based greenhouse gas detection technology. As regulators and investors demand verified emissions data, space-based monitoring is emerging as a critical infrastructure layer for accountability — especially for hard-to-audit industrial and agricultural sources.</div>
+          <div class="news-source">Source: ESG Today (13 March 2026)</div>
+          <div class="news-context"><strong>Context:</strong> Satellite-based MRV (measurement, reporting, verification) is the missing piece for carbon markets. India's CCTS will need robust emissions verification across nine sectors covering 700M+ tonnes CO₂e. ISRO's own GHG monitoring capabilities and AIRMO-type startups could become critical infrastructure for India's compliance carbon market.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-block">
+    <strong>The ESG Dispatch</strong> · Monday, 16 March 2026<br>
+    <span style="font-size:0.78rem;">13 stories · Week of 9–15 March 2026 · All sources linked above · For informational purposes only.</span>
+  </div>
+
+  <style>
+    #esg-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+    #esg-subscribe-card { position: relative; max-width: 480px; width: 90%; margin: 0; padding: 40px 32px; border: none; border-radius: 20px; background: white; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; box-shadow: 0 10px 40px rgba(0,0,0,0.25); }
+    #esg-modal-close { position: absolute; top: 16px; right: 20px; font-size: 28px; font-weight: 600; color: #999; cursor: pointer; background: none; border: none; padding: 0; line-height: 1; transition: color 0.2s; }
+    #esg-modal-close:hover { color: #333; }
+    #esg-subscribe-card h3 { color: #15582e; margin-bottom: 12px; font-size: 1.4rem; font-weight: 800; }
+    #esg-subscribe-card p { color: #555; font-size: 0.95rem; margin-bottom: 24px; line-height: 1.5; }
+    #esg-subscribe-input { width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.2s; }
+    #esg-subscribe-input:focus { border-color: #15582e; }
+    #esg-subscribe-button { background: #0d3d22; background: linear-gradient(135deg, #0d3d22, #1a6b3c); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: opacity 0.2s, transform 0.1s; width: 100%; }
+    #esg-subscribe-button:hover { opacity: 0.9; transform: translateY(-1px); }
+    #esg-subscribe-success { display: none; color: #15582e; font-weight: 700; font-size: 1rem; padding: 12px; background: #d1fae5; border-radius: 10px; margin-top: 12px; }
+  </style>
+  <div id="esg-modal-overlay">
+    <div id="esg-subscribe-card">
+      <button id="esg-modal-close" onclick="document.getElementById('esg-modal-overlay').style.display='none'">&times;</button>
+      <h3>🌿 Stay in the Loop</h3>
+      <p>Get weekly ESG intelligence — India &amp; Global — delivered straight to your inbox. No fluff. No greenwashing.</p>
+      <form id="subscribe-form" action="https://forminit.com/f/j6uvttw24dn" method="POST" onsubmit="handleSubscribe(event)">
+        <input type="email" name="fi-sender-email" id="esg-subscribe-input" placeholder="Your corporate email..." required>
+        <button type="submit" id="esg-subscribe-button">Join the List →</button>
+      </form>
+      <div id="esg-subscribe-success">✅ You're on the list! First dispatch lands next Monday.</div>
+    </div>
+  </div>
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var form = document.getElementById('subscribe-form');
+      var ok = document.getElementById('esg-subscribe-success');
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function(r) {
+        if (!r.ok) { throw new Error('FormInit rejected the submission'); }
+        form.style.display = 'none';
+        ok.style.display = 'block';
+      })
+      .catch(function() {
+        alert('Subscription failed. Please try again in a minute.');
+      });
+    }
+  </script>
+</body>
+</html>
