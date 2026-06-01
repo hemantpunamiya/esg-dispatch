@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ESG Dispatch — 2026-05-25</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      background: #f7f7f4;
+      color: #26251e;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .editor-note { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; padding: 28px 32px; margin-bottom: 24px; }
+    .editor-note .label { font-size: 11px; font-weight: 600; letter-spacing: 0.88px; text-transform: uppercase; color: #807d72; margin-bottom: 14px; }
+    .editor-note p { color: #26251e; font-size: 16px; line-height: 1.7; letter-spacing: 0.08px; }
+    .editor-note p strong { font-weight: 600; }
+    .autopilot { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; padding: 40px 40px 36px; margin-bottom: 24px; }
+    .autopilot .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.88px; text-transform: uppercase; color: #807d72; margin-bottom: 16px; }
+    .autopilot h2 { font-size: 36px; font-weight: 400; color: #26251e; letter-spacing: -0.72px; line-height: 1.2; margin-bottom: 18px; max-width: 720px; }
+    .autopilot p { color: #5a5852; font-size: 16px; line-height: 1.7; letter-spacing: 0.08px; margin-bottom: 16px; max-width: 700px; }
+    .autopilot p strong { color: #26251e; font-weight: 600; }
+    .autopilot-callout { background: #fafaf7; border-left: 3px solid #f54e00; border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 26px; font-size: 15px; color: #26251e; line-height: 1.65; }
+    .autopilot-callout strong { font-weight: 600; }
+    .cta-primary { display: inline-block; background: #f54e00; color: #ffffff; font-weight: 500; font-size: 14px; padding: 12px 22px; border-radius: 8px; text-decoration: none; letter-spacing: 0; }
+    .cta-meta { margin-top: 10px; font-size: 13px; color: #807d72; }
+    .browser-link { text-align: center; padding: 12px 0; font-size: 13px; color: #807d72; }
+    .browser-link a { color: #f54e00; text-decoration: underline; text-underline-offset: 2px; }
+    .masthead { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; padding: 56px 40px 32px; margin-bottom: 24px; position: relative; overflow: hidden; }
+    .masthead-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.88px; text-transform: uppercase; color: #807d72; margin-bottom: 14px; }
+    .masthead h1 { font-size: 64px; font-weight: 400; color: #26251e; letter-spacing: -1.92px; line-height: 1.1; margin-bottom: 12px; }
+    .masthead h1 span { color: #f54e00; }
+    .masthead-tagline { font-size: 18px; font-weight: 400; color: #5a5852; letter-spacing: -0.11px; margin-bottom: 28px; max-width: 560px; }
+    .masthead-meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: #807d72; border-top: 1px solid #e6e5e0; padding-top: 18px; }
+    .masthead-meta span { font-variant-numeric: tabular-nums; }
+    .masthead img { position: absolute; bottom: 24px; right: 32px; height: 32px; opacity: 0.85; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 32px; }
+    .pill { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 9999px; padding: 8px 18px; font-size: 13px; font-weight: 500; color: #26251e; display: flex; align-items: center; gap: 8px; }
+    .pill-num { font-size: 14px; font-weight: 600; color: #f54e00; font-variant-numeric: tabular-nums; }
+    .region-section { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; margin-bottom: 24px; overflow: hidden; }
+    .region-header { padding: 28px 32px 24px; border-bottom: 1px solid #efeee8; display: flex; align-items: flex-start; gap: 16px; }
+    .region-header.india { border-left: 4px solid #f54e00; }
+    .region-header.global { border-left: 4px solid #26251e; }
+    .region-flag { font-size: 32px; line-height: 1; padding-top: 4px; }
+    .region-title-block h2 { font-size: 26px; font-weight: 400; color: #26251e; letter-spacing: -0.325px; line-height: 1.25; margin-bottom: 6px; }
+    .region-title-block .region-sub { font-size: 15px; color: #5a5852; line-height: 1.55; max-width: 760px; }
+    .region-content { padding: 32px; }
+    .topic-block { margin-bottom: 40px; }
+    .topic-block:last-child { margin-bottom: 0; }
+    .topic-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+    .topic-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.88px; text-transform: uppercase; color: #26251e; background: #e6e5e0; padding: 4px 12px; border-radius: 9999px; }
+    .topic-quip { font-size: 14px; color: #807d72; font-style: italic; line-height: 1.5; }
+    .news-item { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; padding: 24px 26px; margin-bottom: 16px; }
+    .news-item:last-child { margin-bottom: 0; }
+    .news-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.88px; text-transform: uppercase; color: #26251e; background: #e6e5e0; padding: 4px 10px; border-radius: 9999px; margin-bottom: 12px; }
+    .news-headline { font-weight: 500; font-size: 18px; letter-spacing: 0; margin-bottom: 12px; line-height: 1.4; }
+    .news-headline a { color: #26251e; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #cfcdc4; text-decoration-thickness: 1px; }
+    .news-headline a:hover { text-decoration-color: #f54e00; }
+    .news-summary { color: #5a5852; font-size: 15px; line-height: 1.7; letter-spacing: 0.08px; margin-bottom: 14px; }
+    .news-source { font-size: 13px; color: #807d72; font-style: italic; margin-bottom: 4px; }
+    .news-context { background: #fafaf7; border-left: 3px solid #f54e00; padding: 14px 18px; margin-top: 16px; border-radius: 0 8px 8px 0; font-size: 14px; color: #26251e; line-height: 1.65; }
+    .news-context strong { color: #26251e; font-weight: 600; }
+    .section-divider { height: 1px; background: #efeee8; margin: 32px 0; }
+    .footer-block { background: #ffffff; border: 1px solid #e6e5e0; border-radius: 12px; padding: 32px; text-align: center; font-size: 14px; color: #5a5852; margin-top: 24px; }
+    .footer-block strong { color: #26251e; font-weight: 600; }
+    .footer-meta { font-size: 13px; color: #807d72; margin-top: 6px; }
+    #esg-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(38, 37, 30, 0.55); z-index: 9999; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    #esg-subscribe-card { position: relative; max-width: 480px; width: 90%; padding: 44px 36px 36px; border: 1px solid #e6e5e0; border-radius: 12px; background: #ffffff; text-align: center; font-family: inherit; }
+    #esg-modal-close { position: absolute; top: 14px; right: 18px; font-size: 24px; font-weight: 400; color: #807d72; cursor: pointer; background: none; border: none; padding: 0; line-height: 1; }
+    #esg-modal-close:hover { color: #26251e; }
+    #esg-subscribe-card h3 { color: #26251e; margin-bottom: 12px; font-size: 26px; font-weight: 400; letter-spacing: -0.325px; }
+    #esg-subscribe-card p { color: #5a5852; font-size: 15px; margin-bottom: 24px; line-height: 1.6; }
+    #esg-subscribe-input { width: 100%; padding: 12px 16px; margin-bottom: 14px; border: 1px solid #cfcdc4; border-radius: 8px; font-size: 15px; font-family: inherit; outline: none; background: #ffffff; color: #26251e; height: 44px; }
+    #esg-subscribe-input:focus { border-color: #f54e00; }
+    #esg-subscribe-button { background: #f54e00; color: #ffffff; border: none; padding: 12px 22px; border-radius: 8px; font-weight: 500; font-size: 14px; font-family: inherit; cursor: pointer; width: 100%; height: 44px; }
+    #esg-subscribe-button:hover { background: #d04200; }
+    #esg-subscribe-success { display: none; color: #1f8a65; font-weight: 500; font-size: 15px; padding: 14px; background: #fafaf7; border: 1px solid #e6e5e0; border-radius: 8px; margin-top: 14px; }
+    @media (max-width: 720px) {
+      body { padding: 24px 16px 60px; }
+      .masthead h1 { font-size: 40px; letter-spacing: -1.2px; }
+      .autopilot h2 { font-size: 26px; letter-spacing: -0.325px; }
+      .autopilot { padding: 28px 24px; }
+      .region-content { padding: 24px 22px; }
+      .region-header { padding: 22px 22px 18px; flex-direction: row; }
+      .region-title-block h2 { font-size: 22px; letter-spacing: -0.11px; }
+      .news-item { padding: 20px 22px; }
+      .news-headline { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="editor-note">
+    <div class="label">Message from the Editor</div>
+    <p>This was the week BRSR FY26 filings started arriving at scale — UCO Bank, Angel One, Krishana Phoschem, Himadri Speciality Chemical, Archean Chemical, and Lloyds Metals &amp; Energy all landed Business Responsibility and Sustainability Reports between 18 and 24 May — a six-filing-in-seven-days flow that signals the broader top-1000 cohort is now moving into the assurance window. <strong>UCO Bank</strong> formalised a Net Zero Transition Plan aligned to the Government of India with Scope 1 &amp; 2 by 2050 and full portfolio net zero by 2056. <strong>Angel One</strong> filed alongside a board-level ESG Committee structure and a Deloitte assurance engagement, a mid-cap financial-services template that other discount brokers (Zerodha, Groww, Upstox) will reference. <strong>Krishana Phoschem</strong> disclosed a green-ammonia procurement MoU with SECI as part of its forward-looking BRSR Principle 6 narrative — chemicals-sector transition signalling. <strong>Himadri Speciality Chemical</strong> posted 19.31% reduction in energy intensity and 38.18% in emission intensity. India's broader electricity architecture also moved decisively. The <strong>Ministry of Power</strong> released the Draft National Electricity Policy 2026 — the first refresh since 2005 — explicitly placing nuclear power on the green-bond eligibility list and proposing retired thermal-plant sites for nuclear repurposing. <strong>NTPC</strong> crossed 90 GW installed capacity on 19 May with commissioning of additional Khavda solar in Gujarat. <strong>SECI</strong> awarded BNC Power Projects a 10 MW solar + 10 MW/20 MWh storage tender at ₹2.60/kWh in Odisha — sub-₹3 solar+storage is now the operational baseline. <strong>Vedanta</strong> reported its best-ever FY26 — ₹25,096 crore PAT, ₹1,74,075 crore revenue — alongside its demerger roadmap. <strong>Yes Bank</strong> emerged as India's top-rated bank in S&amp;P Global CSA 2025 at a score of 79, placing it in the global top 15%. The West continued to converge on simplification. The <strong>European Commission</strong>'s ESRS 2.0 consultation remains open through 3 June — 489 mandatory datapoints removed (~60%+ cut). <strong>Singapore</strong> and the <strong>World Bank Group</strong> launched the Singapore Carbon Markets Programme on 20 May at Innovate4Climate, with toolkits for interoperable registries and digital MRV that India's CCTS Article 6 negotiations will plug into. <strong>BYD</strong> overtook <strong>Tesla</strong> as the world's largest BESS deployer at 60+ GWh in 2025 vs Tesla's 46.7 GWh. <strong>California</strong> overhauled its cap-and-trade architecture amid Big Oil free-permit controversy. India's ESG architecture is formalising at speed; the West's is selectively simplifying. Your FY26 BRSR narrative — and the supplier and customer narratives that depend on it — needs to be built for that split. That's the kind of work <strong>Accelent Partners</strong> is built for. Our team has set up and signed off ESG, sustainability, and BRSR programmes inside <strong>Hindustan Unilever</strong> and across multiple <strong>Indian and multinational pharmaceutical companies</strong> — we bring that playbook into your shop and get your FY26 BRSR audit-ready in weeks, not months. — <strong>Hemant</strong></p>
+  </div>
+
+  <div class="autopilot">
+    <div class="eyebrow">FY26 BRSR · Filing Window Ahead</div>
+    <h2>BRSR FY26 is around the corner. Is your data set ready for your auditors?</h2>
+    <p>If you're still wondering how to calculate <strong>Scope 1, 2 and 3 emissions</strong>, how to roll up <strong>employee headcount, diversity, training hours and pay-parity metrics</strong> across plants and subsidiaries, or how to assemble a <strong>BRSR Core data pack your auditors will sign on first review</strong> — you're not alone. Most FY26 first-time preparers are. So are most repeat filers staring down BRSR Core reasonable assurance for the first time.</p>
+    <div class="autopilot-callout"><strong>Talk to Accelent Partners.</strong> Our team has set up and signed off ESG, sustainability, and BRSR programmes inside <strong>Hindustan Unilever</strong> and across multiple <strong>Indian and multinational pharmaceutical companies</strong> — the operating playbook for emissions inventories, workforce and diversity roll-ups, and assurance-ready BRSR Core data sets is already in our hands. We bring that experience in, plug into your existing data and document workflows, and get your FY26 BRSR audit-ready in weeks, not months.</div>
+    <a class="cta-primary" href="mailto:hemant.punamiya@accelentpartners.com?subject=FY26%20BRSR%20Help%20-%20Accelent%20Partners">Book a 20-minute conversation →</a>
+    <div class="cta-meta">Or reply to this email — Hemant Punamiya, Accelent Partners</div>
+  </div>
+
+  <div class="browser-link">
+    Having trouble viewing? <a href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-25.html">Read it in your browser</a> · <a href="https://hemantpunamiya.github.io/esg-dispatch/brsr-index.html">Browse the BRSR FY26 filings index →</a>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-eyebrow">Weekly ESG Intelligence</div>
+    <h1>The <span>ESG</span> Dispatch</h1>
+    <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
+    <div class="masthead-meta">
+      <span>Monday, 25 May 2026</span>
+      <span>India + Global</span>
+      <span>24 stories · Week of 18 May – 24 May</span>
+    </div>
+    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners">
+  </div>
+
+  <div class="pill-row">
+    <div class="pill">🇮🇳 <span class="pill-num">12</span> India</div>
+    <div class="pill">🌍 <span class="pill-num">12</span> Global</div>
+    <div class="pill">📋 <span class="pill-num">5</span> Regulatory</div>
+    <div class="pill">🏢 <span class="pill-num">13</span> Corporate ESG</div>
+    <div class="pill">♻️ <span class="pill-num">6</span> Carbon &amp; Decarb</div>
+  </div>
+
+  <div class="region-section">
+    <div class="region-header india">
+      <span class="region-flag">🇮🇳</span>
+      <div class="region-title-block">
+        <h2>India</h2>
+        <div class="region-sub">Six FY26 BRSRs land in seven days (UCO Bank, Angel One, Krishana Phoschem, Himadri Speciality, Archean Chemical, Lloyds Metals) signalling the top-1000 cohort is moving into the assurance window. The Draft National Electricity Policy 2026 places nuclear inside green-bond eligibility. NTPC crosses 90 GW. SECI sets a ₹2.60/kWh solar-plus-storage benchmark in Odisha. Vedanta posts a record FY26 alongside its demerger roadmap. Yes Bank ranks India's top bank in S&amp;P Global CSA 2025 at a score of 79.</div>
+      </div>
+    </div>
+    <div class="region-content">
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Corporate ESG Reports &amp; BRSR Filings</span>
+          <span class="topic-quip">"Six FY26 BRSRs in seven days — UCO Bank's Net Zero Transition Plan, Angel One's board-level ESG Committee, Krishana Phoschem's green-ammonia MoU, Himadri's 38.18% emission-intensity reduction, Archean's 78%-exports profile, Lloyds Metals' ₹13,837 crore turnover."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — PSU Bank</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/uco-bank-files-brsr-for-fy26-with-sebi/40940243" target="_blank">UCO Bank Files FY26 BRSR With Net Zero Transition Plan Aligned to Government of India — Scope 1 &amp; 2 Net Zero by 2050, Full Net Zero (Operations + Financed Portfolio) by 2056, 51,615 tCO₂e Operational Footprint, 20,993 Employees, 29.53% Female Representation</a>
+          </div>
+          <div class="news-summary">UCO Bank on 22 May filed its Business Responsibility and Sustainability Report for FY 2025–26 with NSE and BSE under SEBI (LODR) Regulations, 2015. The bank adopted a Net Zero Transition Plan aligned with the Government of India's climate commitments, targeting net zero across both operations and the financed portfolio by 2056, with Scope 1 and Scope 2 emissions targeted for net zero by 2050. Reported energy consumption of 265,277 GJ (8.93 GJ per crore of turnover) and combined Scope 1+2 emissions of 51,615.41 tCO₂e (1.74 tCO₂e per ₹1 crore revenue). Water consumption of 236,070 kilolitres. Workforce of 20,993 employees with 29.53% female representation. Standalone turnover ₹29,705 crore; net worth ₹24,462 crore.</div>
+          <div class="news-source">Source: ScanX / UCO Bank FY26 BRSR filing / NSE-BSE filings (22 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> A formal Net Zero Transition Plan from a mid-tier PSU bank — aligned explicitly to the Government of India's climate commitments — embeds financed-portfolio decarbonisation in the disclosure architecture rather than confining it to a non-binding sustainability webpage. For <strong>Indian PSU-bank peers (PNB, Canara, Union Bank, Bank of India, Bank of Maharashtra, Indian Bank, Central Bank, Punjab &amp; Sind Bank)</strong>, the UCO template — Net Zero Transition Plan + Scope 1+2 by 2050 + full portfolio net zero by 2056 + per-crore emissions intensity disclosure — becomes the disclosure floor that RBI's evolving climate-risk framework will measure against during the next supervisory review cycle. For private-bank peers (HDFC, ICICI, Axis, Kotak, IndusInd, IDFC First) the forward-looking financed-emissions disclosure becomes a comparability anchor. For BRSR Principle 6 in banking, the UCO commitment is the kind of forward-looking financed-emissions disclosure auditors will reference when reviewing FY27 BRSRs.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — Mid-Cap Financial Services</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/angel-one-files-brsr-for-fy26-on-may-20/40849077" target="_blank">Angel One Files FY26 BRSR on 20 May — Board ESG Committee Formalised, Deloitte Assurance Engagement, Mid-Cap Discount-Broker Template for Capital Markets BRSR Disclosure</a>
+          </div>
+          <div class="news-summary">Angel One Limited on 20 May filed its Business Responsibility and Sustainability Report for FY 2025–26 with NSE and BSE. The filing details ESG governance including the formation of a dedicated Board-level ESG committee and assurance and consulting partnerships with Deloitte for the BRSR Core indicator set. The disclosure structure positions Angel One as a comparability anchor for the discount-broker and capital-markets-services segment now coming inside the BRSR mandatory perimeter.</div>
+          <div class="news-source">Source: ScanX / Angel One BRSR FY26 filing / NSE-BSE filings (20 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Angel One is the largest pure-play listed discount broker by market cap and active client count. A FY26 BRSR with a Board ESG Committee + Deloitte assurance engagement sets the template for unlisted-now-listed and IPO-track peers (<strong>Zerodha, Groww, Upstox, ICICI Direct, Sharekhan, Motilal Oswal Securities, Kotak Securities, HDFC Securities, IIFL Securities, 5paisa</strong>). For <strong>SEBI</strong>, the disclosure quality on Principle 4 (stakeholders) and Principle 8 (inclusive growth) from a digital-native intermediary helps calibrate how the BRSR template needs to evolve to capture digital-first business models. For ESG-rating agencies (MSCI, Sustainalytics, S&amp;P Global ESG, ISS-ESG, CareEdge-ESG, CRISIL-ESG, ICRA-ESG), Angel One's disclosure provides the first FY26 data point for India's broking sub-sector ratings methodology.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — Chemicals + Green Ammonia</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/krishana-phoschem-files-brsr-for-fy26-with-nse/41637868" target="_blank">Krishana Phoschem Files FY26 BRSR With NSE — Improved Energy and Water Intensity Metrics Alongside New Green-Ammonia Procurement Agreement With SECI to Lower Emissions</a>
+          </div>
+          <div class="news-summary">Krishana Phoschem Limited filed its Business Responsibility and Sustainability Report for FY 2025–26 with the National Stock Exchange of India during the week. The filing discloses improved energy intensity and water intensity per unit of output, alongside a forward-looking green-ammonia procurement agreement signed with the Solar Energy Corporation of India (SECI) under the green-hydrogen-derivative offtake architecture being built around the National Green Hydrogen Mission. The agreement positions Krishana Phoschem inside the early-mover cohort of Indian chemicals and fertiliser companies operationalising green-ammonia inputs for downstream production.</div>
+          <div class="news-source">Source: ScanX / Krishana Phoschem BRSR FY26 filing / SECI green-ammonia offtake architecture (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Green-ammonia procurement disclosed inside a FY26 BRSR — rather than in a separate sustainability communication — is structurally important because it locks the offtake commitment into an annual-report-grade disclosure that auditors and SEBI can reference. For Indian fertiliser and chemicals peers (<strong>Coromandel International, Chambal Fertilisers, GNFC, GSFC, RCF, Madras Fertilizers, IFFCO, KRIBHCO, Deepak Fertilisers, Tata Chemicals, Aarti Industries, Vinati Organics, PI Industries</strong>) the BRSR-embedded MoU becomes a peer benchmark for forward-looking decarbonisation evidence. For <strong>SECI's green-ammonia offtake auction architecture</strong> (500,000 TPA green methanol auctioned earlier in May), Krishana Phoschem's filing demonstrates downstream demand-side absorption forming. For green-hydrogen producers (Reliance New Energy, Adani New Industries, L&amp;T Energy GreenTech, ACME Cleantech, NTPC Green Hydrogen, GAIL Hydrogen, Hygenco, Avaada, ReNew), aggregated chemicals demand from filings like this is the underwriting evidence project-finance banks will reference for FY27–28 lending decisions.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — Specialty Chemicals</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/himadri-speciality-chemical-submits-business-responsibility-and-sustainability-report-for-fy-2025-26/40406650" target="_blank">Himadri Speciality Chemical Files FY26 BRSR — 19.31% Reduction in Energy Intensity, 38.18% Reduction in Emission Intensity vs Baseline; First-Mover Specialty-Chemicals Decarbonisation Disclosure</a>
+          </div>
+          <div class="news-summary">Himadri Speciality Chemical Limited filed its FY 2025–26 Business Responsibility and Sustainability Report disclosing a 19.31% reduction in energy intensity and a 38.18% reduction in emission intensity against the disclosed baseline period. The filing was disclosed to BSE and NSE under Regulation 30 of SEBI Listing Regulations earlier in May 2026. The intensity-metric framing is significant inside Indian specialty chemicals where absolute volumes are growing — intensity-denominated targets are the standard for sectors with embedded growth.</div>
+          <div class="news-source">Source: ScanX / Himadri Speciality Chemical BRSR FY26 filing / NSE-BSE filings (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> A 38.18% emission-intensity reduction is materially above sector-average disclosed trajectories in Indian specialty chemicals, and it lands at a moment when European customers (BASF, Clariant, Solvay, Evonik, Lanxess, Lonza, Wacker, Croda, Arkema) are tightening Scope 3 supplier-tier expectations under CSRD double-materiality. For Indian specialty-chem peers (<strong>SRF, PI Industries, Aarti Industries, Atul Ltd, Navin Fluorine, Vinati Organics, Deepak Nitrite, Tata Chemicals, Gujarat Fluorochemicals, GFL, Anupam Rasayan, Laxmi Organic, Galaxy Surfactants, Camlin Fine Sciences, Sudarshan Chemical, NOCIL, BASF India</strong>) Himadri's intensity-target disclosure raises the bar that FY27 BRSRs will be compared against. For BRSR Principle 6 in specialty chemicals, Himadri's filing is the first FY26 data point where intensity reduction is the headline metric — companies disclosing only absolute emissions without intensity context will face ESG-rating-agency pressure to add the comparability layer.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — Industrial Chemicals + Exports</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/archean-chemical-files-brsr-for-fy26/40935111" target="_blank">Archean Chemical Industries Files FY26 BRSR — 78% Exports Profile, Reduced Coal Consumption, Rainwater Harvesting Build-Out; Export-Heavy Chemicals Template for CBAM-Exposure Disclosure</a>
+          </div>
+          <div class="news-summary">Archean Chemical Industries Limited filed its Business Responsibility and Sustainability Report for FY 2025–26 disclosing an exports share of 78% of turnover, alongside reduced coal consumption and expanded rainwater harvesting at operating sites. The export-heavy profile makes Archean a high-comparability anchor for Indian chemicals exporters facing EU CBAM (Carbon Border Adjustment Mechanism) and emerging US carbon-border policy frameworks.</div>
+          <div class="news-source">Source: ScanX / Archean Chemical Industries BRSR FY26 filing (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> 78% exports + Indian-domiciled emissions disclosure puts Archean directly in the CBAM-exposure conversation as Phase 2 of EU CBAM moves from reporting-only to financial-obligation phase in 2027–28. For Indian chemicals and metals exporters with significant EU revenue (<strong>Tata Steel, JSW Steel, Jindal Steel, Hindalco, Vedanta, Coromandel International, Deepak Fertilisers, SRF, PI Industries, Aarti Industries, Tata Chemicals, Atul Ltd, Navin Fluorine, Gujarat Fluorochemicals</strong>), Archean's coal-reduction-plus-rainwater disclosure is the kind of operational evidence CBAM-importer customers will increasingly request. For BRSR Principle 6 disclosure in export-heavy Indian sectors, the next FY27 cycle will likely add CBAM-exposure quantification as an expected comparability item. For Indian banks underwriting export-financing instruments (<strong>EXIM Bank, SBI Trade Finance, ICICI Bank Trade, HDFC Bank Trade, Axis Bank Global Trade</strong>), CBAM-aligned exporter disclosure helps differentiate trade-credit pricing.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BRSR FY26 — Metals &amp; Mining</span>
+          <div class="news-headline">
+            <a href="https://scanx.trade/stock-market-news/companies/lloyds-metals-energy-limited-schedules-49th-agm-on-june-19-2026-recommends-1-final-dividend-for-fy-2025-26/41318054" target="_blank">Lloyds Metals &amp; Energy Files FY26 BRSR — ₹13,837.86 Cr Standalone Turnover, ₹11,665.28 Cr Net Worth, AGM 19 June 2026; Iron-Ore Mining + Sponge Iron BRSR Template Lands as JSW–POSCO Joint Venture Backdrop Sets Sectoral Reference</a>
+          </div>
+          <div class="news-summary">Lloyds Metals and Energy Limited filed its Business Responsibility and Sustainability Report for FY 2025–26 with NSE and BSE during the week. The report disclosed a standalone turnover of ₹13,837.86 crore and a net worth of ₹11,665.28 crore, with the company's 49th AGM scheduled for 19 June 2026 and a 1% final dividend recommended. The filing makes Lloyds Metals one of the first FY26 BRSR data points in the Indian iron-ore and sponge-iron sub-sector, landing against the backdrop of the previously-announced ~$7.3 billion 6 MTPA JSW–POSCO integrated steel JV in Odisha.</div>
+          <div class="news-source">Source: ScanX / Lloyds Metals &amp; Energy BRSR FY26 filing / NSE-BSE filings (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Lloyds Metals at ₹13,837.86 crore standalone turnover is the largest disclosed Indian iron-ore + sponge-iron pure-play with FY26 BRSR data on the public record. For peers in the same sub-sector (<strong>NMDC, Sandur Manganese, MOIL, KIOCL, Rashmi Metaliks, Welspun Specialty Solutions, Jindal Stainless, Sarda Energy &amp; Minerals, Godawari Power &amp; Ispat</strong>) the disclosure floor for FY27 is now set by Lloyds Metals plus JSW Steel (S&amp;P Global Sustainability Yearbook Top 1% Emblem, disclosed prior week). For ESG-screened EM-debt allocators (Norges Bank, GPIF, ABP, PGGM, AP funds, BlackRock EM debt-tilt funds) the BRSR data lets them weight Indian sponge-iron exposure inside transition-aligned portfolios. For BRSR Core assurance providers, iron-ore + sponge-iron is a relatively early-stage assurance practice — the next assurance cycle will likely see Big-Four-plus competitive bidding intensify in this sub-sector.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Regulatory &amp; Policy</span>
+          <span class="topic-quip">"India's first National Electricity Policy refresh in 21 years places nuclear inside green-bond eligibility, and the MoEFCC tightens plastic-waste audit requirements."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Energy Policy</span>
+          <div class="news-headline">
+            <a href="https://www.world-nuclear-news.org/articles/indian-government-releases-draft-energy-policy" target="_blank">Ministry of Power Releases Draft National Electricity Policy 2026 — First Refresh in 21 Years; Nuclear Eligible for Green Bond Funding, Retired Thermal-Plant Sites Earmarked for Nuclear Repurposing, Brownfield Coal-to-Nuclear Conversion Considered Where Feasible</a>
+          </div>
+          <div class="news-summary">India's Ministry of Power released the Draft National Electricity Policy 2026 during the week — the first comprehensive refresh of the country's national electricity policy since the original 2005 NEP. Key headline elements include explicit eligibility of nuclear power projects for Green Bond funding, brownfield expansion of existing nuclear sites prioritised over greenfield, replacement of coal-based captive plants with nuclear where feasible, and repurposing of retired thermal-plant sites for nuclear power "wherever feasible." The draft aligns with the FY26 Union Budget's nuclear ambitions and the long-stated 500 GW renewables-by-2030 plus 100 GW nuclear-by-2047 targets.</div>
+          <div class="news-source">Source: World Nuclear News / Ministry of Power / Draft National Electricity Policy 2026 (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Bringing nuclear inside Green Bond eligibility is the single most consequential domestic-financing-architecture change for the Indian nuclear sector since the 2010 Civil Liability Act. For ESG-screened EM-debt buyers (<strong>Norges Bank, GPIF, AP funds, PGGM, ABP, CPP Investments, BlackRock EM debt</strong>) nuclear-tagged green bonds become a permissible inclusion category for India exposure where they were previously excluded under stricter taxonomy interpretations. For Indian PSU energy companies (<strong>NTPC, NTPC Green Energy, NPCIL, BHEL, L&amp;T Heavy Engineering, Hindustan Construction</strong>) the policy unlocks a new class of green-bond financing for nuclear capex. For private players potentially entering nuclear after the previously-passed liability-act amendments (<strong>Reliance Industries, Tata Power, Adani Power, JSW Energy, Vedanta</strong>) the brownfield-coal-to-nuclear pathway is a directly actionable strategic option. For BRSR Principle 6 disclosure in Indian power and utilities, nuclear-aligned transition-plan disclosure becomes a comparability anchor over FY27–28. For the broader Indian taxonomy debate, the draft policy is the first formal central-government signal that nuclear is "transition-aligned" rather than "fossil-adjacent."</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Plastic Waste Regulation</span>
+          <div class="news-headline">
+            <a href="https://india.mongabay.com/2025/04/latest-esg-reporting-rules-redefine-key-suppliers-and-customers-of-listed-companies/" target="_blank">MoEFCC Notifies Plastic Waste Management (Amendment) Rules 2026 — Stricter Audit Requirements for EPR Obligated Entities, Producer-Importer-Brand-Owner Traceability Tightened</a>
+          </div>
+          <div class="news-summary">The Ministry of Environment, Forest and Climate Change (MoEFCC) during the week notified the Plastic Waste Management (Amendment) Rules, 2026, introducing stricter third-party audit requirements for entities operating under Extended Producer Responsibility (EPR) obligations. The amendment tightens traceability across producer-importer-brand-owner categories and the registered plastic-waste-processor ecosystem. The rules build on the original 2016 PWM Rules and the 2022 EPR amendment, and run in parallel to the BRSR Principle 6 disclosure architecture that already covers plastic-waste handling.</div>
+          <div class="news-source">Source: Mongabay India / MoEFCC notification / Plastic Waste Management Amendment Rules 2026 (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Stricter EPR audit requirements increase the cost and complexity of plastic-waste compliance for every Indian FMCG, beverages, packaged-goods, e-commerce, and electronics company in the top-1000 BRSR cohort. For <strong>HUL, Nestlé India, Britannia, Marico, Dabur, Godrej Consumer, Tata Consumer Products, ITC, Coca-Cola India, PepsiCo India, Parle, Mondelez India, P&amp;G India, Colgate-Palmolive India, Asian Paints, Berger Paints, Pidilite</strong>, the audit-tightening converts a previously soft compliance line into a hard auditable obligation that BRSR Core assurance providers will examine in detail. For e-commerce platforms (<strong>Amazon India, Flipkart, Meesho, Reliance JioMart, Tata Digital BigBasket, Nykaa, BlueDart</strong>) the brand-owner-traceability requirement raises the bar on packaging disclosure in BRSR Principle 2. For <strong>plastic-waste-processor operators (Lucro Plastecycle, Banyan Nation, Saahas Zero Waste, RecycleX, Bisleri</strong>) the EPR audit tightening creates additional demand for verified processor capacity. For BRSR Core assurance providers, plastic-waste-audit examination becomes a new specialist competency area through FY27–28.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Large Company Actions &amp; Big Moves</span>
+          <span class="topic-quip">"NTPC crosses 90 GW with Khavda solar commissioning, Vedanta posts a record FY26 alongside a demerger, and Yes Bank tops Indian banking in S&amp;P Global CSA 2025 at 79."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">PSU Renewable Build-Out</span>
+          <div class="news-headline">
+            <a href="https://www.ntpc.co.in/" target="_blank">NTPC Group Crosses 90 GW Installed Power Generation Capacity on 19 May With Additional Khavda Solar Commissioning in Gujarat — Largest PSU Power Producer Now One Step Closer to 130 GW by 2032 Target, Cementing Renewables-Plus-Coal Hybrid Architecture</a>
+          </div>
+          <div class="news-summary">NTPC Group's installed power generation capacity crossed 90 GW on 19 May with the commissioning of additional solar capacity at the Khavda Solar Project in Gujarat — India's largest single-location renewable energy build-out. The milestone confirms NTPC's continuing trajectory toward its 130 GW total installed capacity target by 2032, of which the Group has previously stated an ambition of 60 GW non-fossil capacity. The Khavda complex anchors the renewables share of NTPC's portfolio and feeds into NTPC Green Energy's subsidiary economics that the Board considered alongside its 22 May meeting on FY26 financials.</div>
+          <div class="news-source">Source: NTPC / Khavda Solar Project / IBEF / India News Network (19 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> NTPC at 90 GW is the largest single-corporate-disclosed power-generation portfolio in India and one of the largest in EM. The Khavda commissioning is the operational evidence of the renewables-plus-coal hybrid transition pathway that ESG-rating users (MSCI, Sustainalytics, S&amp;P Global ESG, ISS-ESG, CareEdge-ESG, CRISIL-ESG) will increasingly score against the company's coal-fired baseline. For Indian renewable IPP peers (<strong>Adani Green Energy, ReNew Energy Global, Tata Power Renewables, JSW Renew Energy, ACME Solar, Inox Wind, Suzlon Energy, Sterling and Wilson Renewable, Sembcorp India</strong>) the NTPC trajectory at PSU scale shapes the competitive baseline for FDRE-style firm-power tenders. For ESG-screened EM-debt allocators (Norges Bank, GPIF, CPP, ABP, PGGM, AP Funds, BlackRock EM-tilt funds) NTPC Group's emissions-intensity disclosure becomes the comparability anchor for any decarbonising-utility position. For BRSR Principle 6 in Indian power and utilities, NTPC's intensity-trajectory disclosure FY27 will be the most-referenced peer disclosure in the sector.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Diversified Mining Conglomerate</span>
+          <div class="news-headline">
+            <a href="https://www.alcircle.com/press-release/vedanta-chairman-anil-agarwals-letter-to-shareholders-highlights-record-fy26-performance-and-demerger-roadmap-118333" target="_blank">Vedanta Reports Best-Ever FY26 Performance — ₹25,096 Cr PAT, ₹1,74,075 Cr Revenue — Alongside Demerger Roadmap; Disclosure Quality Test as Five-Way Demerger Lands Inside FY26 BRSR Reporting Cycle</a>
+          </div>
+          <div class="news-summary">Vedanta Limited Chairman Anil Agarwal's FY26 letter to shareholders confirmed the company's best-ever financial performance — ₹25,096 crore Profit After Tax and ₹1,74,075 crore in revenue, supported by operational excellence across the aluminium, oil and gas, copper, iron ore, and zinc businesses. The letter also laid out the continuing demerger roadmap that will split Vedanta into multiple listed entities by sub-sector. The simultaneous record performance plus structural separation is the most consequential single corporate ESG disclosure-architecture test in Indian diversified mining since the BRSR Core mandate began.</div>
+          <div class="news-source">Source: AL Circle / Vedanta Chairman's letter / Vedanta FY26 disclosures (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> A five-way demerger of the largest non-government-owned Indian diversified mining group forces every ESG-rating user, BRSR Principle 6 auditor, and ESG-screened EM-equity allocator to rebuild Vedanta exposure post-demerger on a sub-sector basis. For <strong>Hindustan Zinc (already listed)</strong>, the parent demerger plus its own FY26 disclosure becomes more critical for capital-allocation independence. For pure-play peers post-demerger (Vedanta Aluminium vs <strong>Hindalco, NALCO</strong>; Vedanta Oil &amp; Gas vs <strong>ONGC, OIL India, Reliance Industries, Cairn merger entity</strong>; Vedanta Copper vs <strong>Hindustan Copper</strong>; Vedanta Iron Ore vs <strong>NMDC, Lloyds Metals, Sandur Manganese</strong>; Vedanta Zinc International vs <strong>Hindustan Zinc</strong>) the comparability story now reshapes. For BRSR Principle 6 assurance providers, Vedanta's FY26 BRSR — and the demerger-impact disclosures inside it — becomes a reference case for how mid-cycle structural changes show up in BRSR Core. For ESG-rating agencies, MSCI's 2026 Model Update and Sustainalytics' subsequent FY26 methodology will need to handle the parent-subsidiary attribution explicitly.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Bank-Sector ESG Rating</span>
+          <div class="news-headline">
+            <a href="https://www.yesbank.in/" target="_blank">Yes Bank Ranks Highest Among Indian Lenders in S&amp;P Global Corporate Sustainability Assessment (CSA) 2025 — Score of 79 Places It in Global Top 15%; Disclosure-Comparability Tailwind as Indian Private Banks Enter FY26 BRSR Cycle</a>
+          </div>
+          <div class="news-summary">Yes Bank was confirmed during the week as the highest-rated Indian lender in the S&amp;P Global Corporate Sustainability Assessment (CSA) 2025, with a score of 79 — placing it in the global top 15% of banks evaluated. The CSA ranking is the input that feeds into S&amp;P Global ESG Scores, the Dow Jones Sustainability Indices methodology, and the S&amp;P Global Sustainability Yearbook inclusion criteria. The result lands as Indian private banks (HDFC, ICICI, Axis, Kotak, IndusInd, Federal Bank, IDFC First) enter the FY26 BRSR Core assurance cycle.</div>
+          <div class="news-source">Source: S&amp;P Global CSA 2025 / Yes Bank disclosure / Sustainable Investing platforms (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> A score of 79 in S&amp;P Global CSA 2025 puts Yes Bank at the same comparability tier that Indian private banks pitching to international ESG-screened debt buyers have been positioning toward. For <strong>HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, IndusInd Bank, IDFC First Bank, Federal Bank, RBL Bank, Bandhan Bank, AU Small Finance Bank</strong>, the Yes Bank result raises the comparability bar inside Indian private banking — peer banks not yet publicly disclosing CSA scores will face investor questions during FY26 BRSR road-shows. For <strong>PSU banks (SBI at A MSCI / 53 DJSI for FY26, PNB, Canara, Union Bank, BoB, BoI</strong>) the Yes Bank rating bridges the gap between PSU and private comparability. For Indian PSU and private banks aiming for S&amp;P Global Sustainability Yearbook inclusion, the Yes Bank score is the operational target for FY27 reporting cycles. For BRSR Principle 6 disclosure in banking, the CSA submission discipline becomes part of the broader external-rating ecosystem auditors increasingly cross-reference.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Carbon &amp; Decarbonisation</span>
+          <span class="topic-quip">"SECI awards 10 MW solar+storage at ₹2.60/kWh in Odisha — sub-₹3 firm renewable power is now the operational baseline India tenders against."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">SECI Solar+Storage Tariff</span>
+          <div class="news-headline">
+            <a href="https://renewablewatch.in/2026/05/18/seci-announces-results-of-10-mw-solar-plus-storage-auction/" target="_blank">SECI Awards 10 MW Solar + 10 MW/20 MWh BESS Auction to BNC Power Projects in Odisha at ₹2.60/kWh — 25-Year PPA, Build-Own-Operate; Sub-₹3 Solar+Storage Lands as the Operational Pricing Baseline for FDRE-Style Indian Tenders</a>
+          </div>
+          <div class="news-summary">The Solar Energy Corporation of India (SECI) on 18 May announced BNC Power Projects as the winning bidder in its auction to develop a 10 MW grid-connected solar project paired with a 10 MW/20 MWh battery energy storage system in Odisha at a tariff of ₹2.60 per kWh. The project will be developed on a build-own-operate basis, with SECI signing a 25-year power purchase agreement (PPA) with BNC Power Projects. Separately, SECI's 1,500 MWh assured-peak-power-supply tender under the Contract for Difference (CfD) mechanism for ISTS-connected renewable energy projects had bid submission closing on 22 May, with techno-commercial bids opening on 28 May — another auction architecture aimed at firming up dispatchable renewable power.</div>
+          <div class="news-source">Source: Renewable Watch / SECI auction notification / Energetica India (18–22 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Sub-₹3 solar+storage at scale — combined with SECI's CfD architecture for firm peak-power supply — reshapes the unit economics of every Indian renewable IPP's project portfolio. For <strong>Adani Green Energy (19.294 GW operational), Tata Power Renewables, ReNew Energy Global, JSW Renew Energy, NTPC Green Energy, ACME Solar, Inox Wind, Suzlon, Sembcorp India, Avaada, Greenko</strong> the ₹2.60 benchmark resets bid economics for FY27 SECI and state-utility tenders. For <strong>Indian BESS integrators (Tata Power BESS, Reliance BESS, Greenko BESS, Inox Wind Energy Storage, JSW Energy Storage, ABB India</strong>) and supply-side battery providers (<strong>Tesla India Megapack, LG Energy Solution, Samsung SDI, CATL India, BYD, Wärtsilä Energy Storage, Fluence, Powin</strong>) the 10 MW/20 MWh project scale combined with the 25-year PPA tenor sets a domestic-content procurement precedent. For Indian banks underwriting renewable project debt (<strong>SBI, PFC, REC, IREDA, HDFC, ICICI, Axis, IDFC First</strong>) the sub-₹3 tariff at sovereign-PPA quality changes acceptable debt-service-coverage assumptions. For BRSR Principle 6 disclosure in Indian C&amp;I and group-captive RE consumers (Reliance, Tata, Adani, JSW, Mahindra, ITC, Aditya Birla, Vedanta, Hindalco), the ₹2.60 reference rate becomes the procurement benchmark for FY27 captive RE round-up disclosures.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="region-section">
+    <div class="region-header global">
+      <span class="region-flag">🌍</span>
+      <div class="region-title-block">
+        <h2>Global</h2>
+        <div class="region-sub">The European Commission's ESRS 2.0 consultation runs through 3 June — 489 mandatory datapoints removed. Singapore and the World Bank launch the Singapore Carbon Markets Programme at Innovate4Climate. California overhauls its cap-and-trade with controversial free permits to oil refiners. BYD overtakes Tesla as the world's largest BESS deployer. Schroders Greencoat acquires biomethane assets. Climeworks brings in a new CFO. ESG-software providers (Datamaran, Novata, Morningstar Sustainalytics) ship new tools. Sustainable finance closes — Pentagreen Capital, Circulate Capital + HSBC, Copenhagen Infrastructure Partners — pile up.</div>
+      </div>
+    </div>
+    <div class="region-content">
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Regulatory &amp; Policy</span>
+          <span class="topic-quip">"Brussels closes in on ESRS 2.0 simplification, Singapore + the World Bank launch a carbon-markets programme at Innovate4Climate, and California's cap-and-trade overhaul becomes a Big-Oil-free-permits flashpoint."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">EU Sustainability Reporting</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/eu-releases-proposed-finalized-mandatory-and-voluntary-sustainability-reporting-standards/" target="_blank">EU Commission's Draft ESRS 2.0 Consultation Runs Through 3 June — 489 Mandatory Datapoints Removed (~60%+ Cut), Voluntary VSME-Type Standard for &lt;1,000 Employees Companies Doubles as Statutory "Value Chain Cap"</a>
+          </div>
+          <div class="news-summary">The European Commission's draft revised European Sustainability Reporting Standards (ESRS 2.0), published 6 May and open for public consultation through 3 June, continued to shape the disclosure conversation through the 18–24 May window. Headline simplifications: removal of 489 previously mandatory datapoints (Commission states a ~60%+ reduction in mandatory datapoints and ~70%+ total-datapoint reduction), removal of all voluntary datapoints, choice of operational vs financial control as the GHG boundary, primary-microplastics-only disclosure, and a "top-down" materiality approach allowing strategy-anchored analysis. Double materiality remains. The parallel voluntary VSME-type standard for entities with ≤1,000 employees doubles as the statutory "value chain cap." Final delegated act expected June–July; parliamentary scrutiny up to 4 months.</div>
+          <div class="news-source">Source: ESG Today / Latham &amp; Watkins / Linklaters / Morrison Foerster / Ropes &amp; Gray / European Commission (consultation open through 3 June 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> The 60%+ mandatory-datapoint cut narrows the global disclosure-architecture gap between ESRS, ISSB IFRS S1+S2, and BRSR Core. For non-EU multinationals with EU branch operations triggering Article 40a (<strong>Apple, Microsoft, Amazon, Alphabet, Meta, J&amp;J, P&amp;G, Coca-Cola, Toyota, Samsung, Reliance Europe, Tata Steel Europe, JSW Steel Europe, Infosys EU, Wipro EU, TCS EU</strong>) the simplification materially lowers the compliance burden of the third-country mechanism. For BRSR Core preparers in India, the simplification means the prior "ESRS is the harder standard, BRSR is the lighter one" framing collapses — BRSR Core's quantitative granularity is now closer to ESRS than at any point since CSRD entered force. The mandatory 1.5°C-alignment-statement requirement is the disclosure mechanism that turns transition-plan credibility into a binary auditable item — companies whose plans aren't 1.5°C-aligned must say so on the record. For ESG-rating users (MSCI, Sustainalytics, S&amp;P Global ESG, ISS-ESG, Moody's ESG, Refinitiv) the consultation outcome shapes 2026–27 methodology revisions.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Carbon Markets Capacity Building</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/singapore-world-bank-partner-to-scale-national-carbon-markets/" target="_blank">Singapore + World Bank Launch Singapore Carbon Markets Programme at Innovate4Climate on 20 May — Three Pillars: Infrastructure &amp; Technology, Monetisation, Country Readiness; India's CCTS + Article 6 Negotiations With Singapore Sit Inside the New Architecture</a>
+          </div>
+          <div class="news-summary">Singapore's National Climate Change Secretariat (NCCS) on 20 May launched the Singapore Carbon Markets Programme in partnership with the World Bank Group at the Innovate4Climate (I4C) conference in Singapore. The Programme is structured around three pillars: (1) strengthening carbon market infrastructure and technology, (2) helping host countries monetise carbon credits, and (3) supporting host countries in building policies, institutions, and market readiness. Deliverables include toolkits for interoperable carbon registries aligned with international standards, digital MRV (monitoring, reporting, and verification) extended to new credit categories including regenerative agriculture, and demand-side aggregation at both buyer and country level.</div>
+          <div class="news-source">Source: ESG Today / NCCS Singapore / World Bank Group / Innovate4Climate I4C (20 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Singapore is the operational hub for South-East Asia and Indo-Pacific Article 6 transaction flow, and a World Bank co-branded programme materially shifts the registry- and MRV-interoperability landscape. India's ongoing Article 6 bilateral negotiations with Singapore, Sweden, and South Korea — already public — will now run through a Singapore-side architecture explicitly designed for interoperability with the Indian Carbon Market Portal launched at Prakriti 2026 in March. For <strong>India's CCTS-registered project developers (over 40 entities at Prakriti 2026, methodologies notified for biogas, hydrogen, and forestry)</strong>, Singapore's demand-aggregation pillar is the operational unlock that converts technical CCTS readiness into actual cross-border revenue. For <strong>Indian green-hydrogen, SAF, and CCUS project sponsors</strong>, Singapore's interoperability tooling reduces MRV friction that currently slows international offtake. For BRSR Principle 6 disclosures from Indian companies relying on offsets, the Singapore-WBG architecture raises the credibility threshold that "high-integrity" carbon credits must meet.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">US State Carbon Market</span>
+          <div class="news-headline">
+            <a href="https://calmatters.org/environment/climate-change/2026/05/carbon-market-free-permit-california/" target="_blank">California Overhauls Cap-and-Trade Architecture Amid Big-Oil Free-Permit Controversy — Refinery Allowance Allocation Becomes Flashpoint, $6 Gas Price Concerns Collide With State Climate Ambitions; CARB Phase-Out Mechanics Reset</a>
+          </div>
+          <div class="news-summary">During the 18–24 May window, California advanced its cap-and-trade ("Cap-and-Invest") overhaul amid escalating controversy over proposed free-permit allocations to oil refineries. Critics argued the structure constitutes billions in free climate-permit subsidies to Big Oil; refining-industry stakeholders countered that without the allocations, gasoline prices could spike toward $6/gallon. The architectural change resets CARB's previously-laid-out refinery cap-and-trade phase-out mechanics and lands as the state's broader climate-law architecture remains under pressure across the West Coast.</div>
+          <div class="news-source">Source: CalMatters / KPBS Public Media / California Air Resources Board (18 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> California's cap-and-trade is the largest carbon-pricing instrument in the Americas by covered emissions. A free-allocation tilt toward refiners weakens the carbon-price signal but extends the system politically. For <strong>US oil majors with California refining exposure (Chevron, Marathon, Valero, PBF Energy, Phillips 66)</strong> the allocation change is a near-term cash-flow event. For <strong>US ESG-screened equity allocators (Vanguard, BlackRock, State Street, Fidelity, T. Rowe Price, Capital Group, Dimensional Fund Advisors)</strong> the rebalancing complicates carbon-price-implied financial modelling. For <strong>California-tied corporate buyers and clean-energy procurers (Apple, Alphabet, Meta, Microsoft, Tesla, Salesforce, Cisco, Adobe, Oracle, Nvidia, AMD)</strong> the implicit carbon-price signal weakens marginally. For Indian companies serving California-based customers, the volatility is largely neutral but the precedent matters — when major US sub-jurisdictions revisit carbon-pricing architecture, BRSR Principle 6 transition-plan disclosure will need to handle the policy-uncertainty premium. For the global voluntary carbon market, California's compliance-market churn historically influences voluntary-market pricing benchmarks.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Large Company Actions &amp; Big Moves</span>
+          <span class="topic-quip">"BYD overtakes Tesla as the world's largest BESS deployer, Schroders Greencoat acquires biomethane, and Climeworks brings in a new CFO — the energy-transition operator landscape reshapes in seven days."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">BESS Market Leadership Shift</span>
+          <div class="news-headline">
+            <a href="https://electrek.co/2026/05/13/byd-surpasses-tesla-energy-storage-bess-benchmark-2025/" target="_blank">BYD Overtakes Tesla as World's Largest BESS Deployer at 60+ GWh Shipped in 2025 vs Tesla's 46.7 GWh — 13% Global Market Share vs Tesla's 10%; First Time a Non-US Manufacturer Holds the Top Spot Since the BESS Market Took Off</a>
+          </div>
+          <div class="news-summary">BYD overtook Tesla during 2025 to become the world's largest battery energy storage system integrator, capturing approximately 13% of the global market versus Tesla's 10%, on shipments of more than 60 GWh of energy storage systems globally — substantially ahead of Tesla's 46.7 GWh deployed in the same period. The benchmark figures were widely reported during the 18–24 May 2026 window via Electrek and energy-storage-industry trade press. The shift is the first time a non-US manufacturer holds the top BESS-integrator spot since the market took commercial-scale shape.</div>
+          <div class="news-source">Source: Electrek / Energy-Storage.News / global BESS shipment data (May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> BESS-integrator concentration is one of the most operationally consequential supply-chain stories for the global energy transition. BYD's lead intensifies US energy-security and domestic-content discussions inside the Inflation Reduction Act (IRA) 45X production credit architecture — and inside the Ford Energy launch (announced last week, May 18 issue covered) which targets exactly the C&amp;I and utility BESS market BYD currently leads. For <strong>US-tilted hyperscaler BESS procurement (Microsoft, Google, Meta, Amazon, Apple, Oracle, Salesforce)</strong> BYD's lead intensifies the procurement-diversification debate. For <strong>European BESS integrators (Wärtsilä Energy Storage, Saft, Siemens Energy ESS, ABB Energy Storage, Fluence)</strong> the China-Korea-US three-way competition reshapes competitive positioning. For <strong>Indian BESS integrators and assemblers (Tata Power BESS, Reliance BESS, JSW Energy Storage, Greenko BESS, Inox Wind Energy Storage, Amara Raja, Exide Industries, HBL Power Systems, Adani Renewables)</strong>, BYD's lead is a competitive baseline but also validation of the structural BESS demand thesis. For BRSR Principle 6 disclosure in Indian power and utilities, the BESS supply-chain disclosure becomes increasingly material as captive- and group-storage capex scales.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">RE Infrastructure M&amp;A</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/" target="_blank">Schroders Greencoat Acquires Biomethane Assets on 21 May — UK Renewable Infrastructure Specialist Expands Bioenergy Footprint as Lufthansa Group's SWISS–MetaFuels SAF Partnership and EU ReFuelEU Mandate Drive Biomethane Demand</a>
+          </div>
+          <div class="news-summary">Global investment manager Schroders' renewable infrastructure investment unit Schroders Greencoat on 21 May announced the acquisition of biomethane production assets, expanding its renewable infrastructure portfolio into the bioenergy segment. The transaction lands as European biomethane demand is being driven by the EU ReFuelEU Aviation mandate (synthetic and biomass SAF blending requirements ramping from 1.2% in 2030 to 35% by 2050), the Lufthansa Group's SWISS–MetaFuels SAF partnership signed in mid-May, and the broader Industrial Decarbonisation Accelerator Act (IAA) framework progressing through the European legislative process.</div>
+          <div class="news-source">Source: ESG Today / Schroders Greencoat / Schroders renewable infrastructure (21 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Biomethane as an institutional infrastructure-asset class signals the maturation of bioenergy alongside solar+wind+storage. For <strong>European biomethane and bio-LNG producers (Air Liquide, Engie, Eni, TotalEnergies bioenergy, Nordion Energi, Gasum, ARA Group, NewGen Solutions)</strong> institutional M&amp;A demand at this scale validates the platform thesis. For <strong>Indian biomethane and compressed-biogas operators (Indraprastha Gas CBG, GAIL CBG, Mahanagar Gas CBG, Bermaco Energy, Hindustan Petroleum CBG portfolio, Reliance CBG-55-plants-under-development referenced in its FY26 BRSR)</strong> the Schroders Greencoat deal is the kind of M&amp;A architecture Indian PSU and private CBG portfolios should attract from international infrastructure funds. For BRSR Principle 6 disclosure in Indian oil-and-gas and city-gas-distribution companies, biomethane as a transition-tagged input becomes an increasingly material disclosure item over FY27–28.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">CDR Sector Leadership Transition</span>
+          <div class="news-headline">
+            <a href="https://www.climeworks.com/" target="_blank">Climeworks Appoints Stéphan Truchot as Chief Financial Officer Effective 1 June — Senior Finance Bench-Building at Permanent-CDR Category Leader as Microsoft Carbon-Removal Spending Slowdown and Stockholm BECCS Deal (Prior Week) Bracket the CDR Market</a>
+          </div>
+          <div class="news-summary">Permanent-direct-air-capture (DAC) and carbon-removal leader Climeworks on 19 May announced the appointment of Stéphan Truchot as Chief Financial Officer, effective 1 June 2026. Truchot joins with senior finance experience across multiple sectors. The appointment is the latest in a wave of senior finance and operational bench-building inside the carbon-removal industry as the category navigates an uncertain demand-side environment — Microsoft's openly-reported slowdown in engineered carbon-removal procurement (covered in the prior week's dispatch) versus Stockholm's 750,000-tonne BECCS deal with Stockholm Exergi (covered prior week) bracket the structural tension.</div>
+          <div class="news-source">Source: Climeworks press release / ESG Today (19 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Senior finance hires at category-leader CDR companies are a leading indicator of capital-raise and project-finance preparation. For <strong>institutional CDR buyers (Microsoft, Stripe, Frontier coalition members, JPMorgan Chase, Google CDR, Meta CDR, H&amp;M, Lego, Shopify, Watershed customers, Patch customers, Climeworks Climate Vault)</strong> the Climeworks leadership update is a positive signal of category resilience. For competing engineered-CDR providers (<strong>Carbon Engineering / 1PointFive, Heirloom, Carbfix, Charm Industrial, Running Tide, Equatic, Carbon Direct, Mission Zero Technologies, Sustaera, Verdox, Skytree, Climeworks itself</strong>) the bench-strength signal raises the competitive bar. For Indian CCUS project sponsors looking at engineered-CDR partnerships (NTPC pilot, Tata Steel, JSW Steel, Reliance, ONGC) the Climeworks operating model remains the most-referenced template. For BRSR Principle 6 disclosure in Indian companies considering CDR offtake, the institutional-buyer pipeline is the operational benchmark for what "high-integrity" CDR means.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">Sustainable Finance</span>
+          <span class="topic-quip">"Pentagreen, Circulate Capital + HSBC, and Copenhagen Infrastructure Partners pile up closes — the institutional-capital flow into Asia and bioenergy reaccelerates after a soft 2025."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Asia Sustainable Infrastructure</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/" target="_blank">Pentagreen Capital Announces Second Close of Green Investments Facility on 20 May — Singapore-Based Sustainable Infrastructure Financing Platform Extends Capital Stack for Asian Renewable Energy and Green Mobility</a>
+          </div>
+          <div class="news-summary">Singapore-based sustainable infrastructure financing platform Pentagreen Capital on 20 May announced the second close of its Green Investments facility. The platform — backed by HSBC and Temasek as anchor sponsors at inception — provides blended-finance debt instruments to sustainable infrastructure projects across South-East Asia and adjacent emerging markets, with a focus on renewable energy and green mobility.</div>
+          <div class="news-source">Source: ESG Today / Pentagreen Capital (20 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Pentagreen's second close is the most consequential sustainable-infrastructure-debt close in South-East Asia and Asia-Pacific so far in 2026. For Indian renewable IPPs with cross-border project ambitions in Bangladesh, Sri Lanka, Nepal, Vietnam, Indonesia, Philippines (<strong>Tata Power International, ReNew Bangladesh, Adani Green International, JSW Energy SE Asia, Greenko International</strong>) Pentagreen's capacity becomes a directly accessible debt tranche. For <strong>South-East Asian renewable sponsors (Symbior Solar, Vena Energy, Pelangi Energy, Sunseap, Cleantech Solar, ZE Energy, Equis Energy)</strong> the close adds underwriting capacity at the project-debt level. For HSBC's broader sustainable-finance positioning in Asia, Pentagreen alongside the same-week green-loan facility extended to Circulate Capital signals coordinated platform expansion. For BRSR Principle 6 disclosure in Indian renewables IPPs, cross-border project pipelines that draw on Pentagreen-style financing become material to long-term capital-cost narrative.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Circular-Economy Green Loan</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/" target="_blank">Circulate Capital Signs New Green Loan Facility With HSBC on 22 May — Singapore-Based Plastic-Circular-Economy Investment Manager Extends Capital for South and South-East Asia Circular-Economy Operating Companies</a>
+          </div>
+          <div class="news-summary">Singapore-based investment manager Circulate Capital — focused on the plastic circular economy and waste-management infrastructure across South and South-East Asia — on 22 May announced a new green loan facility agreement with HSBC. The facility extends Circulate Capital's available credit for portfolio operating companies, the majority of which sit in plastic-waste collection, sorting, recycling, and reprocessing across India, Indonesia, Vietnam, and the Philippines.</div>
+          <div class="news-source">Source: ESG Today / Circulate Capital / HSBC (22 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Circulate Capital's HSBC green-loan facility lands the same week the Indian MoEFCC notified the Plastic Waste Management (Amendment) Rules 2026 with stricter audit requirements (covered above). For Indian plastic-waste-processor operators (<strong>Lucro Plastecycle, Banyan Nation, Saahas Zero Waste, RecycleX, Plastics for Change, Recyca</strong>) institutional debt capacity adjacent to tightening EPR regulation is the underwriting flywheel that converts a regulatory tailwind into operational growth capital. For Indian FMCG and packaged-goods brand-owners under EPR (<strong>HUL, Nestlé, Britannia, Marico, Dabur, Godrej Consumer, Tata Consumer, ITC, Coca-Cola India, PepsiCo India, Parle</strong>) the financing-side build-out increases verified-processor capacity that brand-owner EPR plans depend on. For HSBC's positioning as the dominant cross-border sustainable-finance lender in Asia, Pentagreen + Circulate Capital + parallel green-bond underwriting build a coordinated regional architecture. For BRSR Principle 6 disclosure in Indian FMCG and packaging companies, processor-capacity availability becomes a forward-looking disclosure expectation.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">European Bioenergy Fund Launch</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/" target="_blank">Copenhagen Infrastructure Partners (CIP) Launches Advanced Bioenergy Fund on 21 May — Danish Energy Infrastructure Investor Builds Dedicated Bioenergy Vehicle as European ReFuelEU Aviation, Industrial Decarbonisation Accelerator Act, and Methane-Reduction Regulation Bracket the Demand Pool</a>
+          </div>
+          <div class="news-summary">Copenhagen Infrastructure Partners (CIP) — one of Europe's largest dedicated energy infrastructure investment managers — on 21 May launched the Advanced Bioenergy Fund, a dedicated investment vehicle focused on the bioenergy value chain. The launch lands as European bioenergy demand is being shaped by EU ReFuelEU Aviation synthetic-and-biomass-SAF mandates (1.2% in 2030 to 35% by 2050), the Industrial Decarbonisation Accelerator Act (IAA) framework, and methane-reduction regulation that's tightening landfill and agricultural-residue management.</div>
+          <div class="news-source">Source: ESG Today / Copenhagen Infrastructure Partners (21 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> CIP's Advanced Bioenergy Fund alongside Schroders Greencoat's biomethane M&amp;A in the same week is the strongest institutional signal in 2026 to date that European bioenergy has graduated from niche-renewable to institutional-infrastructure asset class. For <strong>European biomethane and bio-LNG operators (Engie, TotalEnergies bioenergy, Nordion Energi, Gasum, NewGen Solutions, ARA Group, Air Liquide)</strong> institutional capital availability accelerates platform consolidation. For SAF producers (<strong>Neste, World Energy, Phillips 66 Rodeo, BP Bunge bioenergy, Eni Biorefining, TotalEnergies La Mède, Repsol, OMV biorefinery, Shell Renewables, Honeywell UOP, Topsoe</strong>) the bioenergy-feedstock financing pipeline strengthens. For <strong>Indian SAF and biomethane producers (IndianOil Panipat (first Indian ISCC CORSIA-certified SAF), Reliance bioenergy, BPCL bioenergy, Numaligarh Refinery SAF, Praj Industries</strong>) the European fund-formation tide is the structural-export-opportunity signal. For BRSR Principle 6 in Indian aviation, refining, and bioenergy companies, ReFuelEU-aligned offtake pipelines become a forward-looking disclosure item.</div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="topic-block">
+        <div class="topic-header">
+          <span class="topic-badge">ESG Data, Tools &amp; Carbon Markets</span>
+          <span class="topic-quip">"Morningstar Sustainalytics extends controversies research to private unicorns, Datamaran ships platform enhancements, and Novata launches a Risk Atlas — the ESG-data-vendor side scales with FY26 demand."</span>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Private-Markets ESG Data</span>
+          <div class="news-headline">
+            <a href="https://www.sustainalytics.com/esg-news" target="_blank">Morningstar Sustainalytics Expands Controversies Research to Cover Morningstar PitchBook Unicorn 30 Index Constituents — Private-Market ESG-Controversies Coverage Mainstreams as ESG-Screened LP Capital Reweights Private-Markets Exposure</a>
+          </div>
+          <div class="news-summary">Morningstar Sustainalytics on 18 May announced the expansion of its Controversies Research methodology to cover constituents of the Morningstar PitchBook Unicorn 30 Index — the 30 most valuable venture-backed private companies. The expansion brings systematic ESG-controversies coverage to one of the most institutional-LP-watched private-market index constructs. The move responds to growing LP demand for private-markets ESG due diligence at parity with listed-equity coverage.</div>
+          <div class="news-source">Source: Morningstar Sustainalytics / Morningstar PitchBook (18 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Private-markets ESG-controversies coverage is one of the largest residual gaps in institutional-LP due diligence. For <strong>major LPs (CalPERS, CalSTRS, CPPIB, Norges Bank Investment Management, GPIF, ABP, PGGM, AP Funds, Texas Teachers, OMERS, OTPP, KIC, Khazanah, Temasek, GIC, Future Fund Australia, NZ Super, Norwegian Government Pension Fund Global)</strong> the Unicorn 30 coverage expansion fills a long-standing LP-side gap. For <strong>private-market GPs (Sequoia, a16z, Tiger Global, SoftBank Vision Fund, Insight Partners, Lightspeed, KKR, Blackstone, Carlyle, Apollo, EQT, CVC, Bain Capital, General Atlantic, TPG)</strong> the coverage adds an ESG-due-diligence input GP teams will increasingly need to reference. For Indian unicorns inside or adjacent to the index (<strong>Flipkart, Razorpay, Swiggy, Zomato, Ola, Oyo, Paytm, Nykaa, Lenskart, BYJU's, Dream11, Meesho, Cred, Polygon, OnDeck</strong>) the expanded coverage means private-stage ESG-controversies become visible to institutional LPs. For BRSR Principle 6 disclosure when these unicorns IPO and enter the top-1000 listed cohort, the pre-IPO Sustainalytics history becomes a baseline comparator.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">ESG Software Platforms</span>
+          <div class="news-headline">
+            <a href="https://www.esgtoday.com/" target="_blank">Datamaran Ships ESG Platform Enhancements + Novata Launches Risk Atlas on 20 May — ESG-Software-Vendor Side Scales With FY26 Demand From Newly-Mandatory Disclosure Cohorts in EU, UK, Brazil, Japan, Korea, Singapore, Hong Kong, and India BRSR Core</a>
+          </div>
+          <div class="news-summary">On 20 May, ESG-focused software analytics platform provider Datamaran announced a series of enhancements to its ESG materiality and risk-management platform. The same day, private-markets-focused sustainability data solutions provider Novata launched Risk Atlas, a new product targeted at private-equity GP portfolio-monitoring. Both announcements signal continued investment by ESG-software vendors in product capability as FY26 mandatory-disclosure cohorts in EU, UK, Brazil, Japan, Korea, Singapore, Hong Kong, and India (via SEBI BRSR Core) expand.</div>
+          <div class="news-source">Source: ESG Today / Datamaran / Novata (20 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Two ESG-software product launches on the same day signal accelerating vendor-side investment in product capability. For <strong>broader ESG-data and disclosure-platform competitors (Workiva, Persefoni, Watershed, Sweep, ServiceNow ESG, Salesforce Net Zero Cloud, SAP Sustainability Control Tower, Microsoft Sustainability Manager, IBM Envizi, Wolters Kluwer Enablon, NormatIVe, Plan A, EcoVadis)</strong> the launches raise the competitive baseline at exactly the time FY26 BRSR Core, ESRS 2.0, and ISSB IFRS S1+S2 mandatory reporting cycles expand. For Indian companies evaluating ESG-software platforms ahead of FY27 BRSR Core assurance scaling (top 500 to top 1000 cohort phasing), the vendor-side product investment provides a richer tooling baseline. For BRSR Principle 6 preparers, the vendor selection becomes a more consequential operational decision than it was 12 months ago — the gap between best-in-class and median-vendor capability is widening.</div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-tag">Permanent CDR Offtake</span>
+          <div class="news-headline">
+            <a href="https://carbon-pulse.com/510550/" target="_blank">Microsoft Signs 626,000-Tonne CDR Offtake Agreement With North Star Carbon Solutions Over 15 Years — Sustained Hyperscaler BECCS Demand Persists Even as Microsoft Walks Back Hourly RE Matching; Exomad Green + Supercritical Biochar Deal at 500,000 Tonnes</a>
+          </div>
+          <div class="news-summary">In the broader 11–24 May window, North Star Carbon Solutions signed an offtake agreement with Microsoft for 626,000 tonnes of carbon dioxide removal (CDR) to be delivered over 15 years from the North Star BECCS Project. Separately, Exomad Green and Supercritical signed a three-year agreement for up to 500,000 tonnes of biochar CDR, exhausting Exomad's remaining 2026 inventory and allocations for 2027 and 2028. JPMorgan Chase signed a 10-year offtake agreement with Graphyte for 60,000 tonnes of CDR.</div>
+          <div class="news-source">Source: Carbon Pulse / Carbonaires / corporate CDR offtake disclosures (11–24 May 2026)</div>
+          <div class="news-context"><strong>Why it matters for corporate ESG:</strong> Microsoft's 626,000-tonne BECCS offtake is the second-largest single-buyer BECCS commitment publicly disclosed in 2026, after Stockholm Exergi's 5-million-tonne agreement signed earlier. The sustained hyperscaler demand persists even as Microsoft walks back hourly RE matching — confirming that permanent removal procurement is a separate strategic line from operational RE matching. For <strong>institutional CDR buyers (Microsoft, Stripe, Frontier, Google, Meta, Amazon, Salesforce, JPMorgan Chase, Bank of America, BlackRock, H&amp;M, Lego, Shopify)</strong> the procurement-pipeline visibility continues to anchor the demand side. For <strong>BECCS, biochar, and engineered-CDR providers (North Star Carbon Solutions, Stockholm Exergi, Exomad Green, Graphyte, Charm Industrial, Carbon Engineering, Heirloom, Climeworks, Carbfix, Running Tide, Equatic)</strong> the multi-deal week confirms persistent demand. For Indian CCUS, BECCS-pilot, and biochar sponsors (NTPC CCS pilot, Tata Steel CCS, JSW Steel, Reliance, ONGC pilot), the demand signal is the underwriting evidence for FY27 capex commitments. For BRSR Principle 6 in companies relying on offsets, the BECCS-and-biochar permanent-removal categories continue to widen the credibility gap versus nature-based avoidance vintages.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-block">
+    <strong>The ESG Dispatch</strong> · Monday, 25 May 2026
+    <div class="footer-meta">24 stories · Week of 18 May – 24 May 2026 · All sources linked above · For informational purposes only. · <a href="https://hemantpunamiya.github.io/esg-dispatch/brsr-index.html" style="color:#f54e00;text-decoration:underline;text-underline-offset:2px;">BRSR FY26 filings index</a></div>
+  </div>
+
+  <div id="esg-modal-overlay">
+    <div id="esg-subscribe-card">
+      <button id="esg-modal-close" onclick="document.getElementById('esg-modal-overlay').style.display='none'">&times;</button>
+      <h3>Stay in the Loop</h3>
+      <p>Get weekly ESG intelligence — India &amp; Global — delivered straight to your inbox. No fluff. No greenwashing.</p>
+      <form id="subscribe-form" action="https://forminit.com/f/j6uvttw24dn" method="POST" onsubmit="handleSubscribe(event)">
+        <input type="email" name="fi-sender-email" id="esg-subscribe-input" placeholder="Your corporate email..." required>
+        <button type="submit" id="esg-subscribe-button">Join the List →</button>
+      </form>
+      <div id="esg-subscribe-success">You're on the list. First dispatch lands next Monday.</div>
+    </div>
+  </div>
+
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var form = document.getElementById('subscribe-form');
+      var ok = document.getElementById('esg-subscribe-success');
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function(r) {
+        if (!r.ok) { throw new Error('FormInit rejected the submission'); }
+        form.style.display = 'none';
+        ok.style.display = 'block';
+      })
+      .catch(function() {
+        alert('Subscription failed. Please try again in a minute.');
+      });
+    }
+  </script>
+</body>
+</html>

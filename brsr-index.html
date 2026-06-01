@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRSR FY26 Filings Index — The ESG Dispatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      background: #f7f7f4;
+      color: #26251e;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .masthead {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 56px 40px 32px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .masthead-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.88px;
+      text-transform: uppercase;
+      color: #807d72;
+      margin-bottom: 14px;
+    }
+    .masthead h1 {
+      font-size: 56px;
+      font-weight: 400;
+      color: #26251e;
+      letter-spacing: -1.68px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .masthead h1 span { color: #f54e00; }
+    .masthead-tagline {
+      font-size: 17px;
+      font-weight: 400;
+      color: #5a5852;
+      letter-spacing: -0.11px;
+      margin-bottom: 28px;
+      max-width: 640px;
+    }
+    .masthead-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #807d72;
+      border-top: 1px solid #e6e5e0;
+      padding-top: 18px;
+    }
+    .masthead-meta span { font-variant-numeric: tabular-nums; }
+    .masthead-meta a { color: #f54e00; text-decoration: underline; text-underline-offset: 2px; }
+    .masthead img {
+      position: absolute;
+      bottom: 24px;
+      right: 32px;
+      height: 32px;
+      opacity: 0.85;
+    }
+    .source-note {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-left: 4px solid #f54e00;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #26251e;
+    }
+    .source-note strong { font-weight: 600; }
+    .source-note a { color: #f54e00; text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
+    .sector-group { margin-bottom: 32px; }
+    .sector-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.88px;
+      text-transform: uppercase;
+      color: #807d72;
+      margin: 0 0 14px 4px;
+    }
+    .brsr-card {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .brsr-card:hover {
+      border-color: #f54e00;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(38, 37, 30, 0.06);
+    }
+    .brsr-date {
+      min-width: 96px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f54e00;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      font-variant-numeric: tabular-nums;
+      padding-top: 2px;
+    }
+    .brsr-body {
+      flex: 1;
+    }
+    .brsr-company {
+      font-size: 17px;
+      font-weight: 500;
+      color: #26251e;
+      letter-spacing: -0.1px;
+      margin-bottom: 6px;
+    }
+    .brsr-meta {
+      font-size: 13px;
+      color: #807d72;
+      margin-bottom: 10px;
+      line-height: 1.55;
+    }
+    .brsr-meta strong { color: #26251e; font-weight: 500; }
+    .brsr-summary {
+      font-size: 14px;
+      color: #5a5852;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .brsr-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .brsr-links a {
+      color: #f54e00;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .footer-block {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #5a5852;
+      margin-top: 24px;
+    }
+    .footer-block strong { color: #26251e; font-weight: 600; }
+    .footer-block a { color: #f54e00; text-decoration: underline; text-underline-offset: 2px; }
+    .footer-meta { font-size: 13px; color: #807d72; margin-top: 6px; }
+    @media (max-width: 720px) {
+      body { padding: 24px 16px 60px; }
+      .masthead { padding: 40px 24px 24px; }
+      .masthead h1 { font-size: 34px; letter-spacing: -1.0px; }
+      .brsr-card { flex-direction: column; gap: 8px; padding: 18px 20px; }
+      .brsr-date { min-width: auto; }
+      .brsr-company { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="masthead">
+    <div class="masthead-eyebrow">Weekly ESG Intelligence · Live Index</div>
+    <h1>BRSR FY26 <span>Filings</span> Index</h1>
+    <p class="masthead-tagline">A live list of FY 2025–26 Business Responsibility and Sustainability Reports we've tracked from NSE corporate filings and aggregator notifications — sorted by sector.</p>
+    <div class="masthead-meta">
+      <span>13 filings tracked</span>
+      <span>FY 2025–26</span>
+      <span><a href="https://hemantpunamiya.github.io/esg-dispatch/">← Back to The ESG Dispatch</a></span>
+    </div>
+    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners">
+  </div>
+
+  <div class="source-note">
+    <strong>About this index.</strong> Each entry is a FY 2025–26 BRSR filing made by an NSE-listed company that we have tracked through aggregator coverage (primarily ScanX) and cross-referenced with company press releases and exchange filings. The authoritative master directory is maintained by NSE at <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports</a> — visit that page for the complete official list, downloadable PDFs, and XBRL submissions. Linked summaries below open the aggregator notification that condensed the filing for newsroom and investor distribution. <strong>Working on your own FY26 BRSR?</strong> <a href="mailto:hemant.punamiya@accelentpartners.com?subject=FY26%20BRSR%20Help%20-%20Accelent%20Partners">Talk to Accelent Partners</a> — our team has set up and signed off ESG and BRSR programmes inside Hindustan Unilever and across multiple Indian and multinational pharmaceutical companies. We get you audit-ready in weeks, not months.
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Diversified Conglomerate</div>
+    <div class="brsr-card">
+      <div class="brsr-date">29 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Reliance Industries Limited</div>
+        <div class="brsr-meta">FY26 · <strong>₹5,46,852 cr</strong> standalone turnover · Deloitte Haskins &amp; Sells reasonable assurance · NSE / BSE</div>
+        <div class="brsr-summary">Net Carbon Zero by 2035 reaffirmed. 100 GW renewables capacity target by 2030. 55 Compressed Biogas plants under development. 34,430 MT plastic waste safely disposed. 80 national + 2 international operating locations.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/reliance-industries-files-brsr-for-fy26-with-5-46-852-crore-turnover/41504228" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">IT Services</div>
+    <div class="brsr-card">
+      <div class="brsr-date">15 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Tata Consultancy Services (TCS)</div>
+        <div class="brsr-meta">FY26 · <strong>₹2,67,021 cr</strong> turnover · KPMG reasonable assurance across all BRSR Core indicators · NSE / BSE</div>
+        <div class="brsr-summary">84% Scope 1 &amp; 2 reduction since FY16 (vs 90%-by-FY30 SBTi target). 26% Scope 3 reduction since FY20 (vs 35%-by-FY34 SBTi target). 79% renewable energy share (84.5% of electricity). 6,17,437 workforce; 35.3% female. 130 ISO 14001:2015-certified facilities worldwide.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/tata-consultancy-services-submits-business-responsibility-and-sustainability-report-for-fy-2025-26/40423231" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Renewable Energy — IPP</div>
+    <div class="brsr-card">
+      <div class="brsr-date">29 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Adani Green Energy Limited</div>
+        <div class="brsr-meta">FY26 · <strong>19.294 GW</strong> operational capacity · Intertek India Pvt Ltd reasonable assurance · NSE / BSE</div>
+        <div class="brsr-summary">78.4% of portfolio under sovereign-entity PPAs. Net Water Positive across all operating locations. Zero Waste to Landfill (ZWL) at 100% of operating plants. TCFD applied at every site. 55% emission-intensity reduction target by 2030 (FY23 baseline). 50 GW capacity goal by 2030. 51% EV adoption.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/adani-green-energy-files-brsr-for-fy26-with-19-294-gw-capacity/41629534" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">FMCG / Consumer Goods</div>
+    <div class="brsr-card">
+      <div class="brsr-date">29 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Tata Consumer Products Limited</div>
+        <div class="brsr-meta">FY26 · <strong>₹14,700.05 cr</strong> standalone turnover · Independent third-party assurance · NSE / BSE</div>
+        <div class="brsr-summary">Global Scope 1 &amp; 2 carbon neutrality achieved. 47% renewable energy share (vs 35% FY26 target). Water Positive status sustained. Zero Waste to Landfill across manufacturing. Recyclable packaging share continued to improve against FY26 commitment.</div>
+        <div class="brsr-links">
+          <a href="https://www.whalesbook.com/corporate-news/English/consumer-products/Tata-Consumer-FY26-Carbon-Neutral-Goals-Met-47percent-Renewables-Used/6a09cf4a591776c132886bc0" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">PSU Banking</div>
+    <div class="brsr-card">
+      <div class="brsr-date">22 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">UCO Bank</div>
+        <div class="brsr-meta">FY26 · <strong>₹29,705 cr</strong> turnover · Net worth ₹24,462 cr · NSE / BSE</div>
+        <div class="brsr-summary">Net Zero Transition Plan aligned to Government of India. Scope 1 + 2 net zero by 2050; full portfolio net zero by 2056. Combined Scope 1+2 of 51,615.41 tCO₂e. Energy consumption 265,277 GJ. 20,993 employees; 29.53% female representation. Whistle Blower and Equal Opportunity policies in place.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/uco-bank-files-brsr-for-fy26-with-sebi/40940243" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Financial Services — Broking</div>
+    <div class="brsr-card">
+      <div class="brsr-date">20 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Angel One Limited</div>
+        <div class="brsr-meta">FY26 · Board-level ESG Committee formed · Deloitte assurance and consulting partnership · NSE / BSE</div>
+        <div class="brsr-summary">Mid-cap discount-broker template. ESG governance details include the establishment of a dedicated Board-level ESG Committee and assurance engagement with Deloitte for BRSR Core indicators. First FY26 capital-markets-services data point for the broking sub-sector.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/angel-one-files-brsr-for-fy26-on-may-20/40849077" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Steel &amp; Metals</div>
+    <div class="brsr-card">
+      <div class="brsr-date">14 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">JSW Steel Limited</div>
+        <div class="brsr-meta">FY26 · <strong>₹51,180 cr</strong> Q4 revenue · S&amp;P Global Sustainability Yearbook 2026 "Top 1%" Emblem · 8th consecutive World Steel Sustainability Champion · NSE / BSE</div>
+        <div class="brsr-summary">Hard-to-abate sector benchmark. Q4 FY26 PAT ₹16,370 cr (up 989% YoY). Sustainability-yearbook inclusion at "Top 1%" tier — among the highest-signal ESG-rating outcomes used by EM-tilt institutional investors. Backdrop to the ~$7.3 B JSW–POSCO 6 MTPA integrated steel JV in Odisha.</div>
+        <div class="brsr-links">
+          <a href="https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/05/JSWSteel-Results-Presentation_Q4FY26-1.pdf" target="_blank">Results presentation →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+    <div class="brsr-card">
+      <div class="brsr-date">May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Lloyds Metals &amp; Energy Limited</div>
+        <div class="brsr-meta">FY26 · <strong>₹13,837.86 cr</strong> standalone turnover · Net worth ₹11,665.28 cr · 49th AGM on 19 June 2026 · 1% final dividend · NSE / BSE</div>
+        <div class="brsr-summary">Largest disclosed Indian iron-ore + sponge-iron pure-play with FY26 BRSR on the public record. Sets the disclosure floor for NMDC, MOIL, Sandur Manganese, KIOCL, and other sub-sector peers.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/lloyds-metals-energy-limited-schedules-49th-agm-on-june-19-2026-recommends-1-final-dividend-for-fy-2025-26/41318054" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Telecommunications</div>
+    <div class="brsr-card">
+      <div class="brsr-date">13 May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Tata Teleservices (Maharashtra) Limited (TTML)</div>
+        <div class="brsr-meta">FY26 · <strong>₹1,160.23 cr</strong> turnover · BSI Group India reasonable assurance · NSE / BSE</div>
+        <div class="brsr-summary">First reporting cycle after Board-level ESG Committee established 23 April 2026. Scope 1 emissions 126 tCO₂e, Scope 2 of 10,119 tCO₂e. Zero Waste to Landfill Silver Maturity at Turbhe and Pune. 21 lakh L/year rainwater harvesting. 6.7 MW group-captive RE plant planned for FY27. Mid-cap BRSR template.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/tata-teleservices-maharashtra-limited-submits-business-responsibility-and-sustainability-report-for-fy2025-26/40246321" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">Specialty &amp; Industrial Chemicals</div>
+    <div class="brsr-card">
+      <div class="brsr-date">May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Himadri Speciality Chemical Limited</div>
+        <div class="brsr-meta">FY26 · Specialty chemicals · NSE / BSE</div>
+        <div class="brsr-summary">19.31% reduction in energy intensity. 38.18% reduction in emission intensity against disclosed baseline. Intensity-denominated targets are the standard for growth-stage specialty chemicals — Himadri's filing raises the FY26 benchmark for SRF, PI Industries, Aarti Industries, Atul Ltd, Navin Fluorine, Vinati Organics, Deepak Nitrite, Tata Chemicals peers.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/himadri-speciality-chemical-submits-business-responsibility-and-sustainability-report-for-fy-2025-26/40406650" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+    <div class="brsr-card">
+      <div class="brsr-date">May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Archean Chemical Industries Limited</div>
+        <div class="brsr-meta">FY26 · 78% exports profile · NSE / BSE</div>
+        <div class="brsr-summary">Export-heavy chemicals template for CBAM exposure disclosure. Reduced coal consumption and expanded rainwater harvesting. Positioned as a comparability anchor for Indian chemicals exporters facing EU CBAM Phase 2 (financial obligation) from 2027–28.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/archean-chemical-files-brsr-for-fy26/40935111" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+    <div class="brsr-card">
+      <div class="brsr-date">May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Krishana Phoschem Limited</div>
+        <div class="brsr-meta">FY26 · Fertilisers &amp; phosphate chemicals · NSE</div>
+        <div class="brsr-summary">Improved energy and water intensity metrics. New green-ammonia procurement agreement signed with SECI under the green-hydrogen-derivative offtake architecture being built around the National Green Hydrogen Mission. Early-mover chemicals/fertiliser company operationalising green-ammonia inputs.</div>
+        <div class="brsr-links">
+          <a href="https://scanx.trade/stock-market-news/companies/krishana-phoschem-files-brsr-for-fy26-with-nse/41637868" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sector-group">
+    <div class="sector-label">City Gas Distribution</div>
+    <div class="brsr-card">
+      <div class="brsr-date">May 2026</div>
+      <div class="brsr-body">
+        <div class="brsr-company">Adani Total Gas Limited</div>
+        <div class="brsr-meta">FY26 · City gas distribution · NSE / BSE</div>
+        <div class="brsr-summary">FY26 BRSR filed earlier in May — disclosure architecture covers natural-gas distribution emissions intensity, customer-base coverage, and forward-looking CBG (compressed biogas) integration.</div>
+        <div class="brsr-links">
+          <a href="https://www.tipranks.com/news/company-announcements/adani-total-gas-files-fy26-business-responsibility-and-sustainability-report" target="_blank">Filing summary →</a>
+          <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE master directory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-block">
+    <strong>BRSR FY26 Filings Index</strong> · The ESG Dispatch
+    <div class="footer-meta">Tracking 13 filings as of 1 June 2026 · Authoritative source: <a href="https://www.nseindia.com/companies-listing/corporate-filings-bussiness-sustainabilitiy-reports" target="_blank">NSE corporate filings — Business Sustainability Reports</a> · For informational purposes only.<br><br><a href="https://hemantpunamiya.github.io/esg-dispatch/">← Back to The ESG Dispatch</a></div>
+  </div>
+
+</body>
+</html>
