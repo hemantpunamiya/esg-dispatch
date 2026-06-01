@@ -3,187 +3,320 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌿 The ESG Dispatch — All Issues</title>
+  <title>The ESG Dispatch — All Issues</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; background: #f0f4f1; color: #1a1a2e; }
-    .masthead { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 60%, #2d9c5c 100%); color: white; border-radius: 18px; padding: 36px 36px 28px; margin-bottom: 10px; position: relative; overflow: hidden; }
-    .masthead::before { content: "🌱"; font-size: 140px; position: absolute; right: -10px; top: -20px; opacity: 0.08; }
-    .masthead-eyebrow { font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
-    .masthead h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .masthead h1 span { color: #7dffa3; }
-    .masthead-tagline { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 20px; }
-    .masthead-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.82rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; }
-    .divider { height: 3px; background: linear-gradient(90deg, #15582e, #4caf7d); border-radius: 2px; margin: 14px 0 24px; }
-    .month-group { margin-bottom: 28px; }
-    .month-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #15582e; margin-bottom: 10px; padding-left: 4px; }
-    .issue-card { display: flex; align-items: center; gap: 16px; background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #15582e; transition: box-shadow 0.15s, transform 0.15s; }
-    .issue-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.12); transform: translateY(-1px); }
-    .issue-date { min-width: 72px; text-align: center; }
-    .issue-weekday { display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 1.5px; color: #15582e; text-transform: uppercase; }
-    .issue-day { display: block; font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 2px; }
-    .issue-title { flex: 1; font-weight: 600; font-size: 0.97rem; color: #1a1a2e; }
-    .issue-arrow { font-size: 1.1rem; color: #15582e; opacity: 0.6; }
-    .footer-block { background: #0d3d22; color: rgba(255,255,255,0.7); border-radius: 14px; padding: 24px 28px; text-align: center; font-size: 0.82rem; margin-top: 8px; }
-    .footer-block strong { color: #7dffa3; }
-    .footer-block a { color: #7dffa3; text-decoration: none; }
+    body {
+      font-family: 'Inter', system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      background: #f7f7f4;
+      color: #26251e;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .masthead {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 56px 40px 32px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .masthead-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.88px;
+      text-transform: uppercase;
+      color: #807d72;
+      margin-bottom: 14px;
+    }
+    .masthead h1 {
+      font-size: 64px;
+      font-weight: 400;
+      color: #26251e;
+      letter-spacing: -1.92px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .masthead h1 span { color: #f54e00; }
+    .masthead-tagline {
+      font-size: 18px;
+      font-weight: 400;
+      color: #5a5852;
+      letter-spacing: -0.11px;
+      margin-bottom: 28px;
+      max-width: 560px;
+    }
+    .masthead-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #807d72;
+      border-top: 1px solid #e6e5e0;
+      padding-top: 18px;
+    }
+    .masthead-meta span { font-variant-numeric: tabular-nums; }
+    .masthead img {
+      position: absolute;
+      bottom: 24px;
+      right: 32px;
+      height: 32px;
+      opacity: 0.85;
+    }
+    .month-group { margin-bottom: 32px; }
+    .month-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.88px;
+      text-transform: uppercase;
+      color: #807d72;
+      margin: 0 0 14px 4px;
+    }
+    .issue-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 20px 26px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .issue-card:hover {
+      border-color: #f54e00;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(38, 37, 30, 0.06);
+    }
+    .issue-date {
+      min-width: 78px;
+      text-align: center;
+      border-right: 1px solid #e6e5e0;
+      padding-right: 16px;
+    }
+    .issue-weekday {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.88px;
+      color: #f54e00;
+      text-transform: uppercase;
+    }
+    .issue-day {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #26251e;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+    .issue-title {
+      flex: 1;
+      font-weight: 500;
+      font-size: 16px;
+      color: #26251e;
+      letter-spacing: -0.05px;
+    }
+    .issue-arrow {
+      font-size: 18px;
+      color: #f54e00;
+      opacity: 0.7;
+    }
+    .footer-block {
+      background: #ffffff;
+      border: 1px solid #e6e5e0;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #5a5852;
+      margin-top: 24px;
+    }
+    .footer-block strong { color: #26251e; font-weight: 600; }
+    .footer-block a { color: #f54e00; text-decoration: underline; text-underline-offset: 2px; }
+    .footer-meta { font-size: 13px; color: #807d72; margin-top: 6px; }
+    @media (max-width: 720px) {
+      body { padding: 24px 16px 60px; }
+      .masthead { padding: 40px 24px 24px; }
+      .masthead h1 { font-size: 40px; letter-spacing: -1.2px; }
+      .issue-card { padding: 16px 20px; gap: 16px; }
+      .issue-date { min-width: 68px; padding-right: 12px; }
+      .issue-title { font-size: 15px; }
+    }
   </style>
 </head>
 <body>
+
   <div class="masthead">
-    <div class="masthead-eyebrow">All Issues</div>
+    <div class="masthead-eyebrow">Weekly ESG Intelligence · Archive</div>
     <h1>The <span>ESG</span> Dispatch</h1>
-    <p class="masthead-tagline">Because saving the planet deserves better headlines.</p>
+    <p class="masthead-tagline">All issues. Because saving the planet deserves better headlines.</p>
     <div class="masthead-meta">
-      <span>📚 16 issues published</span>
-      <span>🇮🇳 India + 🌍 Global</span>
+      <span>16 issues published</span>
+      <span>India + Global</span>
+      <span><a href="https://hemantpunamiya.github.io/esg-dispatch/" style="color:#f54e00;text-decoration:underline;text-underline-offset:2px;">← Latest issue</a></span>
     </div>
-    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners" style="position:absolute;bottom:20px;right:30px;height:28px;opacity:0.9;">
+    <img src="https://hemantpunamiya.github.io/esg-dispatch/Accelent%20Logo.webp" alt="Accelent Partners">
   </div>
-  <div class="divider"></div>
-    <div class="month-group">
-      <div class="month-label">June 2026</div>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-06-01.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">1 Jun 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 1 June 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-    </div>
-    <div class="month-group">
-      <div class="month-label">May 2026</div>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-18.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">18 May 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 18 May 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-11.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">11 May 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 11 May 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-04.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">4 May 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 4 May 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-    </div>
-    <div class="month-group">
-      <div class="month-label">April 2026</div>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-27.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">27 Apr 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 27 April 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-20.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">20 Apr 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 20 April 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-13.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">13 Apr 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 13 April 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-06.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">6 Apr 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 6 April 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-    </div>
-    <div class="month-group">
-      <div class="month-label">March 2026</div>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-30.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">30 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 30 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-23.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">23 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 23 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-16.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">16 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 16 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-12.html">
-        <div class="issue-date">
-          <span class="issue-weekday">THU</span>
-          <span class="issue-day">12 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Thursday, 12 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-11.html">
-        <div class="issue-date">
-          <span class="issue-weekday">WED</span>
-          <span class="issue-day">11 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Wednesday, 11 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-10.html">
-        <div class="issue-date">
-          <span class="issue-weekday">TUE</span>
-          <span class="issue-day">10 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Tuesday, 10 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-09.html">
-        <div class="issue-date">
-          <span class="issue-weekday">MON</span>
-          <span class="issue-day">9 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Monday, 9 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-      <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-08.html">
-        <div class="issue-date">
-          <span class="issue-weekday">SUN</span>
-          <span class="issue-day">8 Mar 2026</span>
-        </div>
-        <div class="issue-title">The ESG Dispatch — Sunday, 8 March 2026</div>
-        <div class="issue-arrow">→</div>
-      </a>
-    </div>
+
+  <div class="month-group">
+    <div class="month-label">June 2026</div>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-06-01.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">1 Jun 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 1 June 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="month-group">
+    <div class="month-label">May 2026</div>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-18.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">18 May 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 18 May 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-11.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">11 May 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 11 May 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-05-04.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">4 May 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 4 May 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="month-group">
+    <div class="month-label">April 2026</div>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-27.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">27 Apr 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 27 April 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-20.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">20 Apr 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 20 April 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-13.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">13 Apr 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 13 April 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-04-06.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">6 Apr 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 6 April 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="month-group">
+    <div class="month-label">March 2026</div>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-30.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">30 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 30 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-23.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">23 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 23 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-16.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">16 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 16 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-12.html">
+      <div class="issue-date">
+        <span class="issue-weekday">THU</span>
+        <span class="issue-day">12 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Thursday, 12 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-11.html">
+      <div class="issue-date">
+        <span class="issue-weekday">WED</span>
+        <span class="issue-day">11 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Wednesday, 11 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-10.html">
+      <div class="issue-date">
+        <span class="issue-weekday">TUE</span>
+        <span class="issue-day">10 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Tuesday, 10 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-09.html">
+      <div class="issue-date">
+        <span class="issue-weekday">MON</span>
+        <span class="issue-day">9 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Monday, 9 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+    <a class="issue-card" href="https://hemantpunamiya.github.io/esg-dispatch/ESG-Digest-2026-03-08.html">
+      <div class="issue-date">
+        <span class="issue-weekday">SUN</span>
+        <span class="issue-day">8 Mar 2026</span>
+      </div>
+      <div class="issue-title">The ESG Dispatch — Sunday, 8 March 2026</div>
+      <div class="issue-arrow">→</div>
+    </a>
+  </div>
+
   <div class="footer-block">
-    <strong>The ESG Dispatch</strong> · Archive<br>
-    <span style="font-size:0.78rem;"><a href="https://hemantpunamiya.github.io/esg-dispatch/">← Latest issue</a> · For informational purposes only.</span>
+    <strong>The ESG Dispatch</strong> · Archive
+    <div class="footer-meta">Weekly ESG intelligence — India + Global · <a href="https://hemantpunamiya.github.io/esg-dispatch/">Latest issue</a> · For informational purposes only.</div>
   </div>
+
 </body>
 </html>
